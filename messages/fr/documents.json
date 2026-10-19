@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Documents",
+    "description": "Les documents du Collège Tomi Fidele à télécharger : règlement intérieur, grille des frais, fiche d'inscription, listes de fournitures et calendrier scolaire."
+  },
+  "hero": {
+    "eyebrow": "Documents",
+    "title": "Les documents à {télécharger}",
+    "intro": "Règlement, fournitures, fiches d'inscription : les documents utiles aux parents et aux élèves, au format PDF."
+  },
+  "categories": {
+    "rules": "Règlement et tenue",
+    "admissions": "Inscription et frais",
+    "supplies": "Fournitures et manuels",
+    "school": "Vie du collège"
+  },
+  "download": "Télécharger",
+  "downloadLabel": "Télécharger le document : %title% (PDF)",
+  "preview": "Aperçu",
+  "previewLabel": "Aperçu du document : %title%",
+  "page": "%title%, page %page% sur %total%",
+  "soon": "Bientôt disponible",
+  "format": "PDF",
+  "updated": "Mis à jour le %date%",
+  "available": {
+    "one": "%count% document disponible",
+    "other": "%count% documents disponibles",
+    "none": "Documents bientôt disponibles"
+  },
+  "help": {
+    "title": "Un document vous {manque} ?",
+    "text": "Le secrétariat vous le remet sur place ou vous l'envoie par WhatsApp.",
+    "primary": "Demander un document",
+    "secondary": "Voir les contacts",
+    "whatsappMessage": "Bonjour, je souhaite recevoir un document du Collège Tomi Fidele."
+  }
+}

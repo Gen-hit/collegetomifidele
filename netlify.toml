@@ -1,0 +1,15 @@
+# Réglages de construction pour Netlify, quand le site est relié à un dépôt Git.
+# Les renvois (racine, page introuvable) et les en-têtes sont dans public/_redirects et public/_headers :
+# ils s'appliquent ainsi aux deux façons de publier, dépôt du dossier out/ compris.
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Les deux réglages ci-dessous se saisissent de préférence dans Netlify (Site configuration > Environment variables).
+  # Adresse du site : elle sert aux aperçus de lien (WhatsApp, Facebook) et au plan du site.
+  # NEXT_PUBLIC_SITE_URL = "https://college-tomi-fidele.netlify.app"
+  # À passer à "true" le jour où le site doit apparaître dans Google.
+  # NEXT_PUBLIC_SITE_INDEXABLE = "false"

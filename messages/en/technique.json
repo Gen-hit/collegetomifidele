@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Technical education",
+    "description": "Technical education at Collège Tomi Fidele: specialities, workshop practice and the certificates students prepare for, in the Francophone and Anglophone sections."
+  },
+  "hero": {
+    "eyebrow": "Programmes",
+    "title": "{Technical} education",
+    "intro": "Learn a trade and prepare for a certificate, in the Francophone and the Anglophone sections alike.",
+    "chips": [
+      "Section francophone",
+      "Anglophone section",
+      "Practical work"
+    ]
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "specialites",
+        "label": "Specialities"
+      },
+      {
+        "id": "pedagogie",
+        "label": "Teaching"
+      },
+      {
+        "id": "diplomes",
+        "label": "Certificates"
+      },
+      {
+        "id": "ateliers",
+        "label": "Workshops"
+      }
+    ]
+  },
+  "overview": {
+    "eyebrow": "Overview",
+    "title": "Learn a {trade}, prepare for a certificate",
+    "paragraphs": [
+      "[Introduction to technical education, to be provided: fields offered, workshops, proportion of practical work.]",
+      "Technical education is offered in both sections of the school, from the first cycle to the final examination."
+    ],
+    "photo": "Students in a workshop or practical class · 4:3"
+  },
+  "specialities": {
+    "eyebrow": "Specialities",
+    "title": "The {specialities} on offer",
+    "intro": "[List to be provided by the school. Each speciality is shown with its field and the certificate it leads to.]",
+    "fieldLabel": "Field",
+    "diplomaLabel": "Certificate",
+    "items": [
+      {
+        "name": "[Speciality 1]",
+        "field": "[Industrial or commercial]",
+        "diploma": "[Certificate]"
+      },
+      {
+        "name": "[Speciality 2]",
+        "field": "[Industrial or commercial]",
+        "diploma": "[Certificate]"
+      },
+      {
+        "name": "[Speciality 3]",
+        "field": "[Industrial or commercial]",
+        "diploma": "[Certificate]"
+      },
+      {
+        "name": "[Speciality 4]",
+        "field": "[Industrial or commercial]",
+        "diploma": "[Certificate]"
+      },
+      {
+        "name": "[Speciality 5]",
+        "field": "[Industrial or commercial]",
+        "diploma": "[Certificate]"
+      },
+      {
+        "name": "[Speciality 6]",
+        "field": "[Industrial or commercial]",
+        "diploma": "[Certificate]"
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "Teaching",
+    "title": "From the classroom to the {workshop}",
+    "items": [
+      {
+        "title": "Theory lessons",
+        "text": "[To be provided: the general and vocational subjects taught in class.]"
+      },
+      {
+        "title": "Practical work",
+        "text": "[To be provided: time spent in the workshop, equipment used.]"
+      },
+      {
+        "title": "[Work placement or project]",
+        "text": "[To be confirmed by the school: work placements, end-of-year projects.]"
+      }
+    ]
+  },
+  "diplomas": {
+    "eyebrow": "Certificates",
+    "title": "The {examinations} students prepare for",
+    "columns": [
+      {
+        "track": "francophone",
+        "title": "Section francophone",
+        "items": [
+          {
+            "exam": "CAP",
+            "when": "At the end of 4e année"
+          },
+          {
+            "exam": "Technical Probatoire",
+            "when": "In 1re"
+          },
+          {
+            "exam": "Technical Baccalauréat",
+            "when": "In Terminale"
+          }
+        ]
+      },
+      {
+        "track": "anglophone",
+        "title": "Anglophone section",
+        "items": [
+          {
+            "exam": "GCE Technical",
+            "when": "[Levels and classes to be confirmed by the school]"
+          }
+        ]
+      }
+    ],
+    "note": "The examinations students actually prepare for depend on the specialities available at the school."
+  },
+  "workshops": {
+    "eyebrow": "In pictures",
+    "title": "Inside the {workshops}",
+    "photos": [
+      "Workshop · overview",
+      "A student at the workbench",
+      "A student's work or project"
+    ]
+  },
+  "cta": {
+    "title": "Interested in a {speciality}?",
+    "text": "The school office can tell you which specialities are available and how to apply.",
+    "primary": "See admissions",
+    "secondary": "Ask a question"
+  }
+}

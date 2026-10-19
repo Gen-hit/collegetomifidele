@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Galerie photo",
+    "description": "Le Collège Tomi Fidele en images : campus, salles de classe, ateliers et laboratoires, sport et événements."
+  },
+  "hero": {
+    "eyebrow": "Galerie photo",
+    "title": "Le collège en {images}",
+    "intro": "Salles de classe, ateliers, sport et cérémonies : découvrez la vie de l'établissement."
+  },
+  "filters": {
+    "label": "Filtrer par thème",
+    "all": "Toutes"
+  },
+  "categories": {
+    "campus": "Campus",
+    "classes": "En classe",
+    "workshops": "Ateliers et laboratoires",
+    "sport": "Sport",
+    "events": "Événements"
+  },
+  "count": {
+    "one": "%count% photo",
+    "other": "%count% photos"
+  },
+  "more": "Afficher plus de photos",
+  "empty": "Aucune photo dans ce thème pour l'instant.",
+  "pending": "Les emplacements en pointillés attendent les photos du collège.",
+  "cta": {
+    "title": "Rejoignez la {communauté} du collège",
+    "text": "Préinscrivez votre enfant ou découvrez la vie scolaire.",
+    "primary": "Préinscrire mon enfant",
+    "secondary": "Découvrir la vie scolaire"
+  }
+}

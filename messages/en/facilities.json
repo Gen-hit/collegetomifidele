@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Facilities",
+    "description": "Facilities at Collège Tomi Fidele: classrooms, laboratories, computer rooms, technical workshops, library and sports grounds."
+  },
+  "hero": {
+    "eyebrow": "Facilities",
+    "title": "A setting designed for {learning}",
+    "intro": "Classrooms, laboratories, workshops and communal areas: tour the school in pictures."
+  },
+  "toc": {
+    "label": "Spaces at the school"
+  },
+  "items": [
+    {
+      "key": "labs",
+      "title": "Science laboratories",
+      "short": "Laboratories",
+      "text": "[Description to be provided: physics, chemistry, life and earth sciences.]",
+      "features": [
+        "[Feature 1]",
+        "[Feature 2]",
+        "[Feature 3]"
+      ],
+      "photo": "Science laboratory · 16:10"
+    },
+    {
+      "key": "computers",
+      "title": "Computer rooms",
+      "short": "Computers",
+      "text": "[Description to be provided: number of computers, internet connection, use in lessons.]",
+      "features": [
+        "[Feature 1]",
+        "[Feature 2]",
+        "[Feature 3]"
+      ],
+      "photo": "Computer room · 16:10"
+    },
+    {
+      "key": "workshops",
+      "title": "Technical workshops",
+      "short": "Workshops",
+      "text": "[Description to be provided: workshops by speciality, equipment, practical work.]",
+      "features": [
+        "[Feature 1]",
+        "[Feature 2]",
+        "[Feature 3]"
+      ],
+      "photo": "Technical workshop · 16:10"
+    },
+    {
+      "key": "library",
+      "title": "Library",
+      "short": "Library",
+      "text": "[Description to be provided: collection, reading area, opening hours.]",
+      "features": [
+        "[Feature 1]",
+        "[Feature 2]",
+        "[Feature 3]"
+      ],
+      "photo": "Library · 16:10"
+    },
+    {
+      "key": "sports",
+      "title": "Sports grounds",
+      "short": "Sports",
+      "text": "[Description to be provided: grounds available and sports played.]",
+      "features": [
+        "[Feature 1]",
+        "[Feature 2]",
+        "[Feature 3]"
+      ],
+      "photo": "Sports ground · 16:10"
+    },
+    {
+      "key": "other",
+      "title": "[Other space: canteen, sick bay]",
+      "short": "Other spaces",
+      "text": "[To be confirmed by the school: this block only appears if the space exists.]",
+      "features": [
+        "[Feature 1]",
+        "[Feature 2]",
+        "[Feature 3]"
+      ],
+      "photo": "Canteen or sick bay · 16:10"
+    }
+  ],
+  "safety": {
+    "eyebrow": "Safety",
+    "title": "A {safe} school",
+    "items": [
+      {
+        "title": "[Supervision]",
+        "text": "[To be provided: supervisors on site, monitored entry and exit.]"
+      },
+      {
+        "title": "[Follow-up]",
+        "text": "[To be provided: discipline masters, tracking of absences and lateness.]"
+      },
+      {
+        "title": "[Health]",
+        "text": "[To be provided: first aid, what happens in an emergency.]"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Come and {visit} the school",
+    "text": "The school office welcomes you during opening hours. You can also browse the photo gallery.",
+    "primary": "Book a visit",
+    "secondary": "See the gallery"
+  }
+}

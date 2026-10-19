@@ -1,0 +1,590 @@
+[
+  {
+    "id": "rentree",
+    "category": "term",
+    "start": "2026-09-07",
+    "title": {
+      "fr": "Rentrée scolaire 2026-2027",
+      "en": "Start of the 2026-2027 school year"
+    },
+    "note": {
+      "fr": "Début du premier trimestre. Accueil des élèves à 7 h 30.",
+      "en": "Start of the first term. Students are welcomed at 7:30 am."
+    }
+  },
+  {
+    "id": "fin-trimestre-1",
+    "category": "term",
+    "start": "2026-12-18",
+    "confirm": true,
+    "title": {
+      "fr": "Fin du premier trimestre",
+      "en": "End of the first term"
+    },
+    "note": {
+      "fr": "Départ en congés de Noël à 15 h 30.",
+      "en": "School closes for the Christmas break at 3:30 pm."
+    }
+  },
+  {
+    "id": "reprise-janvier",
+    "category": "term",
+    "start": "2027-01-04",
+    "title": {
+      "fr": "Rentrée du deuxième trimestre",
+      "en": "Start of the second term"
+    },
+    "note": {
+      "fr": "Reprise des cours à 7 h 30, après les congés de Noël.",
+      "en": "Classes resume at 7:30 am after the Christmas break."
+    }
+  },
+  {
+    "id": "fin-trimestre-2",
+    "category": "term",
+    "start": "2027-03-25",
+    "confirm": true,
+    "title": {
+      "fr": "Fin du deuxième trimestre",
+      "en": "End of the second term"
+    },
+    "note": {
+      "fr": "Départ en congés de Pâques à 15 h 30.",
+      "en": "School closes for the Easter break at 3:30 pm."
+    }
+  },
+  {
+    "id": "reprise-avril",
+    "category": "term",
+    "start": "2027-04-12",
+    "title": {
+      "fr": "Rentrée du troisième trimestre",
+      "en": "Start of the third term"
+    },
+    "note": {
+      "fr": "Reprise des cours à 7 h 30, après les congés de Pâques.",
+      "en": "Classes resume at 7:30 am after the Easter break."
+    }
+  },
+  {
+    "id": "fin-trimestre-3",
+    "category": "term",
+    "start": "2027-06-11",
+    "confirm": true,
+    "title": {
+      "fr": "Fin des cours du troisième trimestre",
+      "en": "End of third-term classes"
+    }
+  },
+  {
+    "id": "fin-annee",
+    "category": "term",
+    "start": "2027-07-30",
+    "title": {
+      "fr": "Fin de l'année scolaire",
+      "en": "End of the school year"
+    }
+  },
+  {
+    "id": "conges-noel",
+    "category": "holiday",
+    "start": "2026-12-19",
+    "end": "2027-01-03",
+    "title": {
+      "fr": "Congés de Noël",
+      "en": "Christmas break"
+    },
+    "note": {
+      "fr": "Sortie le vendredi 18 décembre 2026 à 15 h 30. Reprise le lundi 4 janvier 2027 à 7 h 30.",
+      "en": "School closes on Friday 18 December 2026 at 3:30 pm and reopens on Monday 4 January 2027 at 7:30 am."
+    }
+  },
+  {
+    "id": "noel",
+    "category": "holiday",
+    "start": "2026-12-25",
+    "title": {
+      "fr": "Noël (jour férié)",
+      "en": "Christmas Day (public holiday)"
+    }
+  },
+  {
+    "id": "jour-de-l-an",
+    "category": "holiday",
+    "start": "2027-01-01",
+    "title": {
+      "fr": "Jour de l'An (jour férié)",
+      "en": "New Year's Day (public holiday)"
+    }
+  },
+  {
+    "id": "fete-jeunesse",
+    "category": "holiday",
+    "start": "2027-02-11",
+    "title": {
+      "fr": "Fête de la Jeunesse (jour férié)",
+      "en": "Youth Day (public holiday)"
+    }
+  },
+  {
+    "id": "conges-paques",
+    "category": "holiday",
+    "start": "2027-03-26",
+    "end": "2027-04-11",
+    "title": {
+      "fr": "Congés de Pâques",
+      "en": "Easter break"
+    },
+    "note": {
+      "fr": "Sortie le jeudi 25 mars 2027 à 15 h 30. Reprise le lundi 12 avril 2027 à 7 h 30.",
+      "en": "School closes on Thursday 25 March 2027 at 3:30 pm and reopens on Monday 12 April 2027 at 7:30 am."
+    }
+  },
+  {
+    "id": "vendredi-saint",
+    "category": "holiday",
+    "start": "2027-03-26",
+    "title": {
+      "fr": "Vendredi saint (jour férié)",
+      "en": "Good Friday (public holiday)"
+    }
+  },
+  {
+    "id": "fete-travail",
+    "category": "holiday",
+    "start": "2027-05-01",
+    "title": {
+      "fr": "Fête du Travail (jour férié)",
+      "en": "Labour Day (public holiday)"
+    }
+  },
+  {
+    "id": "ascension",
+    "category": "holiday",
+    "start": "2027-05-06",
+    "title": {
+      "fr": "Ascension (jour férié)",
+      "en": "Ascension Day (public holiday)"
+    }
+  },
+  {
+    "id": "fete-nationale",
+    "category": "holiday",
+    "start": "2027-05-20",
+    "title": {
+      "fr": "Fête nationale (jour férié)",
+      "en": "National Day (public holiday)"
+    }
+  },
+  {
+    "id": "fin-ramadan",
+    "category": "holiday",
+    "start": null,
+    "title": {
+      "fr": "Fête de fin du Ramadan (jour férié)",
+      "en": "End of Ramadan (public holiday)"
+    },
+    "note": {
+      "fr": "Date fixée selon le calendrier lunaire et annoncée par les autorités.",
+      "en": "Date set by the lunar calendar and announced by the authorities."
+    }
+  },
+  {
+    "id": "fete-mouton",
+    "category": "holiday",
+    "start": null,
+    "title": {
+      "fr": "Fête du Mouton (jour férié)",
+      "en": "Feast of the Sacrifice (public holiday)"
+    },
+    "note": {
+      "fr": "Date fixée selon le calendrier lunaire et annoncée par les autorités.",
+      "en": "Date set by the lunar calendar and announced by the authorities."
+    }
+  },
+  {
+    "id": "evaluations-sequence-1",
+    "category": "evaluation",
+    "start": "2026-10-12",
+    "end": "2026-10-16",
+    "confirm": true,
+    "title": {
+      "fr": "Évaluations de la 1re séquence",
+      "en": "First sequence assessments"
+    }
+  },
+  {
+    "id": "evaluations-sequence-2",
+    "category": "evaluation",
+    "start": "2026-11-30",
+    "end": "2026-12-04",
+    "confirm": true,
+    "title": {
+      "fr": "Évaluations de la 2e séquence",
+      "en": "Second sequence assessments"
+    }
+  },
+  {
+    "id": "evaluations-sequence-3",
+    "category": "evaluation",
+    "start": "2027-02-01",
+    "end": "2027-02-05",
+    "confirm": true,
+    "title": {
+      "fr": "Évaluations de la 3e séquence",
+      "en": "Third sequence assessments"
+    }
+  },
+  {
+    "id": "evaluations-sequence-4",
+    "category": "evaluation",
+    "start": "2027-03-01",
+    "end": "2027-03-05",
+    "confirm": true,
+    "title": {
+      "fr": "Évaluations de la 4e séquence",
+      "en": "Fourth sequence assessments"
+    }
+  },
+  {
+    "id": "examens-blancs",
+    "category": "evaluation",
+    "start": "2027-03-15",
+    "end": "2027-03-19",
+    "confirm": true,
+    "title": {
+      "fr": "Examens blancs",
+      "en": "Mock examinations"
+    },
+    "note": {
+      "fr": "Pour les classes d'examen des deux sections.",
+      "en": "For examination classes in both sections."
+    }
+  },
+  {
+    "id": "evaluations-sequence-5",
+    "category": "evaluation",
+    "start": "2027-05-10",
+    "end": "2027-05-14",
+    "confirm": true,
+    "title": {
+      "fr": "Évaluations de la 5e séquence",
+      "en": "Fifth sequence assessments"
+    }
+  },
+  {
+    "id": "evaluations-sequence-6",
+    "category": "evaluation",
+    "start": "2027-05-31",
+    "end": "2027-06-04",
+    "confirm": true,
+    "title": {
+      "fr": "Évaluations de la 6e séquence",
+      "en": "Sixth sequence assessments"
+    },
+    "note": {
+      "fr": "Pour les classes sans examen officiel.",
+      "en": "For classes without an official examination."
+    }
+  },
+  {
+    "id": "periode-examens",
+    "category": "exam",
+    "start": "2027-04-19",
+    "confirm": true,
+    "title": {
+      "fr": "Ouverture de la période des examens officiels",
+      "en": "Official examination period opens"
+    },
+    "note": {
+      "fr": "Période nationale des examens du secondaire : du 19 avril au 30 juillet 2027.",
+      "en": "National secondary examination period: 19 April to 30 July 2027."
+    }
+  },
+  {
+    "id": "epreuves-eps",
+    "category": "exam",
+    "start": "2027-04-26",
+    "end": "2027-05-07",
+    "confirm": true,
+    "title": {
+      "fr": "Épreuves pratiques d'éducation physique et sportive",
+      "en": "Physical education practical tests"
+    },
+    "note": {
+      "fr": "Pour les candidats aux examens officiels.",
+      "en": "For official examination candidates."
+    }
+  },
+  {
+    "id": "bepc",
+    "category": "exam",
+    "start": null,
+    "title": {
+      "fr": "Épreuves écrites du BEPC",
+      "en": "BEPC written papers"
+    }
+  },
+  {
+    "id": "cap",
+    "category": "exam",
+    "start": null,
+    "title": {
+      "fr": "Épreuves écrites du CAP",
+      "en": "CAP written papers"
+    }
+  },
+  {
+    "id": "probatoire",
+    "category": "exam",
+    "start": null,
+    "title": {
+      "fr": "Épreuves écrites du Probatoire",
+      "en": "Probatoire written papers"
+    }
+  },
+  {
+    "id": "baccalaureat",
+    "category": "exam",
+    "start": null,
+    "title": {
+      "fr": "Épreuves écrites du Baccalauréat",
+      "en": "Baccalauréat written papers"
+    }
+  },
+  {
+    "id": "gce-ol",
+    "category": "exam",
+    "start": null,
+    "title": {
+      "fr": "Épreuves écrites du GCE Ordinary Level",
+      "en": "GCE Ordinary Level written papers"
+    }
+  },
+  {
+    "id": "gce-al",
+    "category": "exam",
+    "start": null,
+    "title": {
+      "fr": "Épreuves écrites du GCE Advanced Level",
+      "en": "GCE Advanced Level written papers"
+    }
+  },
+  {
+    "id": "journee-enseignants",
+    "category": "international",
+    "start": "2026-10-05",
+    "title": {
+      "fr": "Journée mondiale des enseignants",
+      "en": "World Teachers' Day"
+    }
+  },
+  {
+    "id": "journee-enfance",
+    "category": "international",
+    "start": "2026-11-20",
+    "title": {
+      "fr": "Journée mondiale de l'enfance",
+      "en": "World Children's Day"
+    }
+  },
+  {
+    "id": "journee-sida",
+    "category": "international",
+    "start": "2026-12-01",
+    "title": {
+      "fr": "Journée mondiale de lutte contre le sida",
+      "en": "World AIDS Day"
+    }
+  },
+  {
+    "id": "journee-education",
+    "category": "international",
+    "start": "2027-01-24",
+    "title": {
+      "fr": "Journée internationale de l'éducation",
+      "en": "International Day of Education"
+    }
+  },
+  {
+    "id": "journee-langue-maternelle",
+    "category": "international",
+    "start": "2027-02-21",
+    "title": {
+      "fr": "Journée internationale de la langue maternelle",
+      "en": "International Mother Language Day"
+    }
+  },
+  {
+    "id": "journee-femmes",
+    "category": "international",
+    "start": "2027-03-08",
+    "title": {
+      "fr": "Journée internationale des femmes",
+      "en": "International Women's Day"
+    }
+  },
+  {
+    "id": "commonwealth-day",
+    "category": "international",
+    "start": "2027-03-08",
+    "title": {
+      "fr": "Journée du Commonwealth",
+      "en": "Commonwealth Day"
+    }
+  },
+  {
+    "id": "journee-francophonie",
+    "category": "international",
+    "start": "2027-03-20",
+    "title": {
+      "fr": "Journée internationale de la Francophonie",
+      "en": "International Francophonie Day"
+    }
+  },
+  {
+    "id": "journee-livre",
+    "category": "international",
+    "start": "2027-04-23",
+    "title": {
+      "fr": "Journée mondiale du livre",
+      "en": "World Book Day"
+    }
+  },
+  {
+    "id": "journee-enfant-africain",
+    "category": "international",
+    "start": "2027-06-16",
+    "title": {
+      "fr": "Journée de l'enfant africain",
+      "en": "Day of the African Child"
+    }
+  },
+  {
+    "id": "semaine-bilinguisme",
+    "category": "culture",
+    "start": "2027-01-25",
+    "end": "2027-01-29",
+    "confirm": true,
+    "title": {
+      "fr": "Semaine nationale du bilinguisme",
+      "en": "National Bilingualism Week"
+    },
+    "note": {
+      "fr": "Les dates nationales sont annoncées par le ministère.",
+      "en": "The national dates are announced by the ministry."
+    }
+  },
+  {
+    "id": "semaine-culturelle",
+    "category": "culture",
+    "start": "2027-02-08",
+    "end": "2027-02-10",
+    "confirm": true,
+    "title": {
+      "fr": "Semaine culturelle et sportive du collège",
+      "en": "School cultural and sports week"
+    },
+    "note": {
+      "fr": "En préparation de la Fête de la Jeunesse.",
+      "en": "In the run-up to Youth Day."
+    }
+  },
+  {
+    "id": "portes-ouvertes",
+    "category": "openDay",
+    "start": "2027-03-13",
+    "confirm": true,
+    "title": {
+      "fr": "Journée portes ouvertes",
+      "en": "Open day"
+    }
+  },
+  {
+    "id": "remise-des-prix",
+    "category": "culture",
+    "start": "2027-06-11",
+    "confirm": true,
+    "title": {
+      "fr": "Cérémonie de remise des prix",
+      "en": "Prize-giving ceremony"
+    },
+    "note": {
+      "fr": "Avec la remise des bulletins de fin d'année.",
+      "en": "Together with the end-of-year report cards."
+    }
+  },
+  {
+    "id": "reunion-parents",
+    "category": "meeting",
+    "start": "2026-09-26",
+    "confirm": true,
+    "title": {
+      "fr": "Assemblée générale des parents d'élèves",
+      "en": "Parents' general assembly"
+    }
+  },
+  {
+    "id": "conseils-trimestre-1",
+    "category": "meeting",
+    "start": "2026-12-14",
+    "end": "2026-12-16",
+    "confirm": true,
+    "title": {
+      "fr": "Conseils de classe du premier trimestre",
+      "en": "First-term class councils"
+    }
+  },
+  {
+    "id": "remise-bulletins",
+    "category": "meeting",
+    "start": "2026-12-18",
+    "confirm": true,
+    "title": {
+      "fr": "Remise des bulletins du premier trimestre",
+      "en": "First-term report cards handed out"
+    }
+  },
+  {
+    "id": "rencontre-parents-professeurs",
+    "category": "meeting",
+    "start": "2027-01-16",
+    "confirm": true,
+    "title": {
+      "fr": "Rencontre parents-professeurs",
+      "en": "Parent-teacher meeting"
+    }
+  },
+  {
+    "id": "conseils-trimestre-2",
+    "category": "meeting",
+    "start": "2027-03-22",
+    "end": "2027-03-24",
+    "confirm": true,
+    "title": {
+      "fr": "Conseils de classe du deuxième trimestre",
+      "en": "Second-term class councils"
+    }
+  },
+  {
+    "id": "remise-bulletins-2",
+    "category": "meeting",
+    "start": "2027-03-25",
+    "confirm": true,
+    "title": {
+      "fr": "Remise des bulletins du deuxième trimestre",
+      "en": "Second-term report cards handed out"
+    }
+  },
+  {
+    "id": "conseils-fin-annee",
+    "category": "meeting",
+    "start": "2027-06-07",
+    "end": "2027-06-09",
+    "confirm": true,
+    "title": {
+      "fr": "Conseils de classe de fin d'année",
+      "en": "End-of-year class councils"
+    }
+  }
+]

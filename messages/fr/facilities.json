@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Infrastructures",
+    "description": "Les infrastructures du Collège Tomi Fidele : salles de classe, laboratoires, salles informatiques, ateliers techniques, bibliothèque et aires de sport."
+  },
+  "hero": {
+    "eyebrow": "Infrastructures",
+    "title": "Un cadre pensé pour {apprendre}",
+    "intro": "Salles de classe, laboratoires, ateliers et espaces de vie : visitez le collège en images."
+  },
+  "toc": {
+    "label": "Les espaces du collège"
+  },
+  "items": [
+    {
+      "key": "labs",
+      "title": "Laboratoires scientifiques",
+      "short": "Laboratoires",
+      "text": "[Description à fournir : physique, chimie, sciences de la vie et de la Terre.]",
+      "features": [
+        "[Caractéristique 1]",
+        "[Caractéristique 2]",
+        "[Caractéristique 3]"
+      ],
+      "photo": "Laboratoire de sciences · 16:10"
+    },
+    {
+      "key": "computers",
+      "title": "Salles informatiques",
+      "short": "Informatique",
+      "text": "[Description à fournir : nombre de postes, connexion, usages en cours.]",
+      "features": [
+        "[Caractéristique 1]",
+        "[Caractéristique 2]",
+        "[Caractéristique 3]"
+      ],
+      "photo": "Salle informatique · 16:10"
+    },
+    {
+      "key": "workshops",
+      "title": "Ateliers techniques",
+      "short": "Ateliers",
+      "text": "[Description à fournir : ateliers par spécialité, équipements, travaux pratiques.]",
+      "features": [
+        "[Caractéristique 1]",
+        "[Caractéristique 2]",
+        "[Caractéristique 3]"
+      ],
+      "photo": "Atelier technique · 16:10"
+    },
+    {
+      "key": "library",
+      "title": "Bibliothèque",
+      "short": "Bibliothèque",
+      "text": "[Description à fournir : fonds documentaire, espace de lecture, horaires.]",
+      "features": [
+        "[Caractéristique 1]",
+        "[Caractéristique 2]",
+        "[Caractéristique 3]"
+      ],
+      "photo": "Bibliothèque · 16:10"
+    },
+    {
+      "key": "sports",
+      "title": "Aires de sport",
+      "short": "Sport",
+      "text": "[Description à fournir : terrains disponibles et disciplines pratiquées.]",
+      "features": [
+        "[Caractéristique 1]",
+        "[Caractéristique 2]",
+        "[Caractéristique 3]"
+      ],
+      "photo": "Terrain de sport · 16:10"
+    },
+    {
+      "key": "other",
+      "title": "[Autre espace : cantine, infirmerie]",
+      "short": "Autres espaces",
+      "text": "[À confirmer par le collège : cet encart n'apparaît que si l'espace existe.]",
+      "features": [
+        "[Caractéristique 1]",
+        "[Caractéristique 2]",
+        "[Caractéristique 3]"
+      ],
+      "photo": "Cantine ou infirmerie · 16:10"
+    }
+  ],
+  "safety": {
+    "eyebrow": "Sécurité",
+    "title": "Un établissement {sûr}",
+    "items": [
+      {
+        "title": "[Surveillance]",
+        "text": "[À fournir : présence de surveillants, contrôle des entrées et des sorties.]"
+      },
+      {
+        "title": "[Encadrement]",
+        "text": "[À fournir : surveillants généraux, suivi des absences et des retards.]"
+      },
+      {
+        "title": "[Santé]",
+        "text": "[À fournir : premiers soins, conduite à tenir en cas d'urgence.]"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Venez {visiter} le collège",
+    "text": "Le secrétariat vous accueille aux heures d'ouverture. Vous pouvez aussi parcourir la galerie photo.",
+    "primary": "Prendre rendez-vous",
+    "secondary": "Voir la galerie"
+  }
+}

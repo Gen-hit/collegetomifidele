@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "News",
+    "description": "News from Collège Tomi Fidele: results, sports and cultural events, notices and school life."
+  },
+  "hero": {
+    "eyebrow": "News",
+    "title": "Life at the {school}",
+    "intro": "Results, events, notices: keep up with what is happening at the school."
+  },
+  "filters": {
+    "label": "Filter by topic",
+    "all": "All"
+  },
+  "categories": {
+    "academic": "Academic",
+    "sport": "Sport",
+    "culture": "Culture",
+    "announcement": "Notice",
+    "life": "School life"
+  },
+  "featured": "Top story",
+  "listTitle": "All news",
+  "readMore": "Read more",
+  "more": "Show more news",
+  "empty": "No news in this topic yet.",
+  "datePlaceholder": "[Publication date]",
+  "coverRatio": "16:9",
+  "article": {
+    "back": "All news",
+    "published": "Published on %date%",
+    "readingTime": "%minutes% min read",
+    "coverWord": "Cover photo",
+    "photoRatio": "4:3",
+    "shareText": "%title%\n%school%",
+    "sample": {
+      "title": "Sample article",
+      "text": "This page shows how a news article is laid out. The text in square brackets is replaced in the content/news.ts file."
+    },
+    "related": {
+      "eyebrow": "Read next",
+      "title": "More {news}"
+    }
+  }
+}

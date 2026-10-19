@@ -1,0 +1,40 @@
+{
+  "address": null,
+  "city": null,
+  "phones": [],
+  "whatsapp": null,
+  "email": null,
+  "openingHours": [
+    {
+      "days": "weekdays",
+      "open": null,
+      "close": null,
+      "closed": false
+    },
+    {
+      "days": "saturday",
+      "open": null,
+      "close": null,
+      "closed": false
+    },
+    {
+      "days": "sunday",
+      "open": null,
+      "close": null,
+      "closed": true
+    }
+  ],
+  "social": {
+    "facebook": null,
+    "instagram": null,
+    "youtube": null,
+    "tiktok": null,
+    "whatsappChannel": null
+  },
+  "stats": {
+    "founded": null,
+    "students": null,
+    "teachers": null,
+    "successRate": null
+  }
+}

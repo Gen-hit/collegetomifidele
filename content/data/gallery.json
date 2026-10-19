@@ -1,0 +1,98 @@
+[
+  {
+    "src": null,
+    "category": "campus",
+    "caption": {
+      "fr": "Façade du collège",
+      "en": "School front"
+    }
+  },
+  {
+    "src": null,
+    "category": "classes",
+    "caption": {
+      "fr": "Élèves en classe, section francophone",
+      "en": "Students in class, Francophone section"
+    }
+  },
+  {
+    "src": null,
+    "category": "workshops",
+    "caption": {
+      "fr": "Travaux pratiques en atelier",
+      "en": "Practical work in the workshop"
+    }
+  },
+  {
+    "src": null,
+    "category": "sport",
+    "caption": {
+      "fr": "Séance de sport",
+      "en": "Sports session"
+    }
+  },
+  {
+    "src": null,
+    "category": "events",
+    "caption": {
+      "fr": "Cérémonie de remise des prix",
+      "en": "Prize-giving ceremony"
+    }
+  },
+  {
+    "src": null,
+    "category": "classes",
+    "caption": {
+      "fr": "Élèves en classe, section anglophone",
+      "en": "Students in class, Anglophone section"
+    }
+  },
+  {
+    "src": null,
+    "category": "campus",
+    "caption": {
+      "fr": "Cour du collège",
+      "en": "School courtyard"
+    }
+  },
+  {
+    "src": null,
+    "category": "workshops",
+    "caption": {
+      "fr": "Salle informatique",
+      "en": "Computer room"
+    }
+  },
+  {
+    "src": null,
+    "category": "classes",
+    "caption": {
+      "fr": "Laboratoire de sciences",
+      "en": "Science laboratory"
+    }
+  },
+  {
+    "src": null,
+    "category": "sport",
+    "caption": {
+      "fr": "Équipe du collège en compétition",
+      "en": "School team in competition"
+    }
+  },
+  {
+    "src": null,
+    "category": "events",
+    "caption": {
+      "fr": "Fête de la Jeunesse",
+      "en": "Youth Day"
+    }
+  },
+  {
+    "src": null,
+    "category": "campus",
+    "caption": {
+      "fr": "Bibliothèque",
+      "en": "Library"
+    }
+  }
+]

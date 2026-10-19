@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Admissions",
+    "description": "Admissions at Collège Tomi Fidele: four-step procedure, entrance examination dates, documents required, frequently asked questions and pre-registration form."
+  },
+  "hero": {
+    "eyebrow": "Admissions",
+    "title": "{%year%} admissions",
+    "intro": "The steps, entrance examination dates, documents required and the pre-registration form.",
+    "primary": "Pre-register my child",
+    "secondary": "See the fees"
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "procedure",
+        "label": "How to apply"
+      },
+      {
+        "id": "frais",
+        "label": "Fees"
+      },
+      {
+        "id": "concours",
+        "label": "Exams and documents"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      },
+      {
+        "id": "preinscription",
+        "label": "Pre-registration"
+      }
+    ]
+  },
+  "steps": {
+    "eyebrow": "How to apply",
+    "title": "Enrol in {four steps}",
+    "items": [
+      {
+        "title": "Find out more",
+        "text": "Look at the programmes, the fees and the documents required."
+      },
+      {
+        "title": "Pre-register online",
+        "text": "Fill in the online form: it goes to the school office."
+      },
+      {
+        "title": "Hand in the application file",
+        "text": "[Place, days and times for handing in the file, to be provided.]"
+      },
+      {
+        "title": "Pay the first instalment",
+        "text": "By Mobile Money or at the school office, then receive your confirmation."
+      }
+    ]
+  },
+  "fees": {
+    "eyebrow": "Fees",
+    "title": "Registration fee and {school fees}",
+    "text": "The breakdown by level, the instalment schedule and the payment methods are on the Fees and payment page.",
+    "registration": "Registration fee",
+    "registrationNew": "On first enrolment",
+    "registrationYearly": "Every year",
+    "tuition": "Annual school fees",
+    "tuitionFrom": "From %amount%",
+    "tuitionNote": "Payable in %count% instalments",
+    "exam": "Next entrance exam",
+    "examNote": "[Class concerned]",
+    "primary": "See fees and payment",
+    "secondary": "Use the fee calculator"
+  },
+  "exams": {
+    "eyebrow": "Entrance examinations",
+    "title": "Entrance exam {dates}",
+    "intro": "Entry into 6e, 1re année (technical) and Form 1.",
+    "datePlaceholder": "[Date to be provided]",
+    "note": "[Venue, time and subjects of the papers, to be provided.]"
+  },
+  "documents": {
+    "eyebrow": "Application file",
+    "title": "Documents {required}",
+    "items": [
+      "[Birth certificate, to be confirmed]",
+      "[Report cards from the previous year]",
+      "[Passport-size photos]",
+      "[School attendance certificate]",
+      "[Other document required]"
+    ],
+    "note": "[Place, days and times for handing in the file, to be provided.]"
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "Your questions, our {answers}",
+    "items": [
+      {
+        "q": "What is the enrolment deadline?",
+        "a": "[Answer to be provided by the school.]"
+      },
+      {
+        "q": "Can school fees be paid in one go?",
+        "a": "[Answer to be provided by the school.]"
+      },
+      {
+        "q": "Are there any additional fees?",
+        "a": "[Answer to be provided by the school.]"
+      },
+      {
+        "q": "Is the school uniform compulsory?",
+        "a": "[Answer to be provided by the school.]"
+      },
+      {
+        "q": "Can my child change section during their schooling?",
+        "a": "[Answer to be provided by the school.]"
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "Pre-registration",
+    "title": "Pre-register your child in {two minutes}",
+    "intro": "Fill in the form: your request goes straight to the school office, which will call you back.",
+    "privacy": "Your answers are only shared with the school office and are erased after 12 months.",
+    "contactTitle": "Prefer to talk to us?",
+    "call": "Call:",
+    "whatsapp": "WhatsApp:",
+    "required": "Fields marked with an asterisk are required.",
+    "fields": {
+      "student": {
+        "label": "Student's full name",
+        "error": "Enter the student's full name."
+      },
+      "section": {
+        "label": "Section"
+      },
+      "stream": {
+        "label": "Stream"
+      },
+      "className": {
+        "label": "Class requested",
+        "placeholder": "Choose a class",
+        "error": "Choose the class requested."
+      },
+      "parent": {
+        "label": "Parent or guardian's name",
+        "error": "Enter the parent or guardian's name."
+      },
+      "phone": {
+        "label": "Parent's phone number",
+        "hint": "9-digit Cameroonian number, for example 6 77 12 34 56.",
+        "error": "Enter a 9-digit Cameroonian number."
+      },
+      "message": {
+        "label": "Message",
+        "optional": "(optional)"
+      }
+    },
+    "sections": {
+      "francophone": "Section francophone",
+      "anglophone": "Anglophone section"
+    },
+    "streams": {
+      "general": "General education",
+      "technical": "Technical education"
+    },
+    "cycles": [
+      "First cycle",
+      "Second cycle"
+    ],
+    "submit": "Send my request",
+    "errorSummary": "The form is not complete: please correct the fields marked in red.",
+    "disclaimer": "Pre-registration is not enrolment: the school office will contact you about the next steps.",
+    "template": "Hello, I would like to pre-register a student at %school%.\n\nStudent: %student%\nSection: %section%\nStream: %stream%\nClass requested: %className%\nParent or guardian: %parent%\nPhone: %phone%",
+    "templateMessage": "\nMessage: %message%",
+    "done": {
+      "title": "Your request is ready",
+      "sent": "WhatsApp opens with your message. All you need to do is press Send.",
+      "open": "Open WhatsApp",
+      "noNumber": "The school office's WhatsApp number is not online yet. Copy this message and pass it on to the school.",
+      "copy": "Copy the message",
+      "copied": "Message copied",
+      "edit": "Edit my request",
+      "contact": "See contact details"
+    },
+    "whatsappOnly": {
+      "intro": "Fill in the form: your request opens in WhatsApp, ready to send to the school office.",
+      "privacy": "Your answers only go to WhatsApp: this site does not store them.",
+      "submit": "Send via WhatsApp"
+    },
+    "sending": "Sending…",
+    "consent": {
+      "label": "I agree that the school may store this information to handle my request.",
+      "link": "How it is used",
+      "error": "Tick this box to send the request."
+    },
+    "saved": {
+      "title": "Request received",
+      "reference": "Reference number",
+      "keep": "Keep this number: the school office may ask for it.",
+      "callback": "The school office will call you back on %phone%.",
+      "whatsapp": "Also let them know on WhatsApp",
+      "again": "Make another request"
+    },
+    "failed": {
+      "network": "Sending failed: the connection was interrupted. Please try again in a moment.",
+      "throttled": "Several messages were just sent from this device. Please wait a quarter of an hour, or call the school office.",
+      "invalid": "Some information was not accepted. Check the form, then try again.",
+      "server": "The sending service is not responding right now.",
+      "fallbackWhatsapp": "Send via WhatsApp instead",
+      "fallbackCopy": "Prepare a message to pass on"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Le collège",
+    "description": "Présentation du Collège Tomi Fidele : histoire, mission, valeurs et équipe de direction d'un collège d'enseignement général et technique à sections francophone et anglophone."
+  },
+  "hero": {
+    "eyebrow": "Le collège",
+    "title": "À propos du {Collège Tomi Fidele}",
+    "intro": "Notre histoire, nos valeurs et l'équipe qui accompagne les élèves au quotidien."
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      { "id": "presentation", "label": "Présentation" },
+      { "id": "histoire", "label": "Histoire" },
+      { "id": "valeurs", "label": "Valeurs" },
+      { "id": "equipe", "label": "Équipe de direction" }
+    ]
+  },
+  "overview": {
+    "eyebrow": "Présentation",
+    "title": "Un collège d'enseignement {général} et {technique}",
+    "paragraphs": [
+      "[Présentation du collège, à fournir : année de création, quartier et ville, promoteur, autorisation d'ouverture, ce qui distingue l'établissement.]",
+      "Le collège accueille les élèves dans deux sections, francophone et anglophone, en enseignement général comme en enseignement technique."
+    ],
+    "points": [
+      "Section francophone et section anglophone",
+      "Enseignement général et enseignement technique",
+      "Préparation aux examens officiels des deux sous-systèmes"
+    ],
+    "photo": "Vue d'ensemble du campus · format 4:3"
+  },
+  "history": {
+    "eyebrow": "Notre histoire",
+    "title": "Les grandes {étapes} du collège",
+    "intro": "[Introduction à fournir : deux phrases sur l'origine du collège.]",
+    "steps": [
+      { "year": "[AAAA]", "title": "[Création du collège]", "text": "[Une phrase sur l'ouverture : premières classes, premiers élèves.]" },
+      { "year": "[AAAA]", "title": "[Ouverture de la section anglophone]", "text": "[Une phrase sur cette étape.]" },
+      { "year": "[AAAA]", "title": "[Ouverture de l'enseignement technique]", "text": "[Une phrase sur cette étape.]" },
+      { "year": "[AAAA]", "title": "[Étape récente]", "text": "[Nouveau bâtiment, premiers résultats aux examens, etc.]" }
+    ]
+  },
+  "values": {
+    "eyebrow": "Mission et valeurs",
+    "title": "Une devise, trois {engagements}",
+    "intro": "[Mission du collège, à fournir : ce que l'établissement s'engage à apporter à chaque élève.]",
+    "items": [
+      { "title": "Discipline", "text": "[Ce que la discipline signifie au collège : ponctualité, tenue, respect du règlement.]" },
+      { "title": "Travail", "text": "[Ce que le travail signifie au collège : rigueur, suivi, évaluations régulières.]" },
+      { "title": "Succès", "text": "[Ce que le succès signifie au collège : réussite aux examens et épanouissement.]" }
+    ]
+  },
+  "team": {
+    "eyebrow": "L'équipe",
+    "title": "La {direction} du collège",
+    "namePlaceholder": "[Nom et prénom]",
+    "photo": "Portrait · 1:1"
+  },
+  "cta": {
+    "title": "Rejoignez le {Collège Tomi Fidele}",
+    "text": "Découvrez nos programmes ou préinscrivez votre enfant dès maintenant.",
+    "primary": "Préinscrire mon enfant",
+    "secondary": "Voir les programmes"
+  }
+}
+

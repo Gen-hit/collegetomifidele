@@ -1,0 +1,9 @@
+# Règles de renvoi lues par Netlify (dépôt du dossier out/ ou déploiement depuis Git).
+
+# Racine du site : version anglaise si le navigateur est en anglais, version française sinon.
+/       /en/    302!  Language=en
+/       /fr/    302!
+
+# Adresse inconnue : la page « introuvable » du site, dans la langue de l'adresse.
+/en/*   /en/404/index.html   404
+/*      /fr/404/index.html   404

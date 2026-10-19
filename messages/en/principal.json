@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Principal's message",
+    "description": "A message from the Principal of Collège Tomi Fidele to parents and students: educational vision, discipline, hard work and support towards success."
+  },
+  "hero": {
+    "eyebrow": "The school",
+    "title": "A message from the {Principal}",
+    "intro": "A word from the head of school to parents and students."
+  },
+  "letter": {
+    "greeting": "Dear parents, dear students,",
+    "paragraphs": [
+      "[First paragraph of the Principal's message, to be provided: welcoming families and the school's vision of education.]",
+      "[Second paragraph: expectations in discipline and hard work, and the support offered to students.]",
+      "[Third paragraph: ambitions for the school year and an invitation to join the school.]"
+    ],
+    "quote": "[Key sentence of the message, to be provided: it is highlighted in the middle of the text.]",
+    "photoLabel": "Portrait of the Principal · 3:4",
+    "namePlaceholder": "[Principal's name]"
+  },
+  "meet": {
+    "title": "Meeting the Principal",
+    "text": "[Details to be provided: days and times when the Principal receives parents, how to book an appointment through the school office.]",
+    "cta": "Contact the school office"
+  },
+  "more": {
+    "eyebrow": "Find out more",
+    "title": "Get to {know} the school",
+    "items": [
+      { "label": "History and values", "text": "Key milestones, mission and motto", "path": "/about#histoire" },
+      { "label": "Leadership team", "text": "The staff who guide our students", "path": "/about#equipe" },
+      { "label": "Programmes", "text": "Two sections, general and technical education", "path": "/programmes" }
+    ]
+  }
+}
+

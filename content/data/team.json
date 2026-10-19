@@ -1,0 +1,32 @@
+{
+  "principal": {
+    "name": null,
+    "photo": null
+  },
+  "others": [
+    {
+      "name": null,
+      "role": {
+        "fr": "[Fonction : Censeur]",
+        "en": "[Role: Vice-Principal]"
+      },
+      "photo": null
+    },
+    {
+      "name": null,
+      "role": {
+        "fr": "[Fonction : Surveillant général]",
+        "en": "[Role: Discipline Master]"
+      },
+      "photo": null
+    },
+    {
+      "name": null,
+      "role": {
+        "fr": "[Fonction : Intendant]",
+        "en": "[Role: Bursar]"
+      },
+      "photo": null
+    }
+  ]
+}

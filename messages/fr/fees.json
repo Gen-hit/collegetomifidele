@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Frais et paiement",
+    "description": "Frais d'inscription et de scolarité du Collège Tomi Fidele par niveau, échéancier des tranches, simulateur de frais et paiement par MTN Mobile Money, Orange Money ou au secrétariat."
+  },
+  "hero": {
+    "eyebrow": "Admissions",
+    "title": "Frais et {paiement}",
+    "intro": "La scolarité par niveau, l'échéancier des tranches, le simulateur et les moyens de paiement."
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "grille",
+        "label": "Grille des frais"
+      },
+      {
+        "id": "simulateur",
+        "label": "Simulateur"
+      },
+      {
+        "id": "paiement",
+        "label": "Paiement"
+      },
+      {
+        "id": "a-savoir",
+        "label": "À savoir"
+      }
+    ]
+  },
+  "amountPlaceholder": "[à fournir]",
+  "year": "Année scolaire %year%",
+  "registration": {
+    "title": "Frais d'inscription",
+    "new": "Payables une seule fois, à la première inscription au collège. [À confirmer par le collège.]",
+    "yearly": "Payables chaque année, au moment de l'inscription."
+  },
+  "grid": {
+    "eyebrow": "Grille des frais",
+    "title": "La scolarité par {niveau}",
+    "intro": "La scolarité se règle en %count% tranches. Les montants sont en francs CFA.",
+    "instalments": [
+      "1re tranche",
+      "2e tranche",
+      "3e tranche",
+      "4e tranche",
+      "5e tranche",
+      "6e tranche"
+    ],
+    "before": "avant le %date%",
+    "deadlinePlaceholder": "[date limite]",
+    "total": "Total annuel",
+    "special": "Tarif particulier",
+    "sections": {
+      "francophone": "Section francophone",
+      "anglophone": "Anglophone section"
+    },
+    "levels": {
+      "fr-general-1": "Premier cycle général",
+      "fr-general-2": "Second cycle général",
+      "fr-technical-1": "Premier cycle technique",
+      "fr-technical-2": "Second cycle technique",
+      "en-general-1": "Premier cycle général",
+      "en-general-2": "Second cycle général (High School)",
+      "en-technical-1": "Premier cycle technique",
+      "en-technical-2": "Second cycle technique"
+    },
+    "download": "Télécharger la grille des frais (PDF)",
+    "downloadMissing": "[Grille des frais en PDF, à fournir]",
+    "countPlaceholder": "[N]"
+  },
+  "simulator": {
+    "eyebrow": "Simulateur",
+    "title": "Calculez les frais de {votre enfant}",
+    "intro": "Choisissez la section, la filière et la classe : le simulateur affiche l'échéancier et le total de l'année.",
+    "child": "Enfant %n%",
+    "section": "Section",
+    "stream": "Filière",
+    "className": "Classe",
+    "streams": {
+      "general": "Général",
+      "technical": "Technique"
+    },
+    "cycles": [
+      "Premier cycle",
+      "Second cycle"
+    ],
+    "isNew": "Première inscription au collège",
+    "add": "Ajouter un enfant",
+    "remove": "Retirer l'enfant %n%",
+    "result": "Votre estimation",
+    "tuition": "Scolarité",
+    "registrationLine": "Frais d'inscription",
+    "schedule": "Échéancier",
+    "atRegistration": "À l'inscription",
+    "atRegistrationDetail": "Frais d'inscription et 1re tranche",
+    "total": "Total pour l'année",
+    "pending": "Les montants ne sont pas encore publiés. Le simulateur fera le calcul dès que le collège les aura communiqués.",
+    "disclaimer": "Estimation indicative : seule la grille officielle du collège fait foi.",
+    "share": "Partager sur WhatsApp",
+    "shareTitle": "Estimation des frais · %school%",
+    "apply": "Préinscrire mon enfant"
+  },
+  "payment": {
+    "eyebrow": "Paiement",
+    "title": "Comment {payer} la scolarité",
+    "intro": "Indiquez toujours le nom et la classe de l'élève, et conservez le message de confirmation.",
+    "numberLabel": "Numéro du collège",
+    "holderLabel": "Nom du compte",
+    "numberPlaceholder": "[6XX XX XX XX]",
+    "holderPlaceholder": "[Nom affiché lors du transfert]",
+    "steps": [
+      "Composez %ussd% et choisissez le transfert d'argent.",
+      "Saisissez le numéro du collège et le montant de la tranche.",
+      "Vérifiez le nom du compte avant de valider.",
+      "Envoyez la confirmation au secrétariat, avec le nom et la classe de l'élève."
+    ],
+    "cash": {
+      "title": "Au secrétariat",
+      "label": "Horaires de caisse",
+      "value": "[Jours et heures]",
+      "steps": [
+        "Présentez-vous avec le nom et la classe de l'élève.",
+        "Réglez la tranche en espèces.",
+        "Conservez le reçu remis par le collège."
+      ]
+    },
+    "warning": {
+      "title": "Avant de valider un transfert",
+      "text": "Vérifiez que le nom affiché sur votre téléphone est bien celui du collège. En cas de doute sur un numéro, appelez le secrétariat avant de payer."
+    }
+  },
+  "notes": {
+    "eyebrow": "À savoir",
+    "title": "Ce qu'il faut {retenir}",
+    "items": [
+      "[Règle pour les classes d'examen, à fournir.]",
+      "[Ce que les frais comprennent et ne comprennent pas, à fournir.]",
+      "[Réductions éventuelles : fratries, paiement en une fois.]"
+    ]
+  },
+  "cta": {
+    "title": "Prêt à {préinscrire} votre enfant ?",
+    "text": "Le formulaire prend deux minutes, puis le secrétariat vous rappelle.",
+    "primary": "Préinscrire mon enfant",
+    "secondary": "Poser une question"
+  }
+}

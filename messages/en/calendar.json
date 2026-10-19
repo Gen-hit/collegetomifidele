@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "School calendar",
+    "description": "The Collège Tomi Fidele school year calendar: term dates, assessments, official examinations, breaks, public holidays, international days and school celebrations."
+  },
+  "hero": {
+    "eyebrow": "School calendar",
+    "title": "The {%year%} school year, date by date",
+    "intro": "Term dates, assessments, official examinations, breaks, international days and school celebrations: every date in one place, ready to share and add to your calendar.",
+    "shareText": "%school% school calendar %year%"
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "prochaines-dates",
+        "label": "Coming up"
+      },
+      {
+        "id": "calendrier",
+        "label": "Full calendar"
+      },
+      {
+        "id": "a-confirmer",
+        "label": "Dates to be confirmed"
+      }
+    ]
+  },
+  "next": {
+    "eyebrow": "Coming up",
+    "title": "{Upcoming dates}",
+    "empty": "No upcoming dates for this school year.",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "ongoing": "Ongoing",
+    "inDays": "In %count% days"
+  },
+  "board": {
+    "eyebrow": "%year% calendar",
+    "title": "Every {date} of the year",
+    "intro": "Filter by category, switch between the agenda and the year view, share a date or add it to your calendar."
+  },
+  "view": {
+    "legend": "View",
+    "agenda": "Agenda",
+    "year": "Year"
+  },
+  "filters": {
+    "label": "Filter by category",
+    "all": "All dates"
+  },
+  "categories": {
+    "term": "Term dates",
+    "evaluation": "Assessments",
+    "exam": "Official examinations",
+    "holiday": "Breaks and public holidays",
+    "international": "International days",
+    "openDay": "Open days",
+    "culture": "Celebrations and culture",
+    "meeting": "Meetings, class councils and report cards"
+  },
+  "agenda": {
+    "showPast": "Show past dates (%count%)",
+    "hidePast": "Hide past dates",
+    "empty": "No dates in this category yet.",
+    "confirm": "To be confirmed",
+    "past": "Past",
+    "range": "%start% to %end%",
+    "thisMonth": "This month"
+  },
+  "year": {
+    "hint": "Tap a coloured date to see the details in the agenda.",
+    "legendTitle": "Key",
+    "legend": {
+      "blue": "Term dates and meetings",
+      "navy": "Assessments and examinations",
+      "gold": "Breaks and public holidays",
+      "green": "International days, celebrations and open days"
+    },
+    "today": "Today",
+    "dayLabel": "%date%: %events%"
+  },
+  "pending": {
+    "eyebrow": "To be confirmed",
+    "title": "Dates {to be confirmed}",
+    "intro": "These dates are added to the calendar as soon as they are set by the school or by the authorities.",
+    "placeholder": "[Date to be provided]"
+  },
+  "actions": {
+    "shareEvent": "Share: %title%",
+    "agenda": "Calendar",
+    "agendaEvent": "Add to my calendar: %title%",
+    "addTitle": "Add to my calendar",
+    "google": "Google Calendar",
+    "ics": "Calendar file (.ics)",
+    "icsHint": "iPhone, Outlook and other calendars",
+    "downloadAll": "Add everything to my calendar",
+    "shareCalendar": "Share the calendar",
+    "shareText": "%title%\n%date%\n%school%",
+    "fileName": "school-calendar-%year%",
+    "print": "Printable version (PDF)"
+  },
+  "source": {
+    "label": "Source.",
+    "note": "These dates may be changed by the authorities. School dates marked \"To be confirmed\" are provisional, pending confirmation or correction by the administration."
+  },
+  "cta": {
+    "title": "Missing a {date}?",
+    "text": "The school office can tell you about assessments, meetings and school events.",
+    "primary": "Contact the school office",
+    "secondary": "Read the news"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "School life",
+    "description": "School life at Collège Tomi Fidele: clubs and activities, weekly timetable, dates of the year, school uniform and school rules."
+  },
+  "hero": {
+    "eyebrow": "School life",
+    "title": "Life at the {school}",
+    "intro": "Clubs, timetable, uniform and rules: everything that shapes a student's day."
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "clubs",
+        "label": "Clubs and activities"
+      },
+      {
+        "id": "horaires",
+        "label": "Timetable and dates"
+      },
+      {
+        "id": "reglement",
+        "label": "Uniform and rules"
+      },
+      {
+        "id": "galerie",
+        "label": "Gallery"
+      }
+    ]
+  },
+  "clubs": {
+    "eyebrow": "Clubs and activities",
+    "title": "Learning {beyond} the classroom too",
+    "intro": "[Introduction to be provided: who can join a club, when and whom to ask.]",
+    "items": [
+      {
+        "name": "[Club 1: name to be provided]",
+        "text": "[Day, time and supervisor of the club.]",
+        "photo": "Club 1 activity · 16:9"
+      },
+      {
+        "name": "[Club 2: name to be provided]",
+        "text": "[Day, time and supervisor of the club.]",
+        "photo": "Club 2 activity · 16:9"
+      },
+      {
+        "name": "[Club 3: name to be provided]",
+        "text": "[Day, time and supervisor of the club.]",
+        "photo": "Club 3 activity · 16:9"
+      },
+      {
+        "name": "[Club 4: name to be provided]",
+        "text": "[Day, time and supervisor of the club.]",
+        "photo": "Club 4 activity · 16:9"
+      },
+      {
+        "name": "[Club 5: name to be provided]",
+        "text": "[Day, time and supervisor of the club.]",
+        "photo": "Club 5 activity · 16:9"
+      },
+      {
+        "name": "[Club 6: name to be provided]",
+        "text": "[Day, time and supervisor of the club.]",
+        "photo": "Club 6 activity · 16:9"
+      }
+    ]
+  },
+  "schedule": {
+    "eyebrow": "Timetable",
+    "title": "The school {week}",
+    "items": [
+      {
+        "label": "Students arrive",
+        "value": "[00:00]"
+      },
+      {
+        "label": "Morning classes",
+        "value": "[00:00 to 00:00]"
+      },
+      {
+        "label": "Long break",
+        "value": "[00:00 to 00:00]"
+      },
+      {
+        "label": "Afternoon classes",
+        "value": "[00:00 to 00:00]"
+      },
+      {
+        "label": "End of classes",
+        "value": "[00:00]"
+      }
+    ],
+    "note": "[School days and specific arrangements to be confirmed: Wednesday, Saturday, supervised study.]"
+  },
+  "dates": {
+    "eyebrow": "Calendar",
+    "title": "The {dates} of the year",
+    "empty": "Upcoming dates will be announced soon.",
+    "cta": "See the full calendar"
+  },
+  "rules": {
+    "eyebrow": "Uniform and rules",
+    "title": "{Discipline}, the school's first value",
+    "paragraphs": [
+      "[Introduction to be provided: the spirit of the school rules and what the school expects of every student.]"
+    ],
+    "points": [
+      "[Rule 1: punctuality and attendance]",
+      "[Rule 2: school uniform]",
+      "[Rule 3: respect for people and equipment]",
+      "[Rule 4: phones and prohibited items]"
+    ],
+    "photo": "Students in school uniform · 4:3",
+    "download": "Download the school rules (PDF)",
+    "documents": "See all documents"
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "The school in {pictures}",
+    "cta": "See the full gallery"
+  },
+  "cta": {
+    "title": "Want to {join} the school?",
+    "text": "Pre-register your child online or put your questions to the school office.",
+    "primary": "Pre-register my child",
+    "secondary": "Contact us"
+  }
+}

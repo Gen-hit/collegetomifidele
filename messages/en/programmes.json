@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Programmes",
+    "description": "Programmes at Collège Tomi Fidele: Francophone section, Anglophone section, general and technical education, from the entry class to the final examination."
+  },
+  "hero": {
+    "eyebrow": "Programmes",
+    "title": "Our {academic} programmes",
+    "intro": "Two sections, two streams: a complete path in both of Cameroon's education sub-systems."
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "sections",
+        "label": "The two sections"
+      },
+      {
+        "id": "correspondance",
+        "label": "Class equivalence"
+      },
+      {
+        "id": "technique",
+        "label": "Technical education"
+      },
+      {
+        "id": "resultats",
+        "label": "Results"
+      }
+    ]
+  },
+  "sections": {
+    "eyebrow": "The two sections",
+    "title": "Choosing the right {section} for your child",
+    "intro": "The school follows the official curriculum of the Ministry of Secondary Education. Each section offers general and technical education, from the entry class to the final examination.",
+    "items": [
+      {
+        "track": "francophone",
+        "badge": "Francophone",
+        "title": "Section francophone",
+        "sub": "De la 6e à la Terminale",
+        "groups": [
+          {
+            "label": "Enseignement général",
+            "value": "6e · 5e · 4e · 3e · 2nde · 1re · Terminale"
+          },
+          {
+            "label": "Enseignement technique",
+            "value": "1re à 4e année · 2nde · 1re · Terminale"
+          },
+          {
+            "label": "Examens officiels",
+            "value": "BEPC, CAP, Probatoire, Baccalauréat"
+          }
+        ],
+        "link": "Découvrir la section francophone",
+        "photo": "Francophone section classroom · 16:9"
+      },
+      {
+        "track": "anglophone",
+        "badge": "Anglophone",
+        "title": "Anglophone section",
+        "sub": "From Form 1 to Upper Sixth",
+        "groups": [
+          {
+            "label": "General education",
+            "value": "Form 1 · Form 2 · Form 3 · Form 4 · Form 5 · Lower Sixth · Upper Sixth"
+          },
+          {
+            "label": "Technical education",
+            "value": "Form 1 to Form 5 · Lower Sixth · Upper Sixth"
+          },
+          {
+            "label": "Official examinations",
+            "value": "GCE Ordinary Level, GCE Advanced Level, GCE Technical"
+          }
+        ],
+        "link": "Discover the Anglophone section",
+        "photo": "Anglophone section classroom · 16:9"
+      }
+    ]
+  },
+  "pathway": {
+    "eyebrow": "Class equivalence",
+    "title": "Two sub-systems, {seven years} of study",
+    "intro": "Both sections lead to higher education in seven years. This table shows, year by year, the equivalent class in each section, in general education.",
+    "caption": "Class equivalence between the Francophone section and the Anglophone section",
+    "year": "Year",
+    "yearShort": "Yr",
+    "fr": "Section francophone",
+    "en": "Anglophone section",
+    "examWord": "Examination",
+    "rows": [
+      {
+        "fr": "6e",
+        "frExam": "",
+        "en": "Form 1",
+        "enExam": ""
+      },
+      {
+        "fr": "5e",
+        "frExam": "",
+        "en": "Form 2",
+        "enExam": ""
+      },
+      {
+        "fr": "4e",
+        "frExam": "",
+        "en": "Form 3",
+        "enExam": ""
+      },
+      {
+        "fr": "3e",
+        "frExam": "BEPC",
+        "en": "Form 4",
+        "enExam": ""
+      },
+      {
+        "fr": "2nde",
+        "frExam": "",
+        "en": "Form 5",
+        "enExam": "GCE O Level"
+      },
+      {
+        "fr": "1re",
+        "frExam": "Probatoire",
+        "en": "Lower Sixth",
+        "enExam": ""
+      },
+      {
+        "fr": "Terminale",
+        "frExam": "Baccalauréat",
+        "en": "Upper Sixth",
+        "enExam": "GCE A Level"
+      }
+    ],
+    "note": "Indicative equivalence, by year of study. If your child needs to change section partway through, please ask the school office."
+  },
+  "technique": {
+    "eyebrow": "Technical education",
+    "title": "Learn a {trade}, prepare for a certificate",
+    "text": "[Introduction to technical education, to be provided: fields offered, workshops, proportion of practical work.]",
+    "photo": "Students in a workshop or practical class · 4:3",
+    "specialitiesLabel": "Specialities",
+    "specialities": [
+      "[Speciality 1]",
+      "[Speciality 2]",
+      "[Speciality 3]",
+      "[Speciality 4]",
+      "[Speciality 5]"
+    ],
+    "link": "Discover technical education"
+  },
+  "results": {
+    "eyebrow": "Results",
+    "title": "Our {results} in official examinations",
+    "text": "[Session and source of the figures to be specified. This block only appears if the school provides its results.]",
+    "link": "See all results"
+  },
+  "cta": {
+    "title": "Ready to {enrol} your child?",
+    "text": "See the school fees and the admission procedure.",
+    "primary": "See admissions",
+    "secondary": "Ask a question"
+  }
+}

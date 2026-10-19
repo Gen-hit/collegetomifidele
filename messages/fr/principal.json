@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Mot du Principal",
+    "description": "Le message du Principal du Collège Tomi Fidele aux parents et aux élèves : projet éducatif, discipline, travail et accompagnement vers la réussite."
+  },
+  "hero": {
+    "eyebrow": "Le collège",
+    "title": "Le mot du {Principal}",
+    "intro": "Le message du chef d'établissement aux parents et aux élèves."
+  },
+  "letter": {
+    "greeting": "Chers parents, chers élèves,",
+    "paragraphs": [
+      "[Premier paragraphe du mot du Principal, à fournir : l'accueil des familles et la vision de l'éducation portée par le collège.]",
+      "[Deuxième paragraphe : les exigences de discipline et de travail, et l'accompagnement proposé aux élèves.]",
+      "[Troisième paragraphe : les ambitions pour l'année scolaire et l'invitation à rejoindre le collège.]"
+    ],
+    "quote": "[Phrase forte du message, à fournir : elle est mise en avant au milieu du texte.]",
+    "photoLabel": "Portrait du Principal · format 3:4",
+    "namePlaceholder": "[Nom du Principal]"
+  },
+  "meet": {
+    "title": "Rencontrer le Principal",
+    "text": "[Modalités à fournir : jours et heures de réception des parents, prise de rendez-vous auprès du secrétariat.]",
+    "cta": "Contacter le secrétariat"
+  },
+  "more": {
+    "eyebrow": "Pour aller plus loin",
+    "title": "Mieux {connaître} le collège",
+    "items": [
+      { "label": "Histoire et valeurs", "text": "Les grandes étapes, la mission, la devise", "path": "/about#histoire" },
+      { "label": "Équipe de direction", "text": "Les responsables qui encadrent les élèves", "path": "/about#equipe" },
+      { "label": "Programmes", "text": "Les deux sections, le général et le technique", "path": "/programmes" }
+    ]
+  }
+}
+

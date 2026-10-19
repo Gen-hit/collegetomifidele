@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Enseignement technique",
+    "description": "L'enseignement technique au Collège Tomi Fidele : spécialités, travaux pratiques en atelier et diplômes préparés, en section francophone et en section anglophone."
+  },
+  "hero": {
+    "eyebrow": "Programmes",
+    "title": "Enseignement {technique}",
+    "intro": "Apprendre un métier et préparer un diplôme, en section francophone comme en section anglophone.",
+    "chips": [
+      "Section francophone",
+      "Anglophone section",
+      "Travaux pratiques"
+    ]
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "specialites",
+        "label": "Spécialités"
+      },
+      {
+        "id": "pedagogie",
+        "label": "Pédagogie"
+      },
+      {
+        "id": "diplomes",
+        "label": "Diplômes"
+      },
+      {
+        "id": "ateliers",
+        "label": "Ateliers"
+      }
+    ]
+  },
+  "overview": {
+    "eyebrow": "Présentation",
+    "title": "Apprendre un {métier}, préparer un diplôme",
+    "paragraphs": [
+      "[Présentation de l'enseignement technique, à fournir : les domaines proposés, les ateliers, la part de pratique.]",
+      "L'enseignement technique est proposé dans les deux sections du collège, du premier cycle jusqu'à l'examen final."
+    ],
+    "photo": "Élèves en atelier ou en travaux pratiques · format 4:3"
+  },
+  "specialities": {
+    "eyebrow": "Spécialités",
+    "title": "Les {spécialités} proposées",
+    "intro": "[Liste à fournir par le collège. Chaque spécialité est présentée avec son domaine et le diplôme préparé.]",
+    "fieldLabel": "Domaine",
+    "diplomaLabel": "Diplôme préparé",
+    "items": [
+      {
+        "name": "[Spécialité 1]",
+        "field": "[Industriel ou commercial]",
+        "diploma": "[Diplôme]"
+      },
+      {
+        "name": "[Spécialité 2]",
+        "field": "[Industriel ou commercial]",
+        "diploma": "[Diplôme]"
+      },
+      {
+        "name": "[Spécialité 3]",
+        "field": "[Industriel ou commercial]",
+        "diploma": "[Diplôme]"
+      },
+      {
+        "name": "[Spécialité 4]",
+        "field": "[Industriel ou commercial]",
+        "diploma": "[Diplôme]"
+      },
+      {
+        "name": "[Spécialité 5]",
+        "field": "[Industriel ou commercial]",
+        "diploma": "[Diplôme]"
+      },
+      {
+        "name": "[Spécialité 6]",
+        "field": "[Industriel ou commercial]",
+        "diploma": "[Diplôme]"
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "Pédagogie",
+    "title": "De la salle de classe à l'{atelier}",
+    "items": [
+      {
+        "title": "Cours théoriques",
+        "text": "[À fournir : les matières générales et professionnelles enseignées en classe.]"
+      },
+      {
+        "title": "Travaux pratiques",
+        "text": "[À fournir : le temps passé en atelier, les équipements utilisés.]"
+      },
+      {
+        "title": "[Stage ou projet]",
+        "text": "[À confirmer par le collège : stages en entreprise, projets de fin d'année.]"
+      }
+    ]
+  },
+  "diplomas": {
+    "eyebrow": "Diplômes",
+    "title": "Les {examens} préparés",
+    "columns": [
+      {
+        "track": "francophone",
+        "title": "Section francophone",
+        "items": [
+          {
+            "exam": "CAP",
+            "when": "En fin de 4e année"
+          },
+          {
+            "exam": "Probatoire technique",
+            "when": "En classe de 1re"
+          },
+          {
+            "exam": "Baccalauréat technique",
+            "when": "En classe de Terminale"
+          }
+        ]
+      },
+      {
+        "track": "anglophone",
+        "title": "Anglophone section",
+        "items": [
+          {
+            "exam": "GCE Technical",
+            "when": "[Niveaux et classes à confirmer par le collège]"
+          }
+        ]
+      }
+    ],
+    "note": "Les examens réellement préparés dépendent des spécialités ouvertes au collège."
+  },
+  "workshops": {
+    "eyebrow": "En images",
+    "title": "Dans les {ateliers}",
+    "photos": [
+      "Atelier · vue d'ensemble",
+      "Élève au poste de travail",
+      "Réalisation ou projet d'élève"
+    ]
+  },
+  "cta": {
+    "title": "Une {spécialité} vous intéresse ?",
+    "text": "Le secrétariat vous renseigne sur les spécialités ouvertes et les conditions d'admission.",
+    "primary": "Voir les admissions",
+    "secondary": "Poser une question"
+  }
+}

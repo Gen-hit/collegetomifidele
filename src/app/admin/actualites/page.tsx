@@ -1,0 +1,8 @@
+'use client';
+
+import { newsConfig } from '@/admin/content/config';
+import { ContentListPage } from '@/admin/content/list';
+
+export default function Page() {
+  return <ContentListPage config={newsConfig} />;
+}

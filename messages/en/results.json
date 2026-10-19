@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Exam results",
+    "description": "Pass rates at Collège Tomi Fidele in official examinations: BEPC, CAP, Probatoire, Baccalauréat, GCE Ordinary Level and GCE Advanced Level, session after session."
+  },
+  "hero": {
+    "eyebrow": "Programmes",
+    "title": "Exam {results}",
+    "intro": "The school's pass rates in official examinations, session after session."
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "session",
+        "label": "Latest session"
+      },
+      {
+        "id": "historique",
+        "label": "History"
+      }
+    ]
+  },
+  "session": "%year% session",
+  "sessionPlaceholder": "[session]",
+  "ratePlaceholder": "[00%]",
+  "latest": {
+    "eyebrow": "Latest session",
+    "title": "Results of the {%year% session}",
+    "titleEmpty": "Results of the {latest session}",
+    "empty": "Results will be published here as soon as the school provides them. The placeholders below show how they will be presented.",
+    "overall": "Overall pass rate",
+    "overallNote": "All examinations combined, %passed% passes out of %registered% candidates."
+  },
+  "sections": {
+    "francophone": "Section francophone",
+    "anglophone": "Anglophone section"
+  },
+  "passed": "%passed% passes out of %registered% candidates",
+  "countsPlaceholder": "[000] passes out of [000] candidates",
+  "notSat": "Not taken in %year%",
+  "rateOf": "Pass rate",
+  "deltaUp": "+%points% points compared with %year%",
+  "deltaDown": "−%points% points compared with %year%",
+  "deltaSame": "Unchanged compared with %year%",
+  "trend": "Pass rate from %from% to %to%",
+  "trendPending": "The trend will appear once two sessions are available.",
+  "history": {
+    "eyebrow": "History",
+    "title": "All {sessions}",
+    "intro": "The pass rate for each examination, with the number of passes out of the number of candidates.",
+    "caption": "Pass rate by examination and by session",
+    "sessionCol": "Session",
+    "examCol": "Examination",
+    "empty": "No session published yet.",
+    "dash": "Not taken"
+  },
+  "source": {
+    "label": "Source:",
+    "placeholder": "[Source of the figures to be specified: official examination records.]"
+  },
+  "cta": {
+    "title": "Would you like to {join} the school?",
+    "text": "Explore the programmes or pre-register your child.",
+    "primary": "Pre-register my child",
+    "secondary": "See the programmes"
+  }
+}

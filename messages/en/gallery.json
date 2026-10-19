@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Photo gallery",
+    "description": "Collège Tomi Fidele in pictures: campus, classrooms, workshops and laboratories, sport and events."
+  },
+  "hero": {
+    "eyebrow": "Photo gallery",
+    "title": "The school in {pictures}",
+    "intro": "Classrooms, workshops, sport and ceremonies: discover life at the school."
+  },
+  "filters": {
+    "label": "Filter by theme",
+    "all": "All"
+  },
+  "categories": {
+    "campus": "Campus",
+    "classes": "In class",
+    "workshops": "Workshops and laboratories",
+    "sport": "Sport",
+    "events": "Events"
+  },
+  "count": {
+    "one": "%count% photo",
+    "other": "%count% photos"
+  },
+  "more": "Show more photos",
+  "empty": "No photos in this theme yet.",
+  "pending": "The dashed placeholders are waiting for the school's photos.",
+  "cta": {
+    "title": "Join the school {community}",
+    "text": "Pre-register your child or discover school life.",
+    "primary": "Pre-register my child",
+    "secondary": "Discover school life"
+  }
+}

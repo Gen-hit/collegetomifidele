@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "The school",
+    "description": "About Collège Tomi Fidele: history, mission, values and leadership team of a general and technical secondary school with Francophone and Anglophone sections."
+  },
+  "hero": {
+    "eyebrow": "The school",
+    "title": "About {Collège Tomi Fidele}",
+    "intro": "Our history, our values and the team that supports students every day."
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      { "id": "presentation", "label": "About us" },
+      { "id": "histoire", "label": "History" },
+      { "id": "valeurs", "label": "Values" },
+      { "id": "equipe", "label": "Leadership team" }
+    ]
+  },
+  "overview": {
+    "eyebrow": "About us",
+    "title": "A school for {general} and {technical} education",
+    "paragraphs": [
+      "[Introduction to the school, to be provided: year founded, neighbourhood and city, proprietor, authorisation to open, what sets the school apart.]",
+      "The school welcomes students in two sections, Francophone and Anglophone, in both general and technical education."
+    ],
+    "points": [
+      "Francophone section and Anglophone section",
+      "General education and technical education",
+      "Preparation for the official examinations of both sub-systems"
+    ],
+    "photo": "Overview of the campus · 4:3"
+  },
+  "history": {
+    "eyebrow": "Our history",
+    "title": "Key {milestones} of the school",
+    "intro": "[Introduction to be provided: two sentences on how the school began.]",
+    "steps": [
+      { "year": "[YYYY]", "title": "[The school is founded]", "text": "[One sentence on the opening: first classes, first students.]" },
+      { "year": "[YYYY]", "title": "[The Anglophone section opens]", "text": "[One sentence on this milestone.]" },
+      { "year": "[YYYY]", "title": "[Technical education opens]", "text": "[One sentence on this milestone.]" },
+      { "year": "[YYYY]", "title": "[Recent milestone]", "text": "[New building, first examination results, etc.]" }
+    ]
+  },
+  "values": {
+    "eyebrow": "Mission and values",
+    "title": "One motto, three {commitments}",
+    "intro": "[The school's mission, to be provided: what the school commits to giving every student.]",
+    "items": [
+      { "title": "Discipline", "text": "[What discipline means at the school: punctuality, uniform, respect for the rules.]" },
+      { "title": "Hard work", "text": "[What hard work means at the school: rigour, follow-up, regular assessment.]" },
+      { "title": "Success", "text": "[What success means at the school: examination results and personal growth.]" }
+    ]
+  },
+  "team": {
+    "eyebrow": "The team",
+    "title": "The school's {leadership}",
+    "namePlaceholder": "[Full name]",
+    "photo": "Portrait · 1:1"
+  },
+  "cta": {
+    "title": "Join {Collège Tomi Fidele}",
+    "text": "Explore our programmes or pre-register your child today.",
+    "primary": "Pre-register my child",
+    "secondary": "See the programmes"
+  }
+}
+

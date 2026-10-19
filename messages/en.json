@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "Collège Tomi Fidele · General and technical education",
+    "description": "A general and technical secondary school with Francophone and Anglophone sections. Programmes, admissions, school fees, news and contacts."
+  },
+  "common": {
+    "skip": "Skip to content",
+    "school": "Collège",
+    "home": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuTitle": "Menu",
+    "language": "Site language",
+    "preinscription": "Pre-registration",
+    "enroll": "Pre-register my child",
+    "overview": "Overview",
+    "photo": "Photo",
+    "toProvide": "to be provided",
+    "phonePlaceholder": "[+237 6XX XX XX XX]",
+    "emailPlaceholder": "[School office email]",
+    "addressPlaceholder": "[Neighbourhood, street or landmark]",
+    "cityPlaceholder": "[City], Cameroon",
+    "hoursPlaceholder": "[Opening days and hours]",
+    "valuePlaceholder": "[to be provided]",
+    "breadcrumb": "Breadcrumb",
+    "yearPlaceholder": "[school year]",
+    "closed": "Closed",
+    "hoursLine": "%days%: %hours%",
+    "days": { "weekdays": "Monday to Friday", "saturday": "Saturday", "sunday": "Sunday" },
+    "share": {
+      "title": "Share:",
+      "label": "Share",
+      "whatsapp": "WhatsApp",
+      "facebook": "Facebook",
+      "copy": "Copy link",
+      "copied": "Link copied",
+      "more": "Other apps"
+    }
+  },
+  "announcement": {
+    "text": "Admissions for %year% are open.",
+    "cta": "See admissions",
+    "dismiss": "Dismiss announcement"
+  },
+  "nav": {
+    "about": { "label": "The school" },
+    "aboutOverview": { "label": "About us", "desc": "Who we are and what sets us apart" },
+    "aboutHistory": { "label": "History and values", "desc": "Key milestones, mission and motto" },
+    "principal": { "label": "Principal's message", "desc": "A word from the head of school" },
+    "team": { "label": "Leadership team", "desc": "The staff who guide our students" },
+    "programmes": { "label": "Programmes" },
+    "francophone": { "label": "Section francophone", "desc": "De la 6e à la Terminale" },
+    "anglophone": { "label": "Anglophone section", "desc": "From Form 1 to Upper Sixth" },
+    "technique": { "label": "Technical education", "desc": "Specialities, workshops and certificates" },
+    "results": { "label": "Exam results", "desc": "Pass rates for each session" },
+    "facilities": { "label": "Facilities" },
+    "campus": { "label": "School life" },
+    "clubs": { "label": "Clubs and activities", "desc": "Learning beyond the classroom" },
+    "rules": { "label": "Rules and uniform", "desc": "Discipline, uniform and timetable" },
+    "calendar": { "label": "School calendar", "desc": "Assessments, exams, holidays and events" },
+    "gallery": { "label": "Photo gallery", "desc": "The school in pictures" },
+    "documents": { "label": "Documents", "desc": "Rules, book lists and forms to download" },
+    "news": { "label": "News" },
+    "admissions": { "label": "Admissions" },
+    "procedure": { "label": "How to apply", "desc": "Enrol in four steps" },
+    "fees": { "label": "Fees and payment", "desc": "Instalments, MoMo and Orange Money" },
+    "simulator": { "label": "Fee calculator", "desc": "Work out the total for your child" },
+    "apply": { "label": "Pre-registration", "desc": "A two-minute form" },
+    "faq": { "label": "Frequently asked questions", "desc": "Answers to parents' questions" },
+    "contact": { "label": "Contact" },
+    "privacy": { "label": "Privacy" }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "General and technical education",
+      "title": "Raising {disciplined}, hard-working students who are ready to succeed",
+      "text": "One school, two sections, Francophone and Anglophone, guiding every student from their first class to their final exam.",
+      "primary": "Pre-register my child",
+      "secondary": "Discover the school",
+      "photoLabel": "School front or students in class · 4:3",
+      "badgeTitle": "Two sections",
+      "badgeText": "Francophone and Anglophone"
+    },
+    "stats": {
+      "founded": "Year founded",
+      "students": "Students enrolled",
+      "teachers": "Teachers",
+      "success": "Exam pass rate",
+      "sections": "Sections: Francophone and Anglophone"
+    },
+    "principal": {
+      "eyebrow": "The Principal's message",
+      "title": "Welcome to {Collège Tomi Fidele}",
+      "text": "[The Principal's message, to be provided: four or five sentences on the school's educational vision, discipline, hard work and the support given to every student on the way to success.]",
+      "namePlaceholder": "[Principal's name]",
+      "link": "Read the Principal's message",
+      "photoLabel": "Portrait of the Principal · 3:4"
+    },
+    "strengths": {
+      "eyebrow": "Why choose us",
+      "title": "What makes the school {strong}",
+      "items": [
+        { "title": "Two sections", "text": "The Francophone and Anglophone sections under one roof." },
+        { "title": "General and technical", "text": "Both streams, from the first cycle to the final exam." },
+        { "title": "[Strength 3]", "text": "[To be provided by the school, for example student follow-up.]" },
+        { "title": "[Strength 4]", "text": "[To be provided by the school, for example the learning environment.]" }
+      ]
+    },
+    "programmes": {
+      "eyebrow": "Our programmes",
+      "title": "Two sections, {general} and {technical} education",
+      "intro": "A complete path in both of Cameroon's education sub-systems.",
+      "items": [
+        {
+          "track": "Francophone",
+          "title": "Section francophone",
+          "levels": "De la 6e à la Terminale",
+          "text": "Préparation au BEPC, au Probatoire et au Baccalauréat.",
+          "link": "Découvrir la section",
+          "photo": "Francophone section classroom · 16:10"
+        },
+        {
+          "track": "Anglophone",
+          "title": "Anglophone section",
+          "levels": "From Form 1 to Upper Sixth",
+          "text": "Preparation for the GCE Ordinary and Advanced Levels.",
+          "link": "Discover the section",
+          "photo": "Anglophone section classroom · 16:10"
+        },
+        {
+          "track": "Technical",
+          "title": "Technical education",
+          "levels": "In both sections",
+          "text": "Technical specialities with hands-on practice. [Specialities to be provided.]",
+          "link": "See the specialities",
+          "photo": "Workshop or practical class · 16:10"
+        }
+      ]
+    },
+    "facilities": {
+      "eyebrow": "Our facilities",
+      "title": "A place designed for {learning}",
+      "items": ["Laboratories", "Computer room", "Technical workshops", "Library"],
+      "cta": "Tour the facilities"
+    },
+    "admissions": {
+      "eyebrow": "Admissions %year%",
+      "title": "Admissions are {open}",
+      "text": "Check the fees and entrance exam dates, and pre-register your child in a few minutes.",
+      "cards": [
+        { "label": "Registration fee", "value": "[00,000 FCFA]", "note": "[Terms to be specified]" },
+        { "label": "School fees", "value": "[000,000 FCFA]", "note": "Paid in [N] instalments" },
+        { "label": "Next entrance exam", "value": "[Date]", "note": "[Class concerned]" }
+      ],
+      "primary": "Pre-register my child",
+      "secondary": "See fees and payment"
+    },
+    "news": {
+      "eyebrow": "News",
+      "title": "Life at the {school}",
+      "cta": "All news"
+    },
+    "testimonial": {
+      "eyebrow": "Testimonials",
+      "title": "Hear from {parents} and students",
+      "quote": "[A real testimonial from a parent or former student, to be provided. This block only appears on the site when a genuine testimonial is available.]",
+      "author": "[Name], [parent of a student in …]"
+    },
+    "findUs": {
+      "eyebrow": "Find us",
+      "title": "Come and {visit us}",
+      "text": "The school office welcomes you during opening hours. Open the map to see exactly where the school is.",
+      "addressLabel": "Address",
+      "hoursLabel": "School office hours",
+      "phoneLabel": "Phone",
+      "load": "Show the map",
+      "loadNote": "The map loads on request to save your data.",
+      "mapTitle": "Location map of Collège Tomi Fidele",
+      "directions": "Directions",
+      "open": "Open in Google Maps"
+    },
+    "cta": {
+      "title": "Any questions? The school office is here to {help}",
+      "text": "Message us on WhatsApp or call the school during opening hours.",
+      "primary": "Contact us",
+      "secondary": "Message us on WhatsApp"
+    }
+  },
+  "footer": {
+    "description": "A general and technical secondary school with Francophone and Anglophone sections.",
+    "explore": "Explore",
+    "practical": "Useful links",
+    "contact": "Contact",
+    "follow": "Follow the school",
+    "rights": "All rights reserved.",
+    "social": {
+      "facebook": "The school's Facebook page",
+      "instagram": "The school's Instagram account",
+      "youtube": "The school's YouTube channel",
+      "tiktok": "The school's TikTok account",
+      "whatsappChannel": "The school's WhatsApp channel"
+    }
+  },
+  "viewer": {
+    "title": "Viewer",
+    "close": "Close the viewer",
+    "previous": "Previous image",
+    "next": "Next image",
+    "position": "%index% of %total%",
+    "open": "Enlarge: %caption%",
+    "goTo": "Show: %caption%",
+    "thumbnails": "All images",
+    "missing": "This photo will be added by the school."
+  },
+  "follow": {
+    "eyebrow": "Stay informed",
+    "title": "Follow the {school}",
+    "text": "Find the school's announcements and photos on its official channels."
+  },
+  "help": {
+    "open": "Open help",
+    "close": "Close help",
+    "label": "Help",
+    "assistant": "Ask a question",
+    "assistantDesc": "The school assistant",
+    "whatsapp": "Message us on WhatsApp",
+    "whatsappDesc": "The school office will reply",
+    "whatsappMessage": "Hello, I would like some information about Collège Tomi Fidele."
+  },
+  "assistant": {
+    "title": "School assistant",
+    "subtitle": "Guided answers",
+    "close": "Close the assistant",
+    "welcome": "Hello! I am the Collège Tomi Fidele assistant. Choose a topic below to find the information you need quickly.",
+    "fallback": "I cannot answer free-form questions yet: the assistant has not been set up. Choose a topic below, or message the school office on WhatsApp.",
+    "topicsLabel": "Common topics",
+    "inputLabel": "Your question",
+    "inputPlaceholder": "Type your question…",
+    "send": "Send",
+    "whatsapp": "Message the school office",
+    "topics": [
+      { "id": "fees", "label": "School fees", "answer": "The registration fee and school fees, instalment by instalment, are detailed on the Fees and payment page.", "path": "/admissions/fees", "linkLabel": "See the fees" },
+      { "id": "enroll", "label": "Enrol my child", "answer": "Enrolment takes four steps. You can start with the online pre-registration, which takes two minutes.", "path": "/admissions", "linkLabel": "See how to apply" },
+      { "id": "programmes", "label": "Classes and streams", "answer": "The school offers general and technical education, in both the Francophone and Anglophone sections.", "path": "/programmes", "linkLabel": "See the programmes" },
+      { "id": "calendar", "label": "Dates and calendar", "answer": "Assessments, exams, holidays and events for the year are all in the school calendar.", "path": "/calendar", "linkLabel": "See the calendar" },
+      { "id": "location", "label": "Where is the school?", "answer": "The exact location of the school, with directions, is on the Contact page.", "path": "/contact", "linkLabel": "See the map" }
+    ]
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This page {cannot be found}",
+    "text": "The address may have changed, or the link is incomplete. Here is where to find what you are looking for.",
+    "back": "Back to home",
+    "contact": "Contact the school office",
+    "linksTitle": "Most visited pages"
+  }
+}

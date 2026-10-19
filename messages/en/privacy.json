@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Privacy",
+    "description": "What the Collège Tomi Fidele website does with your data: no visitor accounts, no advertising trackers, requests read only by the school office and erased after 12 months, a map loaded on request."
+  },
+  "hero": {
+    "eyebrow": "Privacy",
+    "title": "Your data and {this site}",
+    "intro": "This site introduces the school. It does not create visitor accounts and sets no advertising trackers. Requests sent through its forms are read only by the school office."
+  },
+  "updated": "Last updated: %date%",
+  "summary": {
+    "eyebrow": "In short",
+    "title": "The essentials in {three points}",
+    "items": [
+      {
+        "title": "No account, no tracking",
+        "text": "You browse the site without identifying yourself. It uses neither advertising cookies nor analytics tools."
+      },
+      {
+        "title": "Requests read by the school office",
+        "text": "Pre-registrations and contact messages go to the school office, and to it alone. They are erased after 12 months."
+      },
+      {
+        "title": "A map on request",
+        "text": "The Google Maps map only loads if you tap \"Show the map\"."
+      }
+    ]
+  },
+  "toc": "Contents",
+  "sections": [
+    {
+      "id": "responsable",
+      "title": "Who is responsible for this site?",
+      "paragraphs": [
+        "The site is published by Collège Tomi Fidele. [Name and role of the person responsible for publication, to be provided.]",
+        "For any question about your data: [school office email or phone number, to be provided]."
+      ],
+      "points": []
+    },
+    {
+      "id": "formulaires",
+      "title": "Pre-registration and contact form",
+      "paragraphs": [
+        "When you send a pre-registration or a message, your answers are stored in the school's password-protected management area. Only the school office, the principal and the site's technical administrator can read them.",
+        "They are used only to handle your request: calling you back, preparing an enrolment file, answering a question. They are never sold or passed on to other organisations.",
+        "Nothing is sent unless you tick the consent box. You can also let the school office know on WhatsApp: that message follows WhatsApp's own rules.",
+        "To limit abuse, the site keeps, for 24 hours, a fingerprint of the device used, computed from its address without storing that address in plain form."
+      ],
+      "points": [
+        "Data concerned: the student's name, the class requested, the parent's name and phone number, your message.",
+        "Recipients: the school office and the principal.",
+        "Retention period: 12 months after sending, then automatic erasure.",
+        "Storage: Supabase database, on servers located in Paris (France)."
+      ]
+    },
+    {
+      "id": "appareil",
+      "title": "What the site keeps on your device",
+      "paragraphs": [
+        "The site remembers two things in your browser for the duration of your visit: that you closed the announcement bar, and that the welcome screen has already been shown.",
+        "Neither contains any personal information. Both are erased when you close the tab."
+      ],
+      "points": []
+    },
+    {
+      "id": "carte",
+      "title": "The map and external links",
+      "paragraphs": [
+        "If you display the map, it is provided by Google Maps: Google then receives your IP address and may set its own cookies. Until you ask for it, nothing is exchanged with Google.",
+        "The WhatsApp, Facebook and Google Calendar buttons and the links to the school's social networks open external services, which apply their own privacy rules.",
+        "Sharing a news item or a date only passes on the link you choose to send."
+      ],
+      "points": []
+    },
+    {
+      "id": "hebergement",
+      "title": "Hosting and technical logs",
+      "paragraphs": [
+        "Like any website, this one is served by a hosting provider, which keeps technical logs (IP address, date, page requested) to keep the service secure and running. The school does not use them to identify visitors.",
+        "Website host: Netlify. Request database: Supabase (servers in Paris). [Providers' legal addresses, to be confirmed at launch.]"
+      ],
+      "points": []
+    },
+    {
+      "id": "photos",
+      "title": "Photos of students",
+      "paragraphs": [
+        "The photos published on the site show school life. [School rule to be specified: parents' consent collected at enrolment, no name attached to a student's photo.]",
+        "A parent can ask for a photo of their child to be removed by writing to the school office."
+      ],
+      "points": []
+    },
+    {
+      "id": "droits",
+      "title": "Your rights",
+      "paragraphs": [
+        "You can ask to see, correct or delete the information you have given the school, and object to its use.",
+        "Simply write to or call in at the school office. The school will reply as soon as possible."
+      ],
+      "points": []
+    }
+  ],
+  "cta": {
+    "title": "Any questions about your {data}?",
+    "text": "The school office answers by phone, on WhatsApp or in person.",
+    "primary": "Contact the school office",
+    "secondary": "Back to home"
+  }
+}

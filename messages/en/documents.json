@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Documents",
+    "description": "Collège Tomi Fidele documents to download: school rules, fee schedule, enrolment form, supply lists and school calendar."
+  },
+  "hero": {
+    "eyebrow": "Documents",
+    "title": "Documents to {download}",
+    "intro": "Rules, supplies, enrolment forms: the documents parents and students need, in PDF format."
+  },
+  "categories": {
+    "rules": "Rules and uniform",
+    "admissions": "Enrolment and fees",
+    "supplies": "Supplies and textbooks",
+    "school": "School life"
+  },
+  "download": "Download",
+  "downloadLabel": "Download the document: %title% (PDF)",
+  "preview": "Preview",
+  "previewLabel": "Preview the document: %title%",
+  "page": "%title%, page %page% of %total%",
+  "soon": "Coming soon",
+  "format": "PDF",
+  "updated": "Updated on %date%",
+  "available": {
+    "one": "%count% document available",
+    "other": "%count% documents available",
+    "none": "Documents coming soon"
+  },
+  "help": {
+    "title": "Missing a {document}?",
+    "text": "The school office can hand it to you in person or send it to you on WhatsApp.",
+    "primary": "Request a document",
+    "secondary": "See contact details",
+    "whatsappMessage": "Hello, I would like to receive a document from Collège Tomi Fidele."
+  }
+}

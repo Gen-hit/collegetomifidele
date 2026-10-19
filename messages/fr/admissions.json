@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Admissions",
+    "description": "Inscriptions au Collège Tomi Fidele : procédure en quatre étapes, dates des concours, pièces à fournir, questions fréquentes et formulaire de préinscription."
+  },
+  "hero": {
+    "eyebrow": "Admissions",
+    "title": "Inscriptions {%year%}",
+    "intro": "Les étapes, les dates de concours, les pièces à fournir et le formulaire de préinscription.",
+    "primary": "Préinscrire mon enfant",
+    "secondary": "Voir les frais"
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "procedure",
+        "label": "Procédure"
+      },
+      {
+        "id": "frais",
+        "label": "Frais"
+      },
+      {
+        "id": "concours",
+        "label": "Concours et dossier"
+      },
+      {
+        "id": "faq",
+        "label": "Questions fréquentes"
+      },
+      {
+        "id": "preinscription",
+        "label": "Préinscription"
+      }
+    ]
+  },
+  "steps": {
+    "eyebrow": "Procédure",
+    "title": "S'inscrire en {quatre étapes}",
+    "items": [
+      {
+        "title": "Renseignez-vous",
+        "text": "Consultez les programmes, les frais et les pièces à fournir."
+      },
+      {
+        "title": "Préinscrivez en ligne",
+        "text": "Remplissez le formulaire en ligne : il arrive au secrétariat."
+      },
+      {
+        "title": "Déposez le dossier",
+        "text": "[Lieu, jours et horaires de dépôt, à fournir.]"
+      },
+      {
+        "title": "Réglez la première tranche",
+        "text": "Par Mobile Money ou au secrétariat, puis recevez la confirmation."
+      }
+    ]
+  },
+  "fees": {
+    "eyebrow": "Frais",
+    "title": "Frais d'inscription et de {scolarité}",
+    "text": "Le détail par niveau, l'échéancier des tranches et les moyens de paiement sont réunis sur la page Frais et paiement.",
+    "registration": "Frais d'inscription",
+    "registrationNew": "À la première inscription",
+    "registrationYearly": "Chaque année",
+    "tuition": "Scolarité annuelle",
+    "tuitionFrom": "À partir de %amount%",
+    "tuitionNote": "Payable en %count% tranches",
+    "exam": "Prochain concours",
+    "examNote": "[Classe concernée]",
+    "primary": "Voir les frais et le paiement",
+    "secondary": "Simuler les frais"
+  },
+  "exams": {
+    "eyebrow": "Concours d'entrée",
+    "title": "Dates des {concours}",
+    "intro": "Entrée en 6e, en 1re année technique et en Form 1.",
+    "datePlaceholder": "[Date à fournir]",
+    "note": "[Lieu, heure et matières des épreuves, à fournir.]"
+  },
+  "documents": {
+    "eyebrow": "Dossier",
+    "title": "Pièces à {fournir}",
+    "items": [
+      "[Acte de naissance, à confirmer]",
+      "[Bulletins de l'année précédente]",
+      "[Photos d'identité]",
+      "[Certificat de scolarité]",
+      "[Autre pièce demandée]"
+    ],
+    "note": "[Lieu, jours et horaires de dépôt du dossier, à fournir.]"
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "title": "Vos questions, nos {réponses}",
+    "items": [
+      {
+        "q": "Quelle est la date limite d'inscription ?",
+        "a": "[Réponse à fournir par le collège.]"
+      },
+      {
+        "q": "Peut-on payer la scolarité en une seule fois ?",
+        "a": "[Réponse à fournir par le collège.]"
+      },
+      {
+        "q": "Y a-t-il des frais supplémentaires ?",
+        "a": "[Réponse à fournir par le collège.]"
+      },
+      {
+        "q": "La tenue de classe est-elle obligatoire ?",
+        "a": "[Réponse à fournir par le collège.]"
+      },
+      {
+        "q": "Mon enfant peut-il changer de section en cours de scolarité ?",
+        "a": "[Réponse à fournir par le collège.]"
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "Préinscription",
+    "title": "Préinscrivez votre enfant en {deux minutes}",
+    "intro": "Remplissez le formulaire : votre demande arrive directement au secrétariat, qui vous rappelle.",
+    "privacy": "Vos réponses sont transmises au seul secrétariat du collège et effacées au bout de 12 mois.",
+    "contactTitle": "Vous préférez nous parler ?",
+    "call": "Appeler :",
+    "whatsapp": "WhatsApp :",
+    "required": "Les champs marqués d'un astérisque sont obligatoires.",
+    "fields": {
+      "student": {
+        "label": "Nom et prénom de l'élève",
+        "error": "Indiquez le nom et le prénom de l'élève."
+      },
+      "section": {
+        "label": "Section"
+      },
+      "stream": {
+        "label": "Filière"
+      },
+      "className": {
+        "label": "Classe demandée",
+        "placeholder": "Choisir une classe",
+        "error": "Choisissez la classe demandée."
+      },
+      "parent": {
+        "label": "Nom du parent ou du tuteur",
+        "error": "Indiquez le nom du parent ou du tuteur."
+      },
+      "phone": {
+        "label": "Téléphone du parent",
+        "hint": "Numéro camerounais à 9 chiffres, par exemple 6 77 12 34 56.",
+        "error": "Indiquez un numéro camerounais à 9 chiffres."
+      },
+      "message": {
+        "label": "Message",
+        "optional": "(facultatif)"
+      }
+    },
+    "sections": {
+      "francophone": "Section francophone",
+      "anglophone": "Anglophone section"
+    },
+    "streams": {
+      "general": "Enseignement général",
+      "technical": "Enseignement technique"
+    },
+    "cycles": [
+      "Premier cycle",
+      "Second cycle"
+    ],
+    "submit": "Envoyer ma demande",
+    "errorSummary": "Le formulaire n'est pas complet : corrigez les champs signalés en rouge.",
+    "disclaimer": "La préinscription ne vaut pas inscription : le secrétariat vous recontacte pour la suite.",
+    "template": "Bonjour, je souhaite préinscrire un élève au %school%.\n\nÉlève : %student%\nSection : %section%\nFilière : %stream%\nClasse demandée : %className%\nParent ou tuteur : %parent%\nTéléphone : %phone%",
+    "templateMessage": "\nMessage : %message%",
+    "done": {
+      "title": "Votre demande est prête",
+      "sent": "WhatsApp s'ouvre avec votre message. Il ne reste qu'à appuyer sur Envoyer.",
+      "open": "Ouvrir WhatsApp",
+      "noNumber": "Le numéro WhatsApp du secrétariat n'est pas encore en ligne. Copiez ce message et transmettez-le au collège.",
+      "copy": "Copier le message",
+      "copied": "Message copié",
+      "edit": "Modifier ma demande",
+      "contact": "Voir les contacts"
+    },
+    "whatsappOnly": {
+      "intro": "Remplissez le formulaire : votre demande s'ouvre dans WhatsApp, prête à être envoyée au secrétariat.",
+      "privacy": "Vos réponses partent uniquement vers WhatsApp : le site ne les enregistre pas.",
+      "submit": "Envoyer par WhatsApp"
+    },
+    "sending": "Envoi en cours…",
+    "consent": {
+      "label": "J'accepte que le collège enregistre ces informations pour traiter ma demande.",
+      "link": "Comment elles sont utilisées",
+      "error": "Cochez cette case pour envoyer la demande."
+    },
+    "saved": {
+      "title": "Demande enregistrée",
+      "reference": "Numéro de suivi",
+      "keep": "Notez ce numéro : il vous sera utile au secrétariat.",
+      "callback": "Le secrétariat vous rappelle au %phone%.",
+      "whatsapp": "Prévenir aussi sur WhatsApp",
+      "again": "Faire une autre demande"
+    },
+    "failed": {
+      "network": "L'envoi n'a pas abouti : la connexion a été interrompue. Réessayez dans un instant.",
+      "throttled": "Plusieurs envois viennent d'être faits depuis cet appareil. Patientez un quart d'heure, ou appelez le secrétariat.",
+      "invalid": "Une information n'a pas été acceptée. Vérifiez le formulaire, puis réessayez.",
+      "server": "Le service d'envoi ne répond pas pour le moment.",
+      "fallbackWhatsapp": "Envoyer par WhatsApp à la place",
+      "fallbackCopy": "Préparer un message à transmettre"
+    }
+  }
+}

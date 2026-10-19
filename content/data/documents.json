@@ -1,0 +1,145 @@
+[
+  {
+    "id": "reglement-interieur",
+    "category": "rules",
+    "title": {
+      "fr": "Règlement intérieur",
+      "en": "School rules"
+    },
+    "description": {
+      "fr": "Discipline, tenue, horaires, absences et sanctions.",
+      "en": "Discipline, uniform, timetable, absences and sanctions."
+    },
+    "file": null,
+    "updated": null
+  },
+  {
+    "id": "tenue-et-trousseau",
+    "category": "rules",
+    "title": {
+      "fr": "Tenue de classe et trousseau",
+      "en": "School uniform and kit list"
+    },
+    "description": {
+      "fr": "La tenue de classe, la tenue de sport et l'équipement demandé.",
+      "en": "School uniform, sportswear and required equipment."
+    },
+    "file": null,
+    "updated": null
+  },
+  {
+    "id": "grille-des-frais",
+    "category": "admissions",
+    "title": {
+      "fr": "Grille des frais",
+      "en": "Fee schedule"
+    },
+    "description": {
+      "fr": "Frais d'inscription et de scolarité par niveau, tranche par tranche.",
+      "en": "Registration fee and school fees by level, instalment by instalment."
+    },
+    "file": null,
+    "updated": null,
+    "usesFeeGrid": true
+  },
+  {
+    "id": "fiche-inscription",
+    "category": "admissions",
+    "title": {
+      "fr": "Fiche d'inscription",
+      "en": "Enrolment form"
+    },
+    "description": {
+      "fr": "À imprimer, remplir et déposer au secrétariat avec le dossier.",
+      "en": "Print it, fill it in and hand it in at the school office with the application file."
+    },
+    "file": "/documents/fiche-inscription.pdf",
+    "preview": [
+      "/documents/apercus/fiche-inscription-1.webp"
+    ],
+    "updated": "2026-10-07"
+  },
+  {
+    "id": "pieces-a-fournir",
+    "category": "admissions",
+    "title": {
+      "fr": "Liste des pièces à fournir",
+      "en": "List of documents to provide"
+    },
+    "description": {
+      "fr": "Les pièces du dossier d'inscription, par classe.",
+      "en": "The documents required for enrolment, by class."
+    },
+    "file": null,
+    "updated": null
+  },
+  {
+    "id": "fournitures-francophone",
+    "category": "supplies",
+    "title": {
+      "fr": "Fournitures et manuels, section francophone",
+      "en": "Supplies and textbooks, Francophone section"
+    },
+    "description": {
+      "fr": "La liste par classe, de la 6e à la Terminale.",
+      "en": "The list by class, from 6e to Terminale."
+    },
+    "file": null,
+    "updated": null
+  },
+  {
+    "id": "fournitures-anglophone",
+    "category": "supplies",
+    "title": {
+      "fr": "Fournitures et manuels, section anglophone",
+      "en": "Supplies and textbooks, Anglophone section"
+    },
+    "description": {
+      "fr": "La liste par classe, de Form 1 à Upper Sixth.",
+      "en": "The list by class, from Form 1 to Upper Sixth."
+    },
+    "file": null,
+    "updated": null
+  },
+  {
+    "id": "fournitures-technique",
+    "category": "supplies",
+    "title": {
+      "fr": "Fournitures et outillage, enseignement technique",
+      "en": "Supplies and tools, technical education"
+    },
+    "description": {
+      "fr": "La liste par spécialité, avec l'outillage d'atelier.",
+      "en": "The list by speciality, including workshop tools."
+    },
+    "file": null,
+    "updated": null
+  },
+  {
+    "id": "calendrier-scolaire",
+    "category": "school",
+    "title": {
+      "fr": "Calendrier scolaire à imprimer",
+      "en": "Printable school calendar"
+    },
+    "description": {
+      "fr": "Les dates de l'année sur deux pages, à afficher à la maison.",
+      "en": "The dates of the year on two pages, to pin up at home."
+    },
+    "file": {
+      "fr": "/documents/calendrier-scolaire-2026-2027-fr.pdf",
+      "en": "/documents/school-calendar-2026-2027-en.pdf"
+    },
+    "preview": {
+      "fr": [
+        "/documents/apercus/calendrier-scolaire-2026-2027-fr-1.webp",
+        "/documents/apercus/calendrier-scolaire-2026-2027-fr-2.webp"
+      ],
+      "en": [
+        "/documents/apercus/school-calendar-2026-2027-en-1.webp",
+        "/documents/apercus/school-calendar-2026-2027-en-2.webp"
+      ]
+    },
+    "updated": "2026-10-07"
+  }
+]

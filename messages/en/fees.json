@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "Fees and payment",
+    "description": "Registration fee and school fees at Collège Tomi Fidele by level, instalment schedule, fee calculator and payment by MTN Mobile Money, Orange Money or at the school office."
+  },
+  "hero": {
+    "eyebrow": "Admissions",
+    "title": "Fees and {payment}",
+    "intro": "School fees by level, the instalment schedule, the fee calculator and the payment methods."
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "grille",
+        "label": "Fee schedule"
+      },
+      {
+        "id": "simulateur",
+        "label": "Calculator"
+      },
+      {
+        "id": "paiement",
+        "label": "Payment"
+      },
+      {
+        "id": "a-savoir",
+        "label": "Good to know"
+      }
+    ]
+  },
+  "amountPlaceholder": "[to be provided]",
+  "year": "%year% school year",
+  "registration": {
+    "title": "Registration fee",
+    "new": "Paid once, on first enrolment at the school. [To be confirmed by the school.]",
+    "yearly": "Paid every year, on enrolment."
+  },
+  "grid": {
+    "eyebrow": "Fee schedule",
+    "title": "School fees by {level}",
+    "intro": "School fees are paid in %count% instalments. Amounts are in CFA francs.",
+    "instalments": [
+      "1st instalment",
+      "2nd instalment",
+      "3rd instalment",
+      "4th instalment",
+      "5th instalment",
+      "6th instalment"
+    ],
+    "before": "by %date%",
+    "deadlinePlaceholder": "[deadline]",
+    "total": "Annual total",
+    "special": "Special rate",
+    "sections": {
+      "francophone": "Section francophone",
+      "anglophone": "Anglophone section"
+    },
+    "levels": {
+      "fr-general-1": "General education · first cycle",
+      "fr-general-2": "General education · second cycle",
+      "fr-technical-1": "Technical education · first cycle",
+      "fr-technical-2": "Technical education · second cycle",
+      "en-general-1": "General education · first cycle",
+      "en-general-2": "General education · High School",
+      "en-technical-1": "Technical education · first cycle",
+      "en-technical-2": "Technical education · second cycle"
+    },
+    "download": "Download the fee schedule (PDF)",
+    "downloadMissing": "[Fee schedule PDF, to be provided]",
+    "countPlaceholder": "[N]"
+  },
+  "simulator": {
+    "eyebrow": "Calculator",
+    "title": "Work out the fees for {your child}",
+    "intro": "Choose the section, stream and class: the calculator shows the instalment schedule and the total for the year.",
+    "child": "Child %n%",
+    "section": "Section",
+    "stream": "Stream",
+    "className": "Class",
+    "streams": {
+      "general": "General",
+      "technical": "Technical"
+    },
+    "cycles": [
+      "First cycle",
+      "Second cycle"
+    ],
+    "isNew": "First enrolment at the school",
+    "add": "Add a child",
+    "remove": "Remove child %n%",
+    "result": "Your estimate",
+    "tuition": "School fees",
+    "registrationLine": "Registration fee",
+    "schedule": "Schedule",
+    "atRegistration": "On enrolment",
+    "atRegistrationDetail": "Registration fee and 1st instalment",
+    "total": "Total for the year",
+    "pending": "The amounts have not been published yet. The calculator will do the sums as soon as the school provides them.",
+    "disclaimer": "This is an estimate: only the school's official fee schedule is binding.",
+    "share": "Share on WhatsApp",
+    "shareTitle": "Fee estimate · %school%",
+    "apply": "Pre-register my child"
+  },
+  "payment": {
+    "eyebrow": "Payment",
+    "title": "How to {pay} school fees",
+    "intro": "Always give the student's name and class, and keep the confirmation message.",
+    "numberLabel": "School's number",
+    "holderLabel": "Account name",
+    "numberPlaceholder": "[6XX XX XX XX]",
+    "holderPlaceholder": "[Name shown during the transfer]",
+    "steps": [
+      "Dial %ussd% and choose money transfer.",
+      "Enter the school's number and the instalment amount.",
+      "Check the account name before confirming.",
+      "Send the confirmation to the school office, with the student's name and class."
+    ],
+    "cash": {
+      "title": "At the school office",
+      "label": "Cash desk hours",
+      "value": "[Days and times]",
+      "steps": [
+        "Come with the student's name and class.",
+        "Pay the instalment in cash.",
+        "Keep the receipt given by the school."
+      ]
+    },
+    "warning": {
+      "title": "Before confirming a transfer",
+      "text": "Check that the name shown on your phone is the school's. If you have any doubt about a number, call the school office before paying."
+    }
+  },
+  "notes": {
+    "eyebrow": "Good to know",
+    "title": "What you need to {know}",
+    "items": [
+      "[Rule for examination classes, to be provided.]",
+      "[What the fees do and do not include, to be provided.]",
+      "[Any discounts: siblings, payment in one go.]"
+    ]
+  },
+  "cta": {
+    "title": "Ready to {pre-register} your child?",
+    "text": "The form takes two minutes, then the school office calls you back.",
+    "primary": "Pre-register my child",
+    "secondary": "Ask a question"
+  }
+}

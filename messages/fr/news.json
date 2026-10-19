@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Actualités",
+    "description": "Les actualités du Collège Tomi Fidele : résultats, événements sportifs et culturels, communiqués et vie scolaire."
+  },
+  "hero": {
+    "eyebrow": "Actualités",
+    "title": "La vie du {collège}",
+    "intro": "Résultats, événements, communiqués : restez informé de ce qui se passe au collège."
+  },
+  "filters": {
+    "label": "Filtrer par rubrique",
+    "all": "Toutes"
+  },
+  "categories": {
+    "academic": "Académique",
+    "sport": "Sport",
+    "culture": "Culture",
+    "announcement": "Communiqué",
+    "life": "Vie scolaire"
+  },
+  "featured": "À la une",
+  "listTitle": "Toutes les actualités",
+  "readMore": "Lire la suite",
+  "more": "Afficher plus d'actualités",
+  "empty": "Aucune actualité dans cette rubrique pour l'instant.",
+  "datePlaceholder": "[Date de publication]",
+  "coverRatio": "16:9",
+  "article": {
+    "back": "Toutes les actualités",
+    "published": "Publié le %date%",
+    "readingTime": "%minutes% min de lecture",
+    "coverWord": "Photo de couverture",
+    "photoRatio": "4:3",
+    "shareText": "%title%\n%school%",
+    "sample": {
+      "title": "Article modèle",
+      "text": "Cette page montre la mise en page d'une actualité. Le texte entre crochets se remplace dans le fichier content/news.ts."
+    },
+    "related": {
+      "eyebrow": "À lire aussi",
+      "title": "D'autres {actualités}"
+    }
+  }
+}

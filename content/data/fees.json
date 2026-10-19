@@ -1,0 +1,70 @@
+{
+  "deadlines": [
+    null,
+    null,
+    null
+  ],
+  "registration": {
+    "amount": null,
+    "newStudentsOnly": true
+  },
+  "tuition": {
+    "fr-general-1": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "fr-general-2": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "fr-technical-1": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "fr-technical-2": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "en-general-1": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "en-general-2": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "en-technical-1": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    },
+    "en-technical-2": {
+      "instalments": [
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "gridPdf": null
+}

@@ -1,0 +1,15 @@
+{
+  "mobileMoney": [
+    {
+      "id": "mtn",
+      "number": null,
+      "holder": null
+    },
+    {
+      "id": "orange",
+      "number": null,
+      "holder": null
+    }
+  ],
+  "cashDesk": true
+}

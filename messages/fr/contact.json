@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Contact",
+    "description": "Contacter le Collège Tomi Fidele : adresse, téléphones, WhatsApp, email, heures d'ouverture du secrétariat, plan d'accès et formulaire de contact."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Contactez le {collège}",
+    "intro": "Le secrétariat répond à vos questions par téléphone, par WhatsApp ou sur place."
+  },
+  "cards": {
+    "address": "Adresse",
+    "phones": "Téléphones",
+    "messaging": "WhatsApp et email",
+    "directions": "Voir l'itinéraire"
+  },
+  "form": {
+    "eyebrow": "Écrivez-nous",
+    "title": "Une question ? {Écrivez-nous}",
+    "intro": "Votre message arrive directement au secrétariat, qui vous répond.",
+    "required": "Les champs marqués d'un astérisque sont obligatoires.",
+    "fields": {
+      "name": {
+        "label": "Nom complet",
+        "error": "Indiquez votre nom."
+      },
+      "phone": {
+        "label": "Téléphone",
+        "hint": "Numéro camerounais à 9 chiffres, par exemple 6 77 12 34 56.",
+        "error": "Indiquez un numéro camerounais à 9 chiffres."
+      },
+      "subject": {
+        "label": "Sujet"
+      },
+      "message": {
+        "label": "Message",
+        "error": "Écrivez votre message."
+      }
+    },
+    "subjects": [
+      "Demande d'information",
+      "Inscription",
+      "Rendez-vous",
+      "Réclamation",
+      "Autre"
+    ],
+    "submit": "Envoyer mon message",
+    "errorSummary": "Le formulaire n'est pas complet : corrigez les champs signalés en rouge.",
+    "privacy": "Votre message est transmis au seul secrétariat du collège et effacé au bout de 12 mois.",
+    "template": "Bonjour, je vous écris depuis le site du %school%.\n\nSujet : %subject%\nNom : %name%\nTéléphone : %phone%\n\n%message%",
+    "emailSubject": "%subject% · site du %school%",
+    "done": {
+      "title": "Votre message est prêt",
+      "sent": "WhatsApp s'ouvre avec votre message. Il ne reste qu'à appuyer sur Envoyer.",
+      "open": "Ouvrir WhatsApp",
+      "noNumber": "Le numéro WhatsApp du secrétariat n'est pas encore en ligne. Copiez ce message et transmettez-le au collège.",
+      "copy": "Copier le message",
+      "copied": "Message copié",
+      "edit": "Modifier mon message",
+      "email": "Envoyer par email"
+    },
+    "whatsappOnly": {
+      "intro": "Votre message s'ouvre dans WhatsApp, prêt à être envoyé au secrétariat.",
+      "privacy": "Votre message part uniquement vers WhatsApp : le site ne l'enregistre pas.",
+      "submit": "Envoyer par WhatsApp"
+    },
+    "sending": "Envoi en cours…",
+    "consent": {
+      "label": "J'accepte que le collège enregistre ces informations pour me répondre.",
+      "link": "Comment elles sont utilisées",
+      "error": "Cochez cette case pour envoyer le message."
+    },
+    "saved": {
+      "title": "Message envoyé",
+      "callback": "Le secrétariat vous répond au %phone%.",
+      "whatsapp": "Prévenir aussi sur WhatsApp",
+      "again": "Écrire un autre message"
+    },
+    "failed": {
+      "network": "L'envoi n'a pas abouti : la connexion a été interrompue. Réessayez dans un instant.",
+      "throttled": "Plusieurs envois viennent d'être faits depuis cet appareil. Patientez un quart d'heure, ou appelez le secrétariat.",
+      "invalid": "Une information n'a pas été acceptée. Vérifiez le formulaire, puis réessayez.",
+      "server": "Le service d'envoi ne répond pas pour le moment.",
+      "fallbackWhatsapp": "Envoyer par WhatsApp à la place",
+      "fallbackCopy": "Préparer un message à transmettre"
+    }
+  },
+  "access": {
+    "title": "Plan d'accès"
+  },
+  "hours": {
+    "title": "Heures d'ouverture du secrétariat",
+    "placeholder": "[00 h 00 à 00 h 00]"
+  }
+}

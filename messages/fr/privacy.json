@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Confidentialité",
+    "description": "Ce que le site du Collège Tomi Fidele fait de vos données : aucun compte visiteur, aucun suivi publicitaire, des demandes lues par le seul secrétariat et effacées après 12 mois, une carte chargée à la demande."
+  },
+  "hero": {
+    "eyebrow": "Confidentialité",
+    "title": "Vos données et {ce site}",
+    "intro": "Ce site présente le collège. Il ne crée pas de compte visiteur et n'installe aucun traceur publicitaire. Les demandes envoyées par ses formulaires sont lues par le seul secrétariat."
+  },
+  "updated": "Dernière mise à jour : %date%",
+  "summary": {
+    "eyebrow": "En bref",
+    "title": "L'essentiel en {trois points}",
+    "items": [
+      {
+        "title": "Aucun compte, aucun suivi",
+        "text": "Vous consultez le site sans vous identifier. Il n'utilise ni cookie publicitaire ni outil de mesure d'audience."
+      },
+      {
+        "title": "Des demandes lues par le secrétariat",
+        "text": "La préinscription et le formulaire de contact arrivent au secrétariat du collège, et à lui seul. Elles sont effacées au bout de 12 mois."
+      },
+      {
+        "title": "Une carte à la demande",
+        "text": "La carte Google Maps ne se charge que si vous touchez « Afficher la carte »."
+      }
+    ]
+  },
+  "toc": "Sommaire",
+  "sections": [
+    {
+      "id": "responsable",
+      "title": "Qui est responsable de ce site ?",
+      "paragraphs": [
+        "Le site est édité par le Collège Tomi Fidele. [Nom et fonction du responsable de la publication, à fournir.]",
+        "Pour toute question sur vos données : [email ou téléphone du secrétariat, à fournir]."
+      ],
+      "points": []
+    },
+    {
+      "id": "formulaires",
+      "title": "Préinscription et formulaire de contact",
+      "paragraphs": [
+        "Quand vous envoyez une préinscription ou un message, vos réponses sont enregistrées dans l'espace de gestion du collège, protégé par mot de passe. Seuls le secrétariat, la direction et l'administrateur technique du site peuvent les lire.",
+        "Elles servent uniquement à traiter votre demande : vous rappeler, préparer un dossier d'inscription, répondre à une question. Elles ne sont ni vendues, ni transmises à d'autres organismes.",
+        "L'envoi n'a lieu que si vous cochez la case d'accord. Vous pouvez aussi prévenir le secrétariat sur WhatsApp : ce message-là suit les règles de WhatsApp.",
+        "Pour limiter les envois abusifs, le site retient pendant 24 heures une empreinte de l'appareil utilisé, calculée à partir de son adresse, sans garder cette adresse en clair."
+      ],
+      "points": [
+        "Données concernées : nom de l'élève, classe demandée, nom et téléphone du parent, votre message.",
+        "Destinataires : le secrétariat et la direction du collège.",
+        "Durée de conservation : 12 mois après l'envoi, puis effacement automatique.",
+        "Stockage : base de données Supabase, sur des serveurs situés à Paris (France)."
+      ]
+    },
+    {
+      "id": "appareil",
+      "title": "Ce que le site garde sur votre appareil",
+      "paragraphs": [
+        "Le site mémorise deux choses dans votre navigateur, le temps de votre visite : que vous avez fermé le bandeau d'annonce, et que l'écran d'accueil a déjà été affiché.",
+        "Ces deux repères ne contiennent aucune information personnelle. Ils s'effacent à la fermeture de l'onglet."
+      ],
+      "points": []
+    },
+    {
+      "id": "carte",
+      "title": "La carte et les liens externes",
+      "paragraphs": [
+        "Si vous affichez la carte, elle est fournie par Google Maps : Google reçoit alors votre adresse IP et peut déposer ses propres cookies. Tant que vous ne la demandez pas, rien n'est échangé avec Google.",
+        "Les boutons WhatsApp, Facebook, Google Agenda et les liens vers les réseaux sociaux du collège ouvrent des services extérieurs, qui appliquent leurs propres règles de confidentialité.",
+        "Le partage d'une actualité ou d'une date ne transmet que le lien que vous choisissez d'envoyer."
+      ],
+      "points": []
+    },
+    {
+      "id": "hebergement",
+      "title": "Hébergement et journaux techniques",
+      "paragraphs": [
+        "Comme tout site, celui-ci est servi par un hébergeur, qui tient des journaux techniques (adresse IP, date, page demandée) pour assurer la sécurité et le bon fonctionnement du service. Le collège ne s'en sert pas pour identifier les visiteurs.",
+        "Hébergeur du site : Netlify. Base de données des demandes : Supabase (serveurs à Paris). [Adresses légales des prestataires, à confirmer à la mise en ligne.]"
+      ],
+      "points": []
+    },
+    {
+      "id": "photos",
+      "title": "Photos des élèves",
+      "paragraphs": [
+        "Les photos publiées sur le site montrent la vie du collège. [Règle du collège à préciser : accord des parents recueilli à l'inscription, pas de nom associé à une photo d'élève.]",
+        "Un parent peut demander le retrait d'une photo de son enfant en écrivant au secrétariat."
+      ],
+      "points": []
+    },
+    {
+      "id": "droits",
+      "title": "Vos droits",
+      "paragraphs": [
+        "Vous pouvez demander à consulter, corriger ou faire supprimer les informations que vous avez transmises au collège, et vous opposer à leur utilisation.",
+        "Il suffit d'écrire ou de vous présenter au secrétariat. Le collège vous répond dans les meilleurs délais."
+      ],
+      "points": []
+    }
+  ],
+  "cta": {
+    "title": "Une question sur vos {données} ?",
+    "text": "Le secrétariat vous répond par téléphone, par WhatsApp ou sur place.",
+    "primary": "Contacter le secrétariat",
+    "secondary": "Retour à l'accueil"
+  }
+}

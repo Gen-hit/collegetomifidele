@@ -1,0 +1,95 @@
+[
+  {
+    "slug": "modele-academique",
+    "date": null,
+    "category": "academic",
+    "featured": true,
+    "sample": true,
+    "cover": null,
+    "coverCaption": {
+      "fr": "Cérémonie ou remise de prix",
+      "en": "Ceremony or prize-giving"
+    },
+    "title": {
+      "fr": "[Titre de l'actualité, sur deux lignes au maximum]",
+      "en": "[News headline, two lines at most]"
+    },
+    "summary": {
+      "fr": "[Chapeau : une ou deux phrases qui résument l'information pour le parent pressé.]",
+      "en": "[Standfirst: one or two sentences that sum up the news for a parent in a hurry.]"
+    },
+    "body": {
+      "fr": "[Premier paragraphe de l'article : les faits, la date, le lieu, les personnes concernées.]\n\n[Deuxième paragraphe : le déroulement, les résultats ou les décisions à retenir.]\n\n## [Intertitre]\n\n[Troisième paragraphe : ce que cela change pour les élèves et les parents.]\n\n![Légende de la première photo]()\n![Légende de la deuxième photo]()\n\n> [Citation du Principal, d'un enseignant ou d'un élève.]\n> — [Nom et fonction]\n\n- [Premier point à retenir]\n- [Deuxième point à retenir]\n- [Troisième point à retenir]",
+      "en": "[First paragraph of the article: the facts, the date, the place, the people involved.]\n\n[Second paragraph: how it went, the results or the decisions to remember.]\n\n## [Subheading]\n\n[Third paragraph: what this changes for students and parents.]\n\n![Caption of the first photo]()\n![Caption of the second photo]()\n\n> [Quote from the Principal, a teacher or a student.]\n> — [Name and role]\n\n- [First key point]\n- [Second key point]\n- [Third key point]"
+    }
+  },
+  {
+    "slug": "modele-sport",
+    "date": null,
+    "category": "sport",
+    "sample": true,
+    "cover": null,
+    "coverCaption": {
+      "fr": "Activité sportive",
+      "en": "Sports activity"
+    },
+    "title": {
+      "fr": "[Titre de l'actualité sportive]",
+      "en": "[Sports news headline]"
+    },
+    "summary": {
+      "fr": "[Résumé en deux lignes : la compétition, le résultat, les élèves concernés.]",
+      "en": "[Two-line summary: the competition, the result, the students involved.]"
+    },
+    "body": {
+      "fr": "[Premier paragraphe : la compétition, la date, le lieu et le résultat.]\n\n[Deuxième paragraphe : les élèves et les encadrants à féliciter.]",
+      "en": "[First paragraph: the competition, the date, the place and the result.]\n\n[Second paragraph: the students and staff to congratulate.]"
+    }
+  },
+  {
+    "slug": "modele-culture",
+    "date": null,
+    "category": "culture",
+    "sample": true,
+    "cover": null,
+    "coverCaption": {
+      "fr": "Événement culturel",
+      "en": "Cultural event"
+    },
+    "title": {
+      "fr": "[Titre de l'actualité culturelle]",
+      "en": "[Cultural news headline]"
+    },
+    "summary": {
+      "fr": "[Résumé en deux lignes : l'événement, la date, ce qu'il faut en retenir.]",
+      "en": "[Two-line summary: the event, the date, what to remember.]"
+    },
+    "body": {
+      "fr": "[Premier paragraphe : l'événement, la date, le lieu et les classes concernées.]\n\n[Deuxième paragraphe : le programme et les moments forts.]",
+      "en": "[First paragraph: the event, the date, the place and the classes involved.]\n\n[Second paragraph: the programme and the highlights.]"
+    }
+  },
+  {
+    "slug": "modele-communique",
+    "date": null,
+    "category": "announcement",
+    "sample": true,
+    "cover": null,
+    "coverCaption": {
+      "fr": "Façade ou cour du collège",
+      "en": "School front or courtyard"
+    },
+    "title": {
+      "fr": "[Titre du communiqué]",
+      "en": "[Notice headline]"
+    },
+    "summary": {
+      "fr": "[Résumé en deux lignes : la décision, la date d'effet, les personnes concernées.]",
+      "en": "[Two-line summary: the decision, when it takes effect, who is affected.]"
+    },
+    "body": {
+      "fr": "[Premier paragraphe : l'objet du communiqué et la date d'effet.]\n\n[Deuxième paragraphe : ce que les parents et les élèves doivent faire.]",
+      "en": "[First paragraph: the subject of the notice and when it takes effect.]\n\n[Second paragraph: what parents and students need to do.]"
+    }
+  }
+]

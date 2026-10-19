@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "Collège Tomi Fidele · Enseignement général et technique",
+    "description": "Collège d'enseignement général et technique à sections francophone et anglophone. Programmes, admissions, frais de scolarité, actualités et contacts."
+  },
+  "common": {
+    "skip": "Aller au contenu",
+    "school": "Collège",
+    "home": "Accueil",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "menuTitle": "Menu",
+    "language": "Langue du site",
+    "preinscription": "Préinscription",
+    "enroll": "Préinscrire mon enfant",
+    "overview": "Vue d'ensemble",
+    "photo": "Photo",
+    "toProvide": "à fournir",
+    "phonePlaceholder": "[+237 6XX XX XX XX]",
+    "emailPlaceholder": "[Email du secrétariat]",
+    "addressPlaceholder": "[Quartier, rue ou repère]",
+    "cityPlaceholder": "[Ville], Cameroun",
+    "hoursPlaceholder": "[Jours et horaires d'ouverture]",
+    "valuePlaceholder": "[à fournir]",
+    "breadcrumb": "Fil d'Ariane",
+    "yearPlaceholder": "[année scolaire]",
+    "closed": "Fermé",
+    "hoursLine": "%days% : %hours%",
+    "days": { "weekdays": "Lundi à vendredi", "saturday": "Samedi", "sunday": "Dimanche" },
+    "share": {
+      "title": "Partager :",
+      "label": "Partager",
+      "whatsapp": "WhatsApp",
+      "facebook": "Facebook",
+      "copy": "Copier le lien",
+      "copied": "Lien copié",
+      "more": "Autres applications"
+    }
+  },
+  "announcement": {
+    "text": "Les inscriptions %year% sont ouvertes.",
+    "cta": "Voir les admissions",
+    "dismiss": "Fermer l'annonce"
+  },
+  "nav": {
+    "about": { "label": "Le collège" },
+    "aboutOverview": { "label": "Présentation", "desc": "Qui nous sommes et ce qui nous distingue" },
+    "aboutHistory": { "label": "Histoire et valeurs", "desc": "Les grandes étapes, la mission, la devise" },
+    "principal": { "label": "Mot du Principal", "desc": "Le message du chef d'établissement" },
+    "team": { "label": "Équipe de direction", "desc": "Les responsables qui encadrent les élèves" },
+    "programmes": { "label": "Programmes" },
+    "francophone": { "label": "Section francophone", "desc": "De la 6e à la Terminale" },
+    "anglophone": { "label": "Anglophone section", "desc": "From Form 1 to Upper Sixth" },
+    "technique": { "label": "Enseignement technique", "desc": "Spécialités, ateliers et diplômes" },
+    "results": { "label": "Résultats aux examens", "desc": "Les taux de réussite par session" },
+    "facilities": { "label": "Infrastructures" },
+    "campus": { "label": "Vie scolaire" },
+    "clubs": { "label": "Clubs et activités", "desc": "Apprendre aussi en dehors de la classe" },
+    "rules": { "label": "Règlement et tenue", "desc": "Discipline, uniforme, horaires" },
+    "calendar": { "label": "Calendrier scolaire", "desc": "Évaluations, examens, fêtes et événements" },
+    "gallery": { "label": "Galerie photo", "desc": "Le collège en images" },
+    "documents": { "label": "Documents", "desc": "Règlement, fournitures et fiches à télécharger" },
+    "news": { "label": "Actualités" },
+    "admissions": { "label": "Admissions" },
+    "procedure": { "label": "Procédure", "desc": "S'inscrire en quatre étapes" },
+    "fees": { "label": "Frais et paiement", "desc": "Scolarité par tranche, MoMo et Orange Money" },
+    "simulator": { "label": "Simulateur de frais", "desc": "Calculez le total pour votre enfant" },
+    "apply": { "label": "Préinscription", "desc": "Le formulaire en deux minutes" },
+    "faq": { "label": "Questions fréquentes", "desc": "Les réponses aux questions des parents" },
+    "contact": { "label": "Contact" },
+    "privacy": { "label": "Confidentialité" }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Enseignement général et technique",
+      "title": "Former des élèves {disciplinés}, travailleurs et prêts à réussir",
+      "text": "Un collège à deux sections, francophone et anglophone, qui accompagne chaque élève de la classe d'entrée jusqu'à l'examen final.",
+      "primary": "Préinscrire mon enfant",
+      "secondary": "Découvrir le collège",
+      "photoLabel": "Façade du collège ou élèves en classe · format 4:3",
+      "badgeTitle": "Deux sections",
+      "badgeText": "Francophone et anglophone"
+    },
+    "stats": {
+      "founded": "Année de création",
+      "students": "Élèves inscrits",
+      "teachers": "Enseignants",
+      "success": "Réussite aux examens",
+      "sections": "Sections : francophone et anglophone"
+    },
+    "principal": {
+      "eyebrow": "Le mot du Principal",
+      "title": "Bienvenue au {Collège Tomi Fidele}",
+      "text": "[Texte du Principal, à fournir : quatre ou cinq phrases sur le projet éducatif du collège, la discipline, le travail et l'accompagnement de chaque élève jusqu'à la réussite.]",
+      "namePlaceholder": "[Nom du Principal]",
+      "link": "Lire le mot du Principal",
+      "photoLabel": "Portrait du Principal · format 3:4"
+    },
+    "strengths": {
+      "eyebrow": "Pourquoi nous choisir",
+      "title": "Ce qui fait la {force} du collège",
+      "items": [
+        { "title": "Deux sections", "text": "La section francophone et la section anglophone dans un même établissement." },
+        { "title": "Général et technique", "text": "Les deux filières, du premier cycle jusqu'à l'examen final." },
+        { "title": "[Atout 3]", "text": "[À fournir par le collège, par exemple le suivi des élèves.]" },
+        { "title": "[Atout 4]", "text": "[À fournir par le collège, par exemple le cadre de travail.]" }
+      ]
+    },
+    "programmes": {
+      "eyebrow": "Nos programmes",
+      "title": "Deux sections, le {général} et le {technique}",
+      "intro": "Un parcours complet dans les deux sous-systèmes éducatifs du Cameroun.",
+      "items": [
+        {
+          "track": "Francophone",
+          "title": "Section francophone",
+          "levels": "De la 6e à la Terminale",
+          "text": "Préparation au BEPC, au Probatoire et au Baccalauréat.",
+          "link": "Découvrir la section",
+          "photo": "Classe de la section francophone · 16:10"
+        },
+        {
+          "track": "Anglophone",
+          "title": "Anglophone section",
+          "levels": "From Form 1 to Upper Sixth",
+          "text": "Preparation for the GCE Ordinary and Advanced Levels.",
+          "link": "Discover the section",
+          "photo": "Classe de la section anglophone · 16:10"
+        },
+        {
+          "track": "Technique",
+          "title": "Enseignement technique",
+          "levels": "Dans les deux sections",
+          "text": "Des spécialités techniques avec travaux pratiques. [Spécialités à fournir.]",
+          "link": "Voir les spécialités",
+          "photo": "Atelier ou salle de travaux pratiques · 16:10"
+        }
+      ]
+    },
+    "facilities": {
+      "eyebrow": "Nos installations",
+      "title": "Un cadre pensé pour {apprendre}",
+      "items": ["Laboratoires", "Salle informatique", "Ateliers techniques", "Bibliothèque"],
+      "cta": "Visiter les infrastructures"
+    },
+    "admissions": {
+      "eyebrow": "Admissions %year%",
+      "title": "Les inscriptions sont {ouvertes}",
+      "text": "Consultez les frais, les dates de concours et préinscrivez votre enfant en quelques minutes.",
+      "cards": [
+        { "label": "Frais d'inscription", "value": "[00 000 F CFA]", "note": "[Modalité à préciser]" },
+        { "label": "Frais de scolarité", "value": "[000 000 F CFA]", "note": "Paiement échelonné en [N] tranches" },
+        { "label": "Prochain concours", "value": "[Date]", "note": "[Classe concernée]" }
+      ],
+      "primary": "Préinscrire mon enfant",
+      "secondary": "Voir les frais et le paiement"
+    },
+    "news": {
+      "eyebrow": "Actualités",
+      "title": "La vie du {collège}",
+      "cta": "Toutes les actualités"
+    },
+    "testimonial": {
+      "eyebrow": "Témoignages",
+      "title": "La parole aux {parents} et aux élèves",
+      "quote": "[Témoignage réel d'un parent ou d'un ancien élève, à fournir. Ce bloc n'apparaît sur le site que si un témoignage authentique est disponible.]",
+      "author": "[Nom], [parent d'élève en classe de …]"
+    },
+    "findUs": {
+      "eyebrow": "Nous trouver",
+      "title": "Venez nous {rendre visite}",
+      "text": "Le secrétariat vous accueille aux heures d'ouverture. Ouvrez la carte pour voir l'emplacement exact du collège.",
+      "addressLabel": "Adresse",
+      "hoursLabel": "Horaires du secrétariat",
+      "phoneLabel": "Téléphone",
+      "load": "Afficher la carte",
+      "loadNote": "La carte se charge à la demande pour économiser vos données.",
+      "mapTitle": "Carte de localisation du Collège Tomi Fidele",
+      "directions": "Itinéraire",
+      "open": "Ouvrir dans Google Maps"
+    },
+    "cta": {
+      "title": "Une question ? Le secrétariat vous {répond}",
+      "text": "Écrivez-nous sur WhatsApp ou appelez le collège aux heures d'ouverture.",
+      "primary": "Nous contacter",
+      "secondary": "Écrire sur WhatsApp"
+    }
+  },
+  "footer": {
+    "description": "Collège d'enseignement général et technique, sections francophone et anglophone.",
+    "explore": "Découvrir",
+    "practical": "Pratique",
+    "contact": "Contact",
+    "follow": "Suivez le collège",
+    "rights": "Tous droits réservés.",
+    "social": {
+      "facebook": "Page Facebook du collège",
+      "instagram": "Compte Instagram du collège",
+      "youtube": "Chaîne YouTube du collège",
+      "tiktok": "Compte TikTok du collège",
+      "whatsappChannel": "Chaîne WhatsApp du collège"
+    }
+  },
+  "viewer": {
+    "title": "Visionneuse",
+    "close": "Fermer la visionneuse",
+    "previous": "Image précédente",
+    "next": "Image suivante",
+    "position": "%index% sur %total%",
+    "open": "Agrandir : %caption%",
+    "goTo": "Afficher : %caption%",
+    "thumbnails": "Toutes les images",
+    "missing": "Cette photo sera ajoutée par le collège."
+  },
+  "follow": {
+    "eyebrow": "Restez informé",
+    "title": "Suivez le {collège}",
+    "text": "Retrouvez les annonces et les photos du collège sur ses canaux officiels."
+  },
+  "help": {
+    "open": "Ouvrir l'aide",
+    "close": "Fermer l'aide",
+    "label": "Aide",
+    "assistant": "Poser une question",
+    "assistantDesc": "L'assistant du collège",
+    "whatsapp": "Écrire sur WhatsApp",
+    "whatsappDesc": "Le secrétariat vous répond",
+    "whatsappMessage": "Bonjour, je souhaite avoir des informations sur le Collège Tomi Fidele."
+  },
+  "assistant": {
+    "title": "Assistant du collège",
+    "subtitle": "Réponses guidées",
+    "close": "Fermer l'assistant",
+    "welcome": "Bonjour ! Je suis l'assistant du Collège Tomi Fidele. Choisissez un sujet ci-dessous pour trouver rapidement l'information.",
+    "fallback": "Je ne peux pas encore répondre aux questions libres : l'assistant n'est pas configuré. Choisissez un sujet ci-dessous, ou écrivez au secrétariat sur WhatsApp.",
+    "topicsLabel": "Sujets fréquents",
+    "inputLabel": "Votre question",
+    "inputPlaceholder": "Écrivez votre question…",
+    "send": "Envoyer",
+    "whatsapp": "Écrire au secrétariat",
+    "topics": [
+      { "id": "fees", "label": "Frais de scolarité", "answer": "Les frais d'inscription et de scolarité, tranche par tranche, sont détaillés sur la page Frais et paiement.", "path": "/admissions/fees", "linkLabel": "Voir les frais" },
+      { "id": "enroll", "label": "Inscrire mon enfant", "answer": "L'inscription se fait en quatre étapes. Vous pouvez commencer par la préinscription en ligne, qui prend deux minutes.", "path": "/admissions", "linkLabel": "Voir la procédure" },
+      { "id": "programmes", "label": "Classes et filières", "answer": "Le collège propose l'enseignement général et l'enseignement technique, en section francophone et en section anglophone.", "path": "/programmes", "linkLabel": "Voir les programmes" },
+      { "id": "calendar", "label": "Dates et calendrier", "answer": "Les évaluations, examens, fêtes et événements de l'année sont réunis dans le calendrier scolaire.", "path": "/calendar", "linkLabel": "Voir le calendrier" },
+      { "id": "location", "label": "Où se trouve le collège ?", "answer": "L'emplacement exact du collège, avec l'itinéraire, se trouve sur la page Contact.", "path": "/contact", "linkLabel": "Voir la carte" }
+    ]
+  },
+  "notFound": {
+    "eyebrow": "Erreur 404",
+    "title": "Cette page est {introuvable}",
+    "text": "L'adresse a peut-être changé, ou le lien est incomplet. Voici où trouver ce que vous cherchez.",
+    "back": "Retour à l'accueil",
+    "contact": "Contacter le secrétariat",
+    "linksTitle": "Pages les plus consultées"
+  }
+}

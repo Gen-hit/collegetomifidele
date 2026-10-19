@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Programmes",
+    "description": "Les programmes du Collège Tomi Fidele : section francophone, section anglophone, enseignement général et enseignement technique, de la classe d'entrée à l'examen final."
+  },
+  "hero": {
+    "eyebrow": "Programmes",
+    "title": "Nos programmes {académiques}",
+    "intro": "Deux sections, deux filières : un parcours complet dans les deux sous-systèmes éducatifs du Cameroun."
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "sections",
+        "label": "Les deux sections"
+      },
+      {
+        "id": "correspondance",
+        "label": "Correspondance des classes"
+      },
+      {
+        "id": "technique",
+        "label": "Enseignement technique"
+      },
+      {
+        "id": "resultats",
+        "label": "Résultats"
+      }
+    ]
+  },
+  "sections": {
+    "eyebrow": "Les deux sections",
+    "title": "Choisir la {section} de votre enfant",
+    "intro": "Le collège suit les programmes officiels du Ministère des Enseignements Secondaires. Chaque section propose l'enseignement général et l'enseignement technique, de la classe d'entrée jusqu'à l'examen final.",
+    "items": [
+      {
+        "track": "francophone",
+        "badge": "Francophone",
+        "title": "Section francophone",
+        "sub": "De la 6e à la Terminale",
+        "groups": [
+          {
+            "label": "Enseignement général",
+            "value": "6e · 5e · 4e · 3e · 2nde · 1re · Terminale"
+          },
+          {
+            "label": "Enseignement technique",
+            "value": "1re à 4e année · 2nde · 1re · Terminale"
+          },
+          {
+            "label": "Examens officiels",
+            "value": "BEPC, CAP, Probatoire, Baccalauréat"
+          }
+        ],
+        "link": "Découvrir la section francophone",
+        "photo": "Classe de la section francophone · 16:9"
+      },
+      {
+        "track": "anglophone",
+        "badge": "Anglophone",
+        "title": "Anglophone section",
+        "sub": "From Form 1 to Upper Sixth",
+        "groups": [
+          {
+            "label": "General education",
+            "value": "Form 1 · Form 2 · Form 3 · Form 4 · Form 5 · Lower Sixth · Upper Sixth"
+          },
+          {
+            "label": "Technical education",
+            "value": "Form 1 to Form 5 · Lower Sixth · Upper Sixth"
+          },
+          {
+            "label": "Official examinations",
+            "value": "GCE Ordinary Level, GCE Advanced Level, GCE Technical"
+          }
+        ],
+        "link": "Discover the Anglophone section",
+        "photo": "Classe de la section anglophone · 16:9"
+      }
+    ]
+  },
+  "pathway": {
+    "eyebrow": "Correspondance des classes",
+    "title": "Deux sous-systèmes, {sept années} d'études",
+    "intro": "Les deux sections mènent à l'enseignement supérieur en sept ans. Ce tableau montre, année par année, la classe équivalente dans chaque section, en enseignement général.",
+    "caption": "Correspondance des classes entre la section francophone et la section anglophone",
+    "year": "Année",
+    "yearShort": "An",
+    "fr": "Section francophone",
+    "en": "Anglophone section",
+    "examWord": "Examen",
+    "rows": [
+      {
+        "fr": "6e",
+        "frExam": "",
+        "en": "Form 1",
+        "enExam": ""
+      },
+      {
+        "fr": "5e",
+        "frExam": "",
+        "en": "Form 2",
+        "enExam": ""
+      },
+      {
+        "fr": "4e",
+        "frExam": "",
+        "en": "Form 3",
+        "enExam": ""
+      },
+      {
+        "fr": "3e",
+        "frExam": "BEPC",
+        "en": "Form 4",
+        "enExam": ""
+      },
+      {
+        "fr": "2nde",
+        "frExam": "",
+        "en": "Form 5",
+        "enExam": "GCE O Level"
+      },
+      {
+        "fr": "1re",
+        "frExam": "Probatoire",
+        "en": "Lower Sixth",
+        "enExam": ""
+      },
+      {
+        "fr": "Terminale",
+        "frExam": "Baccalauréat",
+        "en": "Upper Sixth",
+        "enExam": "GCE A Level"
+      }
+    ],
+    "note": "Correspondance indicative, par année d'étude. Pour un changement de section en cours de scolarité, renseignez-vous auprès du secrétariat."
+  },
+  "technique": {
+    "eyebrow": "Enseignement technique",
+    "title": "Apprendre un {métier}, préparer un diplôme",
+    "text": "[Présentation de l'enseignement technique, à fournir : les domaines proposés, les ateliers, la part de pratique.]",
+    "photo": "Élèves en atelier ou en travaux pratiques · format 4:3",
+    "specialitiesLabel": "Spécialités",
+    "specialities": [
+      "[Spécialité 1]",
+      "[Spécialité 2]",
+      "[Spécialité 3]",
+      "[Spécialité 4]",
+      "[Spécialité 5]"
+    ],
+    "link": "Voir l'enseignement technique"
+  },
+  "results": {
+    "eyebrow": "Résultats",
+    "title": "Nos {résultats} aux examens officiels",
+    "text": "[Session et source des chiffres à préciser. Ce bloc n'apparaît que si le collège fournit ses résultats.]",
+    "link": "Voir tous les résultats"
+  },
+  "cta": {
+    "title": "Prêt à {inscrire} votre enfant ?",
+    "text": "Consultez les frais de scolarité et la procédure d'admission.",
+    "primary": "Voir les admissions",
+    "secondary": "Poser une question"
+  }
+}

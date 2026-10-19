@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Calendrier scolaire",
+    "description": "Le calendrier de l'année scolaire du Collège Tomi Fidele : rentrées, trimestres, évaluations, examens officiels, congés, jours fériés, journées internationales et fêtes du collège."
+  },
+  "hero": {
+    "eyebrow": "Calendrier scolaire",
+    "title": "L'année {%year%}, date par date",
+    "intro": "Rentrées, évaluations, examens officiels, congés, journées internationales et fêtes du collège : toutes les dates au même endroit, à partager et à ajouter à votre agenda.",
+    "shareText": "Calendrier scolaire %year% du %school%"
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "prochaines-dates",
+        "label": "Prochaines dates"
+      },
+      {
+        "id": "calendrier",
+        "label": "Tout le calendrier"
+      },
+      {
+        "id": "a-confirmer",
+        "label": "Dates à confirmer"
+      }
+    ]
+  },
+  "next": {
+    "eyebrow": "À venir",
+    "title": "Les {prochaines dates}",
+    "empty": "Aucune date à venir pour cette année scolaire.",
+    "today": "Aujourd'hui",
+    "tomorrow": "Demain",
+    "ongoing": "En cours",
+    "inDays": "Dans %count% jours"
+  },
+  "board": {
+    "eyebrow": "Calendrier %year%",
+    "title": "Toutes les {dates} de l'année",
+    "intro": "Filtrez par catégorie, passez de l'agenda à la vue de l'année, partagez une date ou ajoutez-la à votre agenda."
+  },
+  "view": {
+    "legend": "Affichage",
+    "agenda": "Agenda",
+    "year": "Année"
+  },
+  "filters": {
+    "label": "Filtrer par catégorie",
+    "all": "Toutes les dates"
+  },
+  "categories": {
+    "term": "Rentrées et trimestres",
+    "evaluation": "Évaluations",
+    "exam": "Examens officiels",
+    "holiday": "Congés et jours fériés",
+    "international": "Journées internationales",
+    "openDay": "Portes ouvertes",
+    "culture": "Fêtes et culture",
+    "meeting": "Réunions, conseils et bulletins"
+  },
+  "agenda": {
+    "showPast": "Afficher les dates passées (%count%)",
+    "hidePast": "Masquer les dates passées",
+    "empty": "Aucune date dans cette catégorie pour l'instant.",
+    "confirm": "À confirmer",
+    "past": "Passé",
+    "range": "Du %start% au %end%",
+    "thisMonth": "Ce mois-ci"
+  },
+  "year": {
+    "hint": "Touchez une date colorée pour voir le détail dans l'agenda.",
+    "legendTitle": "Légende",
+    "legend": {
+      "blue": "Rentrées, trimestres et réunions",
+      "navy": "Évaluations et examens",
+      "gold": "Congés et jours fériés",
+      "green": "Journées, fêtes et portes ouvertes"
+    },
+    "today": "Aujourd'hui",
+    "dayLabel": "%date% : %events%"
+  },
+  "pending": {
+    "eyebrow": "À confirmer",
+    "title": "Dates {à confirmer}",
+    "intro": "Ces dates sont ajoutées au calendrier dès qu'elles sont fixées par le collège ou par les autorités.",
+    "placeholder": "[Date à fournir]"
+  },
+  "actions": {
+    "shareEvent": "Partager : %title%",
+    "agenda": "Agenda",
+    "agendaEvent": "Ajouter à mon agenda : %title%",
+    "addTitle": "Ajouter à mon agenda",
+    "google": "Google Agenda",
+    "ics": "Fichier d'agenda (.ics)",
+    "icsHint": "iPhone, Outlook et autres agendas",
+    "downloadAll": "Tout ajouter à mon agenda",
+    "shareCalendar": "Partager le calendrier",
+    "shareText": "%title%\n%date%\n%school%",
+    "fileName": "calendrier-scolaire-%year%",
+    "print": "Version à imprimer (PDF)"
+  },
+  "source": {
+    "label": "Source.",
+    "note": "Ces dates peuvent être modifiées par les autorités. Les dates du collège marquées « À confirmer » sont des propositions, validées ou corrigées par l'administration."
+  },
+  "cta": {
+    "title": "Une date vous {manque} ?",
+    "text": "Le secrétariat vous renseigne sur les évaluations, les réunions et les événements du collège.",
+    "primary": "Contacter le secrétariat",
+    "secondary": "Lire les actualités"
+  }
+}

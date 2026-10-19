@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Vie scolaire",
+    "description": "La vie scolaire au Collège Tomi Fidele : clubs et activités, horaires de la semaine, dates de l'année, tenue de classe et règlement intérieur."
+  },
+  "hero": {
+    "eyebrow": "Vie scolaire",
+    "title": "La vie au {collège}",
+    "intro": "Clubs, horaires, tenue et règlement : tout ce qui rythme la journée d'un élève."
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "clubs",
+        "label": "Clubs et activités"
+      },
+      {
+        "id": "horaires",
+        "label": "Horaires et dates"
+      },
+      {
+        "id": "reglement",
+        "label": "Tenue et règlement"
+      },
+      {
+        "id": "galerie",
+        "label": "Galerie"
+      }
+    ]
+  },
+  "clubs": {
+    "eyebrow": "Clubs et activités",
+    "title": "Apprendre aussi {en dehors} de la classe",
+    "intro": "[Présentation à fournir : qui peut s'inscrire à un club, quand et auprès de qui.]",
+    "items": [
+      {
+        "name": "[Club 1 : nom à fournir]",
+        "text": "[Jour, horaire et encadrant du club.]",
+        "photo": "Activité du club 1 · 16:9"
+      },
+      {
+        "name": "[Club 2 : nom à fournir]",
+        "text": "[Jour, horaire et encadrant du club.]",
+        "photo": "Activité du club 2 · 16:9"
+      },
+      {
+        "name": "[Club 3 : nom à fournir]",
+        "text": "[Jour, horaire et encadrant du club.]",
+        "photo": "Activité du club 3 · 16:9"
+      },
+      {
+        "name": "[Club 4 : nom à fournir]",
+        "text": "[Jour, horaire et encadrant du club.]",
+        "photo": "Activité du club 4 · 16:9"
+      },
+      {
+        "name": "[Club 5 : nom à fournir]",
+        "text": "[Jour, horaire et encadrant du club.]",
+        "photo": "Activité du club 5 · 16:9"
+      },
+      {
+        "name": "[Club 6 : nom à fournir]",
+        "text": "[Jour, horaire et encadrant du club.]",
+        "photo": "Activité du club 6 · 16:9"
+      }
+    ]
+  },
+  "schedule": {
+    "eyebrow": "Horaires",
+    "title": "La {semaine} de cours",
+    "items": [
+      {
+        "label": "Arrivée des élèves",
+        "value": "[00 h 00]"
+      },
+      {
+        "label": "Cours du matin",
+        "value": "[00 h 00 à 00 h 00]"
+      },
+      {
+        "label": "Grande pause",
+        "value": "[00 h 00 à 00 h 00]"
+      },
+      {
+        "label": "Cours de l'après-midi",
+        "value": "[00 h 00 à 00 h 00]"
+      },
+      {
+        "label": "Sortie des classes",
+        "value": "[00 h 00]"
+      }
+    ],
+    "note": "[Jours de cours et particularités à préciser : mercredi, samedi, études surveillées.]"
+  },
+  "dates": {
+    "eyebrow": "Calendrier",
+    "title": "Les {dates} de l'année",
+    "empty": "Les prochaines dates seront bientôt annoncées.",
+    "cta": "Voir tout le calendrier"
+  },
+  "rules": {
+    "eyebrow": "Tenue et règlement",
+    "title": "La {discipline}, première valeur du collège",
+    "paragraphs": [
+      "[Présentation à fournir : l'esprit du règlement intérieur et ce que le collège attend de chaque élève.]"
+    ],
+    "points": [
+      "[Règle 1 : ponctualité et assiduité]",
+      "[Règle 2 : tenue de classe]",
+      "[Règle 3 : respect des personnes et du matériel]",
+      "[Règle 4 : téléphones et objets interdits]"
+    ],
+    "photo": "Élèves en tenue de classe · 4:3",
+    "download": "Télécharger le règlement intérieur (PDF)",
+    "documents": "Voir tous les documents"
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Le collège en {images}",
+    "cta": "Voir toute la galerie"
+  },
+  "cta": {
+    "title": "Envie de {rejoindre} le collège ?",
+    "text": "Préinscrivez votre enfant en ligne ou posez vos questions au secrétariat.",
+    "primary": "Préinscrire mon enfant",
+    "secondary": "Nous contacter"
+  }
+}

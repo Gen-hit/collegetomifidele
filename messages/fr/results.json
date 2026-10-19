@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Résultats aux examens",
+    "description": "Les taux de réussite du Collège Tomi Fidele aux examens officiels : BEPC, CAP, Probatoire, Baccalauréat, GCE Ordinary Level et GCE Advanced Level, session après session."
+  },
+  "hero": {
+    "eyebrow": "Programmes",
+    "title": "Résultats aux {examens}",
+    "intro": "Les taux de réussite du collège aux examens officiels, session après session."
+  },
+  "toc": {
+    "label": "Sur cette page",
+    "items": [
+      {
+        "id": "session",
+        "label": "Dernière session"
+      },
+      {
+        "id": "historique",
+        "label": "Historique"
+      }
+    ]
+  },
+  "session": "session %year%",
+  "sessionPlaceholder": "[session]",
+  "ratePlaceholder": "[00 %]",
+  "latest": {
+    "eyebrow": "Dernière session",
+    "title": "Les résultats de la {session %year%}",
+    "titleEmpty": "Les résultats de la {dernière session}",
+    "empty": "Les résultats seront publiés ici dès que le collège les aura communiqués. Les emplacements ci-dessous montrent comment ils seront présentés.",
+    "overall": "Taux de réussite global",
+    "overallNote": "Tous examens confondus, %passed% admis sur %registered% inscrits."
+  },
+  "sections": {
+    "francophone": "Section francophone",
+    "anglophone": "Anglophone section"
+  },
+  "passed": "%passed% admis sur %registered% inscrits",
+  "countsPlaceholder": "[000] admis sur [000] inscrits",
+  "notSat": "Non présenté en %year%",
+  "rateOf": "Taux de réussite",
+  "deltaUp": "+%points% points par rapport à %year%",
+  "deltaDown": "−%points% points par rapport à %year%",
+  "deltaSame": "Stable par rapport à %year%",
+  "trend": "Évolution du taux de réussite de %from% à %to%",
+  "trendPending": "L'évolution s'affichera à partir de deux sessions.",
+  "history": {
+    "eyebrow": "Historique",
+    "title": "Toutes les {sessions}",
+    "intro": "Le taux de réussite par examen, avec le nombre d'admis sur le nombre d'inscrits.",
+    "caption": "Taux de réussite par examen et par session",
+    "sessionCol": "Session",
+    "examCol": "Examen",
+    "empty": "Aucune session publiée pour le moment.",
+    "dash": "Non présenté"
+  },
+  "source": {
+    "label": "Source :",
+    "placeholder": "[Source des chiffres à préciser : procès-verbaux officiels des examens.]"
+  },
+  "cta": {
+    "title": "Envie de {rejoindre} le collège ?",
+    "text": "Découvrez les programmes ou préinscrivez votre enfant.",
+    "primary": "Préinscrire mon enfant",
+    "secondary": "Voir les programmes"
+  }
+}

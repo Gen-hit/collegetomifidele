@@ -1,0 +1,208 @@
+{
+  "francophone": {
+    "meta": {
+      "title": "Section francophone",
+      "description": "The Francophone section of Collège Tomi Fidele: from 6e to Terminale, general and technical education, preparing for the BEPC, CAP, Probatoire and Baccalauréat."
+    },
+    "hero": {
+      "eyebrow": "Programmes",
+      "title": "Section {francophone}",
+      "intro": "From the first cycle to the Baccalauréat, in general and technical education.",
+      "chips": [
+        "6e to Terminale",
+        "General education",
+        "Technical education"
+      ]
+    },
+    "overview": {
+      "eyebrow": "Overview",
+      "title": "A path that follows the {official curriculum}",
+      "paragraphs": [
+        "The Francophone section follows the curriculum of Cameroon's Ministry of Secondary Education. Lessons are taught in French.",
+        "[Introduction to be provided: class sizes, how students' progress is monitored, languages taught, support activities.]"
+      ],
+      "photo": "Francophone section classroom · 4:3"
+    },
+    "cycles": {
+      "eyebrow": "Cycles",
+      "title": "Four paths, from the first cycle to the {final examination}",
+      "examLabel": "Examination",
+      "items": [
+        {
+          "kind": "general",
+          "track": "General education",
+          "title": "First cycle",
+          "classes": [
+            "6e",
+            "5e",
+            "4e",
+            "3e"
+          ],
+          "exam": "BEPC, at the end of 3e",
+          "text": "Core subjects and the foundations of good study habits."
+        },
+        {
+          "kind": "general",
+          "track": "General education",
+          "title": "Second cycle",
+          "classes": [
+            "2nde",
+            "1re",
+            "Terminale"
+          ],
+          "exam": "Probatoire in 1re, Baccalauréat in Terminale",
+          "text": "[Series offered, to be provided: arts, science.]"
+        },
+        {
+          "kind": "technical",
+          "track": "Technical education",
+          "title": "Technical first cycle",
+          "classes": [
+            "1re année",
+            "2e année",
+            "3e année",
+            "4e année"
+          ],
+          "exam": "CAP, at the end of 4e année",
+          "text": "[Specialities offered, to be provided.]"
+        },
+        {
+          "kind": "technical",
+          "track": "Technical education",
+          "title": "Technical second cycle",
+          "classes": [
+            "2nde",
+            "1re",
+            "Terminale"
+          ],
+          "exam": "Technical Probatoire and Baccalauréat",
+          "text": "[Series and specialities offered, to be provided.]"
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "In pictures",
+      "title": "{Everyday life} in the section",
+      "photos": [
+        "A lesson in the classroom",
+        "Practical work or workshop",
+        "Report cards or prize-giving"
+      ]
+    },
+    "results": {
+      "eyebrow": "Results",
+      "title": "The section's {results}",
+      "text": "[Session and source of the figures to be specified. This block only appears if the school provides its results.]",
+      "link": "See all results"
+    },
+    "cta": {
+      "title": "Enrol your child in the {Francophone} section",
+      "text": "See the school fees and the admission procedure.",
+      "primary": "See admissions",
+      "other": "Anglophone section"
+    }
+  },
+  "anglophone": {
+    "meta": {
+      "title": "Anglophone section",
+      "description": "The Anglophone section of Collège Tomi Fidele: from Form 1 to Upper Sixth, general and technical education, preparing for the GCE Ordinary and Advanced Levels."
+    },
+    "hero": {
+      "eyebrow": "Programmes",
+      "title": "{Anglophone} section",
+      "intro": "From Form 1 to Upper Sixth, in general and technical education.",
+      "chips": [
+        "Form 1 to Upper Sixth",
+        "General education",
+        "Technical education"
+      ]
+    },
+    "overview": {
+      "eyebrow": "Overview",
+      "title": "The {Anglophone} sub-system, from Form 1 to Upper Sixth",
+      "paragraphs": [
+        "The Anglophone section follows the curriculum of the Anglophone sub-system of Cameroon's Ministry of Secondary Education. Lessons are taught in English.",
+        "[Introduction to be provided: class sizes, how students' progress is monitored, languages taught, support activities.]"
+      ],
+      "photo": "Anglophone section classroom · 4:3"
+    },
+    "cycles": {
+      "eyebrow": "Cycles",
+      "title": "Four paths, from Form 1 to the {final examination}",
+      "examLabel": "Examination",
+      "items": [
+        {
+          "kind": "general",
+          "track": "General education",
+          "title": "First cycle",
+          "classes": [
+            "Form 1",
+            "Form 2",
+            "Form 3",
+            "Form 4",
+            "Form 5"
+          ],
+          "exam": "GCE Ordinary Level, at the end of Form 5",
+          "text": "Core subjects and the foundations of good study habits."
+        },
+        {
+          "kind": "general",
+          "track": "General education",
+          "title": "Second cycle (High School)",
+          "classes": [
+            "Lower Sixth",
+            "Upper Sixth"
+          ],
+          "exam": "GCE Advanced Level, at the end of Upper Sixth",
+          "text": "[Series offered, to be provided: Arts, Science.]"
+        },
+        {
+          "kind": "technical",
+          "track": "Technical education",
+          "title": "Technical first cycle",
+          "classes": [
+            "Form 1",
+            "Form 2",
+            "Form 3",
+            "Form 4",
+            "Form 5"
+          ],
+          "exam": "GCE Technical · [level to be confirmed by the school]",
+          "text": "[Specialities offered, to be provided.]"
+        },
+        {
+          "kind": "technical",
+          "track": "Technical education",
+          "title": "Technical second cycle",
+          "classes": [
+            "Lower Sixth",
+            "Upper Sixth"
+          ],
+          "exam": "GCE Technical · [level to be confirmed by the school]",
+          "text": "[Series and specialities offered, to be provided.]"
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "In pictures",
+      "title": "{Everyday life} in the section",
+      "photos": [
+        "A lesson in the classroom",
+        "Practical work or workshop",
+        "Report cards or prize-giving"
+      ]
+    },
+    "results": {
+      "eyebrow": "Results",
+      "title": "The section's {results}",
+      "text": "[Session and source of the figures to be specified. This block only appears if the school provides its results.]",
+      "link": "See all results"
+    },
+    "cta": {
+      "title": "Enrol your child in the {Anglophone} section",
+      "text": "See the school fees and the admission procedure.",
+      "primary": "See admissions",
+      "other": "Section francophone"
+    }
+  }
+}
