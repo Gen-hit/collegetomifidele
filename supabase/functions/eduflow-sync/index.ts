@@ -223,22 +223,25 @@ Deno.serve(async (req) => {
       case 'results.propose': {
         const EXAMS = ['bepc', 'cap', 'probatoire', 'baccalaureat', 'gce-ol', 'gce-al', 'gce-tech'];
         const input = Array.isArray(body.sessions) ? body.sessions.slice(0, 15) : [];
-        const sessions: { year: number; results: Row }[] = [];
+        // Mêmes bornes que l'administration du site : une année hors bornes rendrait la page
+        // « Résultats » impossible à enregistrer pour le Principal.
+        const maxYear = new Date().getFullYear() + 1;
+        const byYear = new Map<number, Row>();
         for (const session of input as Row[]) {
-          const year = typeof session.year === 'number' && session.year >= 1960 && session.year <= 2200 ? Math.round(session.year) : null;
+          const year = typeof session.year === 'number' && session.year >= 1990 && session.year <= maxYear ? Math.round(session.year) : null;
           if (!year) continue;
           const results: Row = {};
           for (const [exam, value] of Object.entries((session.results ?? {}) as Record<string, Row>)) {
             if (!EXAMS.includes(exam)) continue;
             const registered = amount(value.registered);
             const passed = amount(value.passed);
-            if (registered === null || passed === null || passed > registered) continue;
+            if (registered === null || passed === null || registered === 0 || passed > registered) continue;
             results[exam] = { registered, passed };
           }
-          if (Object.keys(results).length) sessions.push({ year, results });
+          if (Object.keys(results).length) byYear.set(year, results); // une seule entrée par année
         }
+        const sessions = [...byYear.entries()].map(([year, results]) => ({ year, results })).sort((a, b) => a.year - b.year);
         if (!sessions.length) return reply(422, { message: 'Aucun résultat exploitable.' });
-        sessions.sort((a, b) => a.year - b.year);
 
         const { data: current } = await db.from('content_blocks').select('data, pending')
           .eq('school_id', schoolId).eq('key', 'results').maybeSingle();
@@ -250,6 +253,38 @@ Deno.serve(async (req) => {
         const data = { ...base, sessions: [...kept, ...sessions].sort((a: Row, b: Row) => Number(a.year) - Number(b.year)) };
         const outcome = await propose(db, 'content_blocks', schoolId, { key: 'results' }, { key: 'results', data });
         return reply(200, { ok: true, outcome, years: sessions.map((s) => s.year) });
+      }
+
+      case 'team.propose': {
+        const principalName = text(body.principal, 120) || null;
+        const people: Row[] = [];
+        for (const person of (Array.isArray(body.others) ? body.others.slice(0, 30) : []) as Row[]) {
+          const name = text(person.name, 120);
+          const role = (person.role ?? {}) as Row;
+          const fr = text(role.fr, 80);
+          if (!name || !fr) continue;
+          people.push({ name, role: { fr, en: text(role.en, 80) || fr } });
+        }
+        if (!principalName && !people.length) return reply(422, { message: 'Aucune personne exploitable.' });
+
+        const { data: current } = await db.from('content_blocks').select('data, pending')
+          .eq('school_id', schoolId).eq('key', 'team').maybeSingle();
+        const base = ((current?.pending as Row | null)?.data ?? current?.data ?? {}) as Row;
+        // Les portraits déposés sur le site sont conservés : on les retrouve par le nom.
+        const photos = new Map<string, unknown>();
+        const basePrincipal = (base.principal ?? {}) as Row;
+        if (basePrincipal.name) photos.set(String(basePrincipal.name).toLowerCase(), basePrincipal.photo ?? null);
+        for (const p of (Array.isArray(base.others) ? base.others : []) as Row[]) {
+          if (p.name) photos.set(String(p.name).toLowerCase(), p.photo ?? null);
+        }
+        const photoOf = (name: string | null) => (name ? photos.get(name.toLowerCase()) ?? null : null);
+
+        const data = {
+          principal: { name: principalName, photo: principalName ? photoOf(principalName) : basePrincipal.photo ?? null },
+          others: people.map((p) => ({ ...p, photo: photoOf(String(p.name)) })),
+        };
+        const outcome = await propose(db, 'content_blocks', schoolId, { key: 'team' }, { key: 'team', data });
+        return reply(200, { ok: true, outcome, people: people.length + (principalName ? 1 : 0) });
       }
 
       default:
