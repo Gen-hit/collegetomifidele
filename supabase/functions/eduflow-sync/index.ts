@@ -60,11 +60,14 @@ function canonical(value: unknown): string {
 }
 
 /** Une ligne en ligne reçoit une proposition ; une ligne pas encore en ligne est mise à jour et soumise. */
-async function propose(db: SupabaseClient, table: string, schoolId: string, match: Row, fields: Row): Promise<'created' | 'proposed' | 'unchanged' | 'conflict'> {
+async function propose(db: SupabaseClient, table: string, schoolId: string, match: Row, fields: Row): Promise<'created' | 'proposed' | 'unchanged' | 'conflict' | 'missing'> {
   const { data: current, error } = await db.from(table).select('*').eq('school_id', schoolId).match(match).maybeSingle();
   if (error) throw error;
   const now = new Date().toISOString();
   if (!current) {
+    // Un réglage (frais…) jamais enregistré sur le site : pas de ligne à proposer. Le Principal
+    // l'enregistre une première fois dans l'administration, puis EduFlow pourra proposer.
+    if (table === 'content_blocks') return 'missing';
     const { error: insertError } = await db.from(table).insert({ ...fields, school_id: schoolId, status: 'submitted', updated_at: now });
     if (insertError) throw insertError;
     return 'created';
@@ -121,9 +124,17 @@ Deno.serve(async (req) => {
 
       case 'preinscriptions.pull': {
         let query = db.from('preinscriptions')
-          .select('reference, student_name, birth_date, target_class, section, stream, previous_school, parent_name, parent_phone, parent_email, message, locale, status, created_at, updated_at')
+          .select('id, reference, student_name, birth_date, target_class, section, stream, previous_school, parent_name, parent_phone, parent_email, message, locale, status, created_at, updated_at')
           .eq('school_id', schoolId).is('deleted_at', null).order('updated_at').order('id').limit(200);
-        if (typeof body.since === 'string' && !Number.isNaN(Date.parse(body.since))) query = query.gte('updated_at', new Date(body.since).toISOString()); // >= : rien ne se perd à égalité (EduFlow ignore les doublons)
+        // Curseur (date de modification, id) : reprend exactement après la dernière ligne reçue,
+        // même si des centaines de lignes partagent la même date.
+        if (typeof body.since === 'string' && !Number.isNaN(Date.parse(body.since))) {
+          const since = new Date(body.since).toISOString();
+          const afterId = typeof body.after_id === 'string' && /^[0-9a-f-]{36}$/i.test(body.after_id) ? body.after_id : null;
+          query = afterId
+            ? query.or(`updated_at.gt.${since},and(updated_at.eq.${since},id.gt.${afterId})`)
+            : query.gte('updated_at', since);
+        }
         else query = query.in('status', ['new', 'contacted']);
         const { data, error } = await query;
         if (error) throw error;
@@ -156,7 +167,7 @@ Deno.serve(async (req) => {
 
       case 'calendar.propose': {
         const events = Array.isArray(body.events) ? body.events.slice(0, 150) : [];
-        const result = { created: 0, proposed: 0, unchanged: 0, skipped: 0, conflict: 0 };
+        const result = { created: 0, proposed: 0, unchanged: 0, skipped: 0, conflict: 0, missing: 0 };
         for (const event of events as Row[]) {
           const k = text(event.key, 60);
           const title = text(event.title_fr, 160);
