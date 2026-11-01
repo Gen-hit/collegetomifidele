@@ -88,6 +88,84 @@ function PublishingRules() {
   );
 }
 
+type LinkStatus = { linked: boolean; hint?: string; created_at?: string; last_used_at?: string | null };
+
+/** Liaison avec EduFlow, le logiciel de gestion du collège : une clé à recopier une fois dans EduFlow. */
+function EduFlowLink() {
+  const [status, setStatus] = useState<LinkStatus | null>(null);
+  const [token, setToken] = useState<string | null>(null);
+  const [message, setMessage] = useState<{ tone: 'success' | 'error'; text: string } | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  const load = () =>
+    supabase()
+      .rpc('eduflow_link_status')
+      .then(({ data, error }) => {
+        if (error) setMessage({ tone: 'error', text: frenchError(error) });
+        else setStatus(data as LinkStatus);
+      });
+  useEffect(() => {
+    void load();
+  }, []);
+
+  async function create() {
+    if (status?.linked && !window.confirm('Créer une nouvelle clé ? L’ancienne cessera de fonctionner : il faudra recopier la nouvelle dans EduFlow.')) return;
+    setBusy(true);
+    setMessage(null);
+    const { data, error } = await supabase().rpc('create_eduflow_link');
+    setBusy(false);
+    if (error) return setMessage({ tone: 'error', text: frenchError(error) });
+    setToken((data as { token: string }).token);
+    void load();
+  }
+
+  async function revoke() {
+    if (!window.confirm('Couper la liaison ? EduFlow ne pourra plus lire les préinscriptions ni proposer de contenus.')) return;
+    setBusy(true);
+    const { error } = await supabase().rpc('revoke_eduflow_link');
+    setBusy(false);
+    setToken(null);
+    if (error) setMessage({ tone: 'error', text: frenchError(error) });
+    else setMessage({ tone: 'success', text: 'Liaison coupée.' });
+    void load();
+  }
+
+  if (!status) return message ? <AdminAlert tone="error">{message.text}</AdminAlert> : <Spinner label="Chargement" />;
+  return (
+    <AdminCard title="Liaison avec EduFlow">
+      <p className="text-[15px] leading-6 text-muted">
+        EduFlow, le logiciel de gestion du collège, récupère les préinscriptions reçues ici et propose les dates du calendrier et la grille des
+        frais. Ses propositions arrivent dans « À valider » : rien n’est mis en ligne sans vous.
+      </p>
+      <p className="text-[15px] font-medium text-navy-700">
+        {status.linked
+          ? `Relié (clé …${status.hint}). ${status.last_used_at ? `Dernier échange ${relativeTime(status.last_used_at)}.` : 'Aucun échange pour l’instant.'}`
+          : 'Pas encore relié.'}
+      </p>
+      {token ? (
+        <div className="flex flex-col gap-2 rounded-xl border border-blue-600 bg-blue-50 p-4">
+          <span className="text-sm font-semibold text-navy-700">Clé à recopier dans EduFlow (Paramètres → Site web). Elle ne sera plus affichée.</span>
+          <code className="break-all rounded-lg bg-white px-3 py-2 text-[15px]">{token}</code>
+          <button type="button" onClick={() => void navigator.clipboard?.writeText(token)} className="self-start text-sm font-semibold text-blue-600 underline">
+            Copier la clé
+          </button>
+        </div>
+      ) : null}
+      <div className="flex flex-wrap gap-3">
+        <button type="button" disabled={busy} onClick={() => void create()} className="min-h-12 rounded-[10px] bg-navy-700 px-4 font-semibold text-white disabled:opacity-40">
+          {status.linked ? 'Créer une nouvelle clé' : 'Créer la clé de liaison'}
+        </button>
+        {status.linked ? (
+          <button type="button" disabled={busy} onClick={() => void revoke()} className="min-h-12 rounded-[10px] border-[1.5px] border-red-600 px-4 font-semibold text-red-600 disabled:opacity-40">
+            Couper la liaison
+          </button>
+        ) : null}
+      </div>
+      {message ? <AdminAlert tone={message.tone}>{message.text}</AdminAlert> : null}
+    </AdminCard>
+  );
+}
+
 function Hub() {
   const me = useMe();
   const [updated, setUpdated] = useState<Record<string, string>>({});
@@ -122,6 +200,7 @@ function Hub() {
         ))}
       </ul>
       <PublishingRules />
+      <EduFlowLink />
     </div>
   );
 }
