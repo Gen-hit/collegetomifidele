@@ -9,6 +9,8 @@ import type { Dictionary } from '@/i18n/dictionaries';
 import { hoursSummary } from '@/lib/hours';
 import { formatPhone, maps } from '@/lib/links';
 import { cn } from '@/lib/utils';
+import { fill } from '@/lib/format';
+import { shown, showPlaceholders } from '@/lib/placeholders';
 import { MapFacade } from './map-facade';
 
 function InfoRow({ Icon, tile, label, children }: { Icon: LucideIcon; tile: string; label: string; children: ReactNode }) {
@@ -37,23 +39,30 @@ export function FindUs({ locale, dict, id = 'nous-trouver' }: { locale: Locale; 
         <div className="reveal flex flex-col gap-7">
           <SectionHeading eyebrow={t.eyebrow} title={t.title} intro={t.text} accent="gold" />
           <ul className="flex flex-col gap-4">
-            <InfoRow Icon={MapPin} tile="bg-sky-100 text-blue-500" label={t.addressLabel}>
-              {site.location.address ?? common.addressPlaceholder}
-              <br />
-              {site.location.city ?? common.cityPlaceholder}
-            </InfoRow>
-            <InfoRow Icon={Clock} tile="bg-green-100 text-green-700" label={t.hoursLabel}>
-              {hoursSummary(locale, dict)}
-            </InfoRow>
-            <InfoRow Icon={Phone} tile="bg-gold-100 text-gold-700" label={t.phoneLabel}>
-              {phone ? (
-                <a href={`tel:${phone}`} className="text-blue-600 underline underline-offset-4">
-                  {formatPhone(phone)}
-                </a>
-              ) : (
-                common.phonePlaceholder
-              )}
-            </InfoRow>
+            {/* Une ligne n'apparaît que si son information est connue (ou en aperçu des emplacements). */}
+            {site.location.address || site.location.city || showPlaceholders ? (
+              <InfoRow Icon={MapPin} tile="bg-sky-100 text-blue-500" label={t.addressLabel}>
+                {site.location.address ?? common.addressPlaceholder}
+                {site.location.address || showPlaceholders ? <br /> : null}
+                {site.location.city ? fill(common.cityLine, { city: site.location.city }) : common.cityPlaceholder}
+              </InfoRow>
+            ) : null}
+            {shown(hoursSummary(locale, dict)) ? (
+              <InfoRow Icon={Clock} tile="bg-green-100 text-green-700" label={t.hoursLabel}>
+                {hoursSummary(locale, dict)}
+              </InfoRow>
+            ) : null}
+            {phone || showPlaceholders ? (
+              <InfoRow Icon={Phone} tile="bg-gold-100 text-gold-700" label={t.phoneLabel}>
+                {phone ? (
+                  <a href={`tel:${phone}`} className="text-blue-600 underline underline-offset-4">
+                    {formatPhone(phone)}
+                  </a>
+                ) : (
+                  common.phonePlaceholder
+                )}
+              </InfoRow>
+            ) : null}
           </ul>
           <div className="flex flex-wrap gap-3">
             <ButtonLink href={maps.directionsUrl} target="_blank">

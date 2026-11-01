@@ -77,7 +77,14 @@ export function formatNumber(value: number, locale: Locale): string {
 
 /** Remplace %cle% par sa valeur dans un modèle de texte : fill('Session %year%', { year: '2026' }). */
 export function fill(template: string, values: Record<string, string | number>): string {
-  return template.replace(/%(\w+)%/g, (match, key: string) => (key in values ? String(values[key]) : match));
+  const out = template.replace(/%(\w+)%/g, (match, key: string) => (key in values ? String(values[key]) : match));
+  if (!Object.values(values).some((value) => value === '')) return out;
+  // Une valeur encore inconnue (année scolaire…) : « Inscriptions {} » devient « Inscriptions », sans espace en trop.
+  return out
+    .replace(/\{\s*\}|\(\s*\)/g, '')
+    .replace(/ {2,}/g, ' ')
+    .replace(/ +([.,])/g, '$1')
+    .trim();
 }
 
 /** '677123456' ou '+237677123456' → « 6 77 12 34 56 » : le format lu à voix haute au Cameroun. */

@@ -12,6 +12,8 @@ type AnchorNavProps = {
  * Sur téléphone, la rangée défile horizontalement au lieu de passer sur plusieurs lignes.
  */
 export function AnchorNav({ label, items }: AnchorNavProps) {
+  // Un sommaire d'un seul lien n'aide personne.
+  if (items.length < 2) return null;
   return (
     <nav aria-label={label} className="border-b border-line bg-white">
       <Container className="flex items-center gap-4">

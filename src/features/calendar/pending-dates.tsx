@@ -38,7 +38,7 @@ export function PendingDates({ id, locale, events, labels, categories }: Pending
                 <div className="flex min-w-0 flex-col gap-1">
                   <p className={cn('text-[13px] leading-5 font-semibold', tones[tone].text)}>{categories[event.category]}</p>
                   <h3 className="font-display text-lg leading-6 font-semibold text-pretty text-navy-700">{typo(event.title[locale], locale)}</h3>
-                  <p className="text-[15px] leading-6 font-semibold">{labels.placeholder}</p>
+                  {labels.placeholder ? <p className="text-[15px] leading-6 font-semibold">{labels.placeholder}</p> : null}
                   {event.note ? <p className="text-sm leading-5 text-pretty text-muted">{typo(event.note[locale], locale)}</p> : null}
                 </div>
               </li>

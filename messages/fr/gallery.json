@@ -26,6 +26,7 @@
   "more": "Afficher plus de photos",
   "empty": "Aucune photo dans ce thème pour l'instant.",
   "pending": "Les emplacements en pointillés attendent les photos du collège.",
+  "soon": {"title": "Les photos arrivent bientôt", "text": "Le collège prépare sa galerie : salles de classe, ateliers, sport et cérémonies y seront présentés très prochainement."},
   "cta": {
     "title": "Rejoignez la {communauté} du collège",
     "text": "Préinscrivez votre enfant ou découvrez la vie scolaire.",

@@ -17,11 +17,13 @@
     ],
     "quote": "[Phrase forte du message, à fournir : elle est mise en avant au milieu du texte.]",
     "photoLabel": "Portrait du Principal · format 3:4",
-    "namePlaceholder": "[Nom du Principal]"
+    "namePlaceholder": "[Nom du Principal]",
+    "pending": "Le message du Principal aux parents et aux élèves sera publié ici prochainement."
   },
   "meet": {
     "title": "Rencontrer le Principal",
     "text": "[Modalités à fournir : jours et heures de réception des parents, prise de rendez-vous auprès du secrétariat.]",
+    "fallback": "Pour rencontrer le Principal, adressez-vous au secrétariat.",
     "cta": "Contacter le secrétariat"
   },
   "more": {

@@ -13,6 +13,7 @@ import { TeamGrid } from '@/components/sections/team-grid';
 import { Timeline } from '@/components/sections/timeline';
 import { AnchorNav } from '@/components/ui/anchor-nav';
 import { ButtonLink } from '@/components/ui/button';
+import { visibleToc } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -34,6 +35,8 @@ export default async function AboutPage({ params }: Props) {
   const dict = getDictionary(locale);
   const t = dict.pages.about;
   const [presentation, histoire, valeurs, equipe] = t.toc.items.map((item) => item.id);
+  // Le sommaire ne pointe que vers les sections affichées.
+  const toc = visibleToc(dict, PATH, t.toc.items);
 
   return (
     <>
@@ -47,7 +50,7 @@ export default async function AboutPage({ params }: Props) {
           items: [{ label: dict.nav.about.label, path: PATH }],
         }}
       />
-      <AnchorNav label={t.toc.label} items={t.toc.items} />
+      <AnchorNav label={t.toc.label} items={toc} />
       <IntroSplit
         id={presentation}
         eyebrow={t.overview.eyebrow}

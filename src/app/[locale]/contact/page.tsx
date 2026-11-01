@@ -14,9 +14,11 @@ import { ContactForm } from '@/features/contact/contact-form';
 import { familyRequestsEnabled } from '@/features/requests/send';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
+import { fill } from '@/lib/format';
 import { openingRows } from '@/lib/hours';
 import { formatPhone, maps, whatsappLink } from '@/lib/links';
 import { pageMetadata } from '@/lib/metadata';
+import { showPlaceholders } from '@/lib/placeholders';
 import { schoolJsonLd } from '@/lib/structured';
 import { tones, type Tone } from '@/lib/tones';
 import { cn } from '@/lib/utils';
@@ -54,11 +56,18 @@ export default async function ContactPage({ params }: Props) {
   const { common } = dict;
   const map = dict.home.findUs;
   const { phones, whatsapp, email } = site.contact;
+  // Sur le site public, une carte ou une ligne sans information n'est pas affichée.
+  const showPhones = phones.length > 0 || showPlaceholders;
+  const showMessaging = Boolean(whatsapp || email) || showPlaceholders;
+  const cardCount = 1 + Number(showPhones) + Number(showMessaging);
+  const hours = openingRows(locale, dict, t.hours.placeholder);
+  const showHours = showPlaceholders || site.openingHours.some((row) => !row.closed && row.open && row.close);
 
   return (
     <>
       <PageHero
         {...t.hero}
+        intro={phones.length || whatsapp || showPlaceholders ? t.hero.intro : t.hero.introForm}
         tone="gold"
         breadcrumb={{
           locale,
@@ -68,20 +77,23 @@ export default async function ContactPage({ params }: Props) {
         }}
       />
 
+      {/* Sans adresse, téléphone ni messagerie publiés, ces cartes n'auraient rien à dire : le formulaire et la carte suffisent. */}
+      {cardCount === 1 && !site.location.address && !site.location.city && !showPlaceholders ? null : (
       <section className="bg-surface-alt py-12 sm:py-16">
         <Container>
-          <ul className="grid gap-4 md:grid-cols-3">
+          <ul className={cn('grid gap-4', cardCount === 3 ? 'md:grid-cols-3' : cardCount === 2 ? 'md:grid-cols-2' : 'max-w-xl')}>
             <InfoCard Icon={MapPin} tone="blue" title={t.cards.address}>
               <p className="py-2.5 font-semibold">
                 {site.location.address ?? common.addressPlaceholder}
-                <br />
-                {site.location.city ?? common.cityPlaceholder}
+                {site.location.address ?? common.addressPlaceholder ? <br /> : null}
+                {site.location.city ? fill(common.cityLine, { city: site.location.city }) : common.cityPlaceholder}
               </p>
               <a href={maps.directionsUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
                 <Navigation aria-hidden="true" className="size-4.5" strokeWidth={1.75} />
                 {t.cards.directions}
               </a>
             </InfoCard>
+            {showPhones ? (
             <InfoCard Icon={Phone} tone="gold" title={t.cards.phones}>
               {phones.length > 0 ? (
                 phones.map((phone) => (
@@ -93,29 +105,33 @@ export default async function ContactPage({ params }: Props) {
                 <p className="py-2.5 font-semibold">{common.phonePlaceholder}</p>
               )}
             </InfoCard>
+            ) : null}
+            {showMessaging ? (
             <InfoCard Icon={Mail} tone="green" title={t.cards.messaging}>
               {whatsapp ? (
                 <a href={whatsappLink(locale, dict.help.whatsappMessage)} target="_blank" rel="noopener noreferrer" className={linkClass}>
                   <FaWhatsapp aria-hidden="true" className="size-4.5 text-green-700" />
                   {formatPhone(`+${whatsapp}`)}
                 </a>
-              ) : (
+              ) : showPlaceholders ? (
                 <p className="flex items-center gap-2 py-2.5 font-semibold">
                   <FaWhatsapp aria-hidden="true" className="size-4.5 shrink-0 text-green-700" />
                   {common.phonePlaceholder}
                 </p>
-              )}
+              ) : null}
               {email ? (
                 <a href={`mailto:${email}`} className={cn(linkClass, 'break-all')}>
                   {email}
                 </a>
-              ) : (
+              ) : showPlaceholders ? (
                 <p className="py-2.5 font-semibold">{common.emailPlaceholder}</p>
-              )}
+              ) : null}
             </InfoCard>
+            ) : null}
           </ul>
         </Container>
       </section>
+      )}
 
       <section className="py-16 sm:py-24">
         <Container className="grid gap-12 lg:grid-cols-2 lg:gap-14">
@@ -142,10 +158,11 @@ export default async function ContactPage({ params }: Props) {
               </div>
             </div>
 
+            {showHours ? (
             <div className="reveal rounded-2xl border border-line bg-surface-alt px-5 py-4">
               <h2 className="pb-1 font-display text-xl leading-7 font-semibold text-navy-700">{t.hours.title}</h2>
               <dl className="divide-y divide-line">
-                {openingRows(locale, dict, t.hours.placeholder).map((row) => (
+                {hours.map((row) => (
                   <div key={row.key} className="flex items-baseline justify-between gap-4 py-3">
                     <dt className="font-semibold">{row.days}</dt>
                     <dd className={cn('text-right', row.closed && 'text-muted')}>{row.hours}</dd>
@@ -153,6 +170,7 @@ export default async function ContactPage({ params }: Props) {
                 ))}
               </dl>
             </div>
+            ) : null}
           </div>
         </Container>
       </section>

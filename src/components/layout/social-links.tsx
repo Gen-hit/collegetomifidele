@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
 import { site } from '@content/site';
 import type { Dictionary } from '@/i18n/dictionaries';
+import { showPlaceholders } from '@/lib/placeholders';
 import { cn } from '@/lib/utils';
 
 const networks = [
@@ -23,7 +24,11 @@ type SocialLinksProps = {
  * Les liens se renseignent dans content/site.ts (`social`) ; tant qu'un lien vaut `null`,
  * l'icône reste affichée mais ne mène nulle part.
  */
+/** Les réseaux qui ont une adresse (tous, en aperçu des emplacements). */
+export const visibleNetworks = networks.filter(({ key }) => showPlaceholders || site.social[key]);
+
 export function SocialLinks({ labels, tone = 'dark', className }: SocialLinksProps) {
+  if (visibleNetworks.length === 0) return null;
   const style =
     tone === 'dark'
       ? 'border-white/25 text-white hover:border-gold-400 hover:bg-gold-400 hover:text-ink'
@@ -31,7 +36,7 @@ export function SocialLinks({ labels, tone = 'dark', className }: SocialLinksPro
 
   return (
     <ul className={cn('flex flex-wrap gap-2', className)}>
-      {networks.map(({ key, Icon }) => {
+      {visibleNetworks.map(({ key, Icon }) => {
         const url = site.social[key];
         return (
           <li key={key}>

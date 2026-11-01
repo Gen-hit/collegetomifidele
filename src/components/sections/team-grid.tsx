@@ -4,6 +4,7 @@ import { PhotoSlot } from '@/components/ui/photo-slot';
 import { SectionHeading } from '@/components/ui/section-heading';
 import type { Locale } from '@/i18n/config';
 import { toneCycle, tones } from '@/lib/tones';
+import { visiblePeople } from '@/features/visibility';
 import { cn } from '@/lib/utils';
 
 type TeamGridProps = {
@@ -17,12 +18,15 @@ type TeamGridProps = {
 
 /** Trombinoscope de l'équipe de direction. Les personnes viennent de content/team.ts. */
 export function TeamGrid({ id, locale, eyebrow, title, people, labels }: TeamGridProps) {
+  // Sur le site public, une personne apparaît dès que son nom est saisi ; sans aucun nom, la section se replie.
+  const shownPeople = visiblePeople(people);
+  if (shownPeople.length === 0) return null;
   return (
     <section id={id} className="bg-surface-alt py-16 sm:py-24">
       <Container className="flex flex-col gap-10">
         <SectionHeading eyebrow={eyebrow} title={title} accent="green" className="reveal" />
         <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 lg:gap-x-6">
-          {people.map((person, index) => {
+          {shownPeople.map((person, index) => {
             const tone = tones[toneCycle[index % toneCycle.length]];
             return (
               <li key={`${person.role.fr}-${index}`} className="group reveal flex flex-col gap-3">

@@ -6,7 +6,8 @@
   "hero": {
     "eyebrow": "Contact",
     "title": "Contact the {school}",
-    "intro": "The school office answers your questions by phone, on WhatsApp or in person."
+    "intro": "The school office answers your questions by phone, on WhatsApp or in person.",
+    "introForm": "Write to the school office using the form below, or come to the school: the map shows you the way."
   },
   "cards": {
     "address": "Address",

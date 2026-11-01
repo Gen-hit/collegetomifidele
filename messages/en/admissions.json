@@ -6,6 +6,7 @@
   "hero": {
     "eyebrow": "Admissions",
     "title": "{%year%} admissions",
+    "titlePlain": "{Admissions}",
     "intro": "The steps, entrance examination dates, documents required and the pre-registration form.",
     "primary": "Pre-register my child",
     "secondary": "See the fees"
@@ -77,6 +78,7 @@
     "title": "Entrance exam {dates}",
     "intro": "Entry into 6e, 1re année (technical) and Form 1.",
     "datePlaceholder": "[Date to be provided]",
+    "dateSoon": "Date to be announced",
     "note": "[Venue, time and subjects of the papers, to be provided.]"
   },
   "documents": {

@@ -5,6 +5,7 @@ import { Notice } from '@/components/ui/notice';
 import { SectionHeading } from '@/components/ui/section-heading';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { fill, formatLocalPhone } from '@/lib/format';
+import { showPlaceholders } from '@/lib/placeholders';
 import { tones, type Tone } from '@/lib/tones';
 import { cn } from '@/lib/utils';
 
@@ -32,12 +33,13 @@ function Steps({ items, tone }: { items: string[]; tone: Tone }) {
  * doit reconnaître sur son téléphone avant de valider.
  */
 export function PaymentMethods({ id, labels }: { id?: string; labels: Dictionary['pages']['fees']['payment'] }) {
+  const mobile = fees.mobileMoney.filter((method) => method.number || showPlaceholders);
   return (
     <section id={id} className="py-16 sm:py-24">
       <Container className="flex flex-col gap-10">
         <SectionHeading eyebrow={labels.eyebrow} title={labels.title} intro={labels.intro} accent="gold" className="reveal" />
         <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {fees.mobileMoney.map((method, index) => {
+          {mobile.map((method, index) => {
             const tone = mobileTones[index % mobileTones.length];
             const look = tones[tone];
             return (
@@ -56,10 +58,12 @@ export function PaymentMethods({ id, labels }: { id?: string; labels: Dictionary
                       {method.number ? formatLocalPhone(method.number) : labels.numberPlaceholder}
                     </dd>
                   </div>
+                  {method.holder || showPlaceholders ? (
                   <div className="flex flex-col">
                     <dt className="text-[13px] leading-5 font-semibold tracking-[0.06em] text-muted uppercase">{labels.holderLabel}</dt>
                     <dd className="font-semibold">{method.holder ?? labels.holderPlaceholder}</dd>
                   </div>
+                  ) : null}
                 </dl>
                 <Steps tone={tone} items={labels.steps.map((step) => fill(step, { ussd: method.ussd }))} />
               </li>
@@ -74,17 +78,21 @@ export function PaymentMethods({ id, labels }: { id?: string; labels: Dictionary
                 </span>
                 {labels.cash.title}
               </h3>
-              <dl className="flex flex-col rounded-xl bg-green-100 p-4">
-                <dt className="text-[13px] leading-5 font-semibold tracking-[0.06em] text-muted uppercase">{labels.cash.label}</dt>
-                <dd className="font-display text-2xl leading-8 font-bold text-navy-700">{labels.cash.value}</dd>
-              </dl>
+              {labels.cash.value ? (
+                <dl className="flex flex-col rounded-xl bg-green-100 p-4">
+                  <dt className="text-[13px] leading-5 font-semibold tracking-[0.06em] text-muted uppercase">{labels.cash.label}</dt>
+                  <dd className="font-display text-2xl leading-8 font-bold text-navy-700">{labels.cash.value}</dd>
+                </dl>
+              ) : null}
               <Steps tone="green" items={labels.cash.steps} />
             </li>
           ) : null}
         </ul>
-        <Notice tone="warning" title={labels.warning.title} className="reveal max-w-3xl">
-          {labels.warning.text}
-        </Notice>
+        {mobile.length ? (
+          <Notice tone="warning" title={labels.warning.title} className="reveal max-w-3xl">
+            {labels.warning.text}
+          </Notice>
+        ) : null}
       </Container>
     </section>
   );

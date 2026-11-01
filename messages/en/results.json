@@ -30,7 +30,9 @@
     "titleEmpty": "Results of the {latest session}",
     "empty": "Results will be published here as soon as the school provides them. The placeholders below show how they will be presented.",
     "overall": "Overall pass rate",
-    "overallNote": "All examinations combined, %passed% passes out of %registered% candidates."
+    "overallNote": "All examinations combined, %passed% passes out of %registered% candidates.",
+    "soon": "The school's results in the official examinations will be published here, session after session, as soon as the administration releases them.",
+    "examsLabel": "Examinations taken"
   },
   "sections": {
     "francophone": "Section francophone",

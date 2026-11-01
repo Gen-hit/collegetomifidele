@@ -39,6 +39,7 @@ npm run typecheck
 | Une photo (remplacer un emplacement par la vraie image) | `/admin` > Réglages > Photos du site (ou `content/data/photos.json` + `public/photos/`) |
 | Le Principal et l'équipe de direction (nom, fonction, portrait) | `/admin` > Réglages > Équipe (ou `content/data/team.json`) |
 | Le menu, l'accueil, le pied de page, l'assistant (français) | `messages/fr.json` |
+| Les textes propres au collège encore entre crochets (mot du Principal, clubs, règlement…) | `/admin` > Réglages > Textes du site (ou `content/data/texts.json`) |
 | Les textes d'une page (français) | `messages/fr/<page>.json` |
 | Les mêmes textes en anglais | `messages/en.json` et `messages/en/<page>.json` |
 | Les couleurs et les polices | `src/app/globals.css` |
@@ -171,7 +172,7 @@ Avec le back-office : Réglages > Photos du site, « Choisir une photo » sous l
 1. Déposer l'image dans `public/photos/` (format WebP, 1 600 px de large au maximum).
 2. Dans `content/data/photos.json`, remplacer `null` par son chemin : `"about.campus": "/photos/campus.webp"`.
 
-L'emplacement en pointillés devient alors la vraie photo, aux mêmes dimensions.
+L'illustration d'attente (ou, en aperçu, l'emplacement en pointillés) devient alors la vraie photo, aux mêmes dimensions.
 
 ### Photos qui s'agrandissent
 
@@ -180,9 +181,20 @@ vignettes). C'est en place sur les Infrastructures, les bandes de photos, les cl
 Pour l'ajouter ailleurs : entourer les photos d'un `LightboxGroup` et chaque photo d'un `LightboxTrigger`
 (`src/components/ui/lightbox.tsx`, un exemple dans `src/components/sections/photo-strip.tsx`).
 
-Tout ce qui est entre crochets sur le site (`[Nom du Principal]`, `[00 000 F CFA]`…) attend
-un contenu du collège. Dans les réglages (et `content/data/*.json`), une valeur vide s'affiche comme un
-emplacement « à fournir ».
+### Site public et aperçu avec emplacements
+
+Les fichiers de textes contiennent encore des emplacements entre crochets (`[Nom du Principal]`, `[00 000 F CFA]`…) :
+ils attendent un contenu du collège. Le site se construit de deux façons :
+
+- **site public** (par défaut) : aucun crochet n'est visible. Un texte entre crochets est retiré ; un bloc, une carte ou
+  une section qui n'a plus rien à dire disparaît, avec ses liens dans le menu, le pied de page et le sommaire de la page
+  (`src/features/visibility.ts`). Une photo manquante devient une illustration aux couleurs du collège
+  (`src/components/ui/photo-illustration.tsx`) ; les frais et les résultats affichent « publiés prochainement ».
+- **aperçu** (`NEXT_PUBLIC_SHOW_PLACEHOLDERS=true`) : tous les emplacements restent visibles, pour voir la mise en page
+  complète et savoir quoi fournir. Les actualités modèles (`sample: true`) n'apparaissent que dans ce mode.
+
+Un texte saisi dans *Réglages > Textes du site* remplace l'emplacement au chemin correspondant
+(`src/i18n/texts.ts`) ; le site anglais reprend le français tant que l'anglais manque.
 
 ## Organisation
 
@@ -218,7 +230,8 @@ docs/         mémoire du projet : état, architecture, registre des composants
 ## Règles du projet
 
 - Aucun nom, numéro, tarif ou adresse en dur dans un composant : tout vient de `content/` ou de `messages/`.
-- Aucun chiffre, tarif ou témoignage inventé : ce qui manque reste un emplacement entre crochets.
+- Aucun chiffre, tarif ou témoignage inventé : ce qui manque reste un emplacement entre crochets, invisible sur le site public.
+- Un composant qui affiche un texte ou une donnée du collège doit savoir se replier quand elle est vide (voir « Site public et aperçu »).
 - Toute clé ajoutée dans un fichier français doit exister dans le fichier anglais du même nom : sinon `npm run build` s'arrête et indique la clé manquante.
 - Code couleur des parcours, partout : section francophone en bleu, section anglophone en vert, enseignement technique en doré (`src/lib/tones.ts`).
 - Les noms de classes et d'examens restent dans leur langue d'origine (« 6e », « Form 1 », « Baccalauréat », « GCE A Level »), quelle que soit la langue du site.

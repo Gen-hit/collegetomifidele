@@ -43,6 +43,7 @@ const blockLabel: Record<string, string> = {
   results: 'Résultats',
   team: 'Équipe de direction',
   photos: 'Photos du site',
+  texts: 'Textes du site',
 };
 
 /** « l’actualité « Rentrée 2026 » », « les réglages « Frais de scolarité » ». */

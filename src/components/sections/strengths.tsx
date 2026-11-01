@@ -15,6 +15,7 @@ const looks: { Icon: LucideIcon; tone: Tone }[] = [
 /** Les atouts du collège, en quatre cartes à pictogramme coloré. */
 export function Strengths({ dict }: { dict: Dictionary }) {
   const t = dict.home.strengths;
+  if (!t.items.some((item) => item.title)) return null;
 
   return (
     <section className="bg-surface-alt py-16 sm:py-24">

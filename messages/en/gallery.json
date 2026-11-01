@@ -26,6 +26,7 @@
   "more": "Show more photos",
   "empty": "No photos in this theme yet.",
   "pending": "The dashed placeholders are waiting for the school's photos.",
+  "soon": {"title": "Photos coming soon", "text": "The school is preparing its gallery: classrooms, workshops, sport and ceremonies will be shown here very soon."},
   "cta": {
     "title": "Join the school {community}",
     "text": "Pre-register your child or discover school life.",

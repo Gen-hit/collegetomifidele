@@ -15,6 +15,7 @@ import { SectionHeading } from '@/components/ui/section-heading';
 import { schoolYear } from '@/features/fees/highlights';
 import { PreinscriptionForm } from '@/features/preinscription/preinscription-form';
 import { familyRequestsEnabled } from '@/features/requests/send';
+import { visibleToc } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { fill } from '@/lib/format';
@@ -49,12 +50,13 @@ export default async function AdmissionsPage({ params }: Props) {
   const t = dict.pages.admissions;
   const [procedure, frais, concours, faq, preinscription] = t.toc.items.map((item) => item.id);
   const phone = site.contact.phones[0];
+  const hours = hoursSummary(locale, dict);
 
   return (
     <>
       <PageHero
         eyebrow={t.hero.eyebrow}
-        title={fill(t.hero.title, { year: schoolYear(dict) })}
+        title={schoolYear(dict) ? fill(t.hero.title, { year: schoolYear(dict) }) : t.hero.titlePlain}
         intro={t.hero.intro}
         tone="gold"
         breadcrumb={{
@@ -74,7 +76,7 @@ export default async function AdmissionsPage({ params }: Props) {
           </ButtonLink>
         </div>
       </PageHero>
-      <AnchorNav label={t.toc.label} items={t.toc.items} />
+      <AnchorNav label={t.toc.label} items={visibleToc(dict, PATH, t.toc.items)} />
 
       <section id={procedure} className="py-16 sm:py-24">
         <Container className="flex flex-col gap-10">
@@ -91,42 +93,39 @@ export default async function AdmissionsPage({ params }: Props) {
         <Container className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div className="reveal flex flex-col gap-6 lg:sticky lg:top-28 lg:self-start">
             <SectionHeading eyebrow={t.form.eyebrow} title={t.form.title} intro={familyRequestsEnabled ? t.form.intro : t.form.whatsappOnly.intro} accent="green" />
-            <div className="flex flex-col gap-3 rounded-2xl border border-sky-200 bg-sky-100 p-5">
-              <p className="font-display text-lg leading-6 font-semibold text-navy-700">{t.form.contactTitle}</p>
-              <p className="flex items-center gap-3">
-                <Phone aria-hidden="true" className="size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
-                <span>
-                  {t.form.call}{' '}
-                  {phone ? (
-                    <a href={`tel:${phone}`} className="font-semibold text-blue-600 underline underline-offset-4">
-                      {formatPhone(phone)}
-                    </a>
-                  ) : (
-                    <span className="font-semibold">{dict.common.phonePlaceholder}</span>
-                  )}
-                </span>
-              </p>
-              <p className="flex items-center gap-3">
-                <FaWhatsapp aria-hidden="true" className="size-5 shrink-0 text-green-700" />
-                <span>
-                  {t.form.whatsapp}{' '}
-                  {site.contact.whatsapp ? (
-                    <a
-                      href={whatsappLink(locale, dict.help.whatsappMessage)}
-                      className="font-semibold text-blue-600 underline underline-offset-4"
-                    >
-                      {formatPhone(`+${site.contact.whatsapp}`)}
-                    </a>
-                  ) : (
-                    <span className="font-semibold">{dict.common.phonePlaceholder}</span>
-                  )}
-                </span>
-              </p>
-              <p className="flex items-center gap-3">
-                <Clock aria-hidden="true" className="size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
-                <span>{hoursSummary(locale, dict)}</span>
-              </p>
-            </div>
+            {phone || site.contact.whatsapp ? (
+              <div className="flex flex-col gap-3 rounded-2xl border border-sky-200 bg-sky-100 p-5">
+                <p className="font-display text-lg leading-6 font-semibold text-navy-700">{t.form.contactTitle}</p>
+                {phone ? (
+                  <p className="flex items-center gap-3">
+                    <Phone aria-hidden="true" className="size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
+                    <span>
+                      {t.form.call}{' '}
+                      <a href={`tel:${phone}`} className="font-semibold text-blue-600 underline underline-offset-4">
+                        {formatPhone(phone)}
+                      </a>
+                    </span>
+                  </p>
+                ) : null}
+                {site.contact.whatsapp ? (
+                  <p className="flex items-center gap-3">
+                    <FaWhatsapp aria-hidden="true" className="size-5 shrink-0 text-green-700" />
+                    <span>
+                      {t.form.whatsapp}{' '}
+                      <a href={whatsappLink(locale, dict.help.whatsappMessage)} className="font-semibold text-blue-600 underline underline-offset-4">
+                        {formatPhone(`+${site.contact.whatsapp}`)}
+                      </a>
+                    </span>
+                  </p>
+                ) : null}
+                {hours ? (
+                  <p className="flex items-center gap-3">
+                    <Clock aria-hidden="true" className="size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
+                    <span>{hours}</span>
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
           </div>
           <div className="reveal">
             <PreinscriptionForm

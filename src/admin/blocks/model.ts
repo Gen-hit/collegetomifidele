@@ -7,7 +7,7 @@ import { normalizePhone } from '@/lib/phone';
  * Ce fichier ne contient que des types et des fonctions pures (testées dans lib.test.ts).
  */
 
-export type BlockKey = 'contact' | 'admissions' | 'fees' | 'payment' | 'results' | 'team' | 'photos';
+export type BlockKey = 'contact' | 'admissions' | 'fees' | 'payment' | 'results' | 'team' | 'photos' | 'texts';
 
 export type OpeningHours = { days: 'weekdays' | 'saturday' | 'sunday'; open: string | null; close: string | null; closed: boolean };
 
@@ -44,6 +44,16 @@ export type TeamBlock = { principal: { name: string | null; photo: string | null
 
 export type PhotosBlock = { slots: Record<string, string | null> };
 
+/** Textes du site saisis par le collège, par langue et par chemin (voir src/i18n/texts.ts). */
+export type TextsBlock = { fr: Record<string, string>; en: Record<string, string> };
+
+/** Textes : on garde seulement ce qui est rempli, espaces de début et de fin retirés. */
+export function normalizeTexts(data: TextsBlock): TextsBlock {
+  const keep = (map: Record<string, string>) =>
+    Object.fromEntries(Object.entries(map ?? {}).map(([k, v]) => [k, (v ?? '').trim()]).filter(([, v]) => v));
+  return { fr: keep(data.fr), en: keep(data.en) };
+}
+
 export type BlockData = {
   contact: ContactBlock;
   admissions: AdmissionsBlock;
@@ -52,6 +62,7 @@ export type BlockData = {
   results: ResultsBlock;
   team: TeamBlock;
   photos: PhotosBlock;
+  texts: TextsBlock;
 };
 
 /** Erreurs de saisie : { chemin du champ : message }. */
@@ -241,4 +252,14 @@ export const blockRules: { [K in BlockKey]: { check: (data: BlockData[K]) => Err
   results: { check: checkResults, normalize: normalizeResults },
   team: { check: checkTeam, normalize: normalizeTeam },
   photos: { check: () => ({}), normalize: (d) => d },
+  texts: {
+    check: (d) => {
+      const errors: Errors = {};
+      for (const lang of ['fr', 'en'] as const) {
+        for (const [path, text] of Object.entries(d[lang] ?? {})) if (/\[[^\]]*\]/.test(text ?? '')) errors[`${lang}.${path}`] = 'Crochets restants.';
+      }
+      return errors;
+    },
+    normalize: normalizeTexts,
+  },
 };

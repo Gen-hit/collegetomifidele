@@ -106,6 +106,7 @@
   "cta": {
     "title": "Venez {visiter} le collège",
     "text": "Le secrétariat vous accueille aux heures d'ouverture. Vous pouvez aussi parcourir la galerie photo.",
+    "textShort": "Le secrétariat vous accueille aux heures d'ouverture pour une visite de l'établissement.",
     "primary": "Prendre rendez-vous",
     "secondary": "Voir la galerie"
   }

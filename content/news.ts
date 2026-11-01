@@ -1,4 +1,5 @@
 import newsData from './data/news.json';
+import { showPlaceholders } from '@/lib/placeholders';
 
 /**
  * Les actualités du collège : la liste, la page de chaque article et les trois cartes de l'accueil lisent ce fichier.
@@ -51,4 +52,8 @@ export type Article = {
 /** L'ordre des catégories dans les filtres. Les libellés sont dans messages/<langue>/news.json. */
 export const newsCategories: NewsCategory[] = ['academic', 'sport', 'culture', 'announcement', 'life'];
 
-export const articles = newsData as Article[];
+/**
+ * Les modèles (`sample: true`) ne paraissent que dans l'aperçu avec emplacements (NEXT_PUBLIC_SHOW_PLACEHOLDERS=true) :
+ * le site public ne montre que de vraies actualités.
+ */
+export const articles = (newsData as Article[]).filter((article) => !article.sample || showPlaceholders);

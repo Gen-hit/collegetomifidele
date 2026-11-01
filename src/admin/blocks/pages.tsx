@@ -7,8 +7,10 @@ import paymentData from '@content/data/payment.json';
 import resultsData from '@content/data/results.json';
 import teamData from '@content/data/team.json';
 import photosData from '@content/data/photos.json';
+import textsData from '@content/data/texts.json';
 import { BlockEditorPage } from './editor';
 import { AdmissionsForm, ContactForm, FeesForm, PaymentForm, PhotosForm, ResultsForm, TeamForm } from './forms';
+import { TextsForm } from './texts-form';
 import type { BlockData, BlockKey } from './model';
 
 /**
@@ -23,9 +25,11 @@ const initial = {
   results: resultsData,
   team: teamData,
   photos: photosData,
+  texts: textsData,
 } as unknown as BlockData;
 
 export const blockPages: { key: BlockKey; path: string; title: string; summary: string; superAdminOnly?: boolean }[] = [
+  { key: 'texts', path: '/admin/reglages/textes/', title: 'Textes du site', summary: 'Mot du Principal, histoire, clubs, règlement, spécialités… : les textes que le collège doit fournir.' },
   { key: 'contact', path: '/admin/reglages/coordonnees/', title: 'Coordonnées et chiffres clés', summary: 'Adresse, téléphones, WhatsApp, email, horaires, réseaux sociaux, chiffres clés.' },
   { key: 'admissions', path: '/admin/reglages/admissions/', title: 'Admissions', summary: 'Année scolaire des inscriptions et dates des concours d’entrée.' },
   { key: 'fees', path: '/admin/reglages/frais/', title: 'Frais de scolarité', summary: 'Tranches, échéances, frais d’inscription, scolarité par niveau, grille PDF.' },
@@ -57,4 +61,7 @@ export function TeamSettings() {
 }
 export function PhotosSettings() {
   return <BlockEditorPage blockKey="photos" title={page('photos').title} intro="Chaque photo remplace un emplacement gris du site. Elles sont réduites automatiquement avant l’envoi." initial={initial.photos} form={(props) => <PhotosForm {...props} />} />;
+}
+export function TextsSettings() {
+  return <BlockEditorPage blockKey="texts" title={page('texts').title} intro="Les textes propres au collège. Chacun apparaît sur le site dès qu’il est rempli et que le site est mis à jour." initial={initial.texts} form={(props) => <TextsForm {...props} />} />;
 }

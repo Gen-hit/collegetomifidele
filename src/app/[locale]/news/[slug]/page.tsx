@@ -28,7 +28,9 @@ export const dynamicParams = false;
 
 /** Une page par article et par langue. */
 export function generateStaticParams() {
-  return locales.flatMap((locale) => sortedArticles().map((article) => ({ locale, slug: article.slug })));
+  const slugs = sortedArticles().map((article) => article.slug);
+  // L'export statique exige au moins une page : sans aucune actualité, une adresse réservée mène à la page introuvable.
+  return locales.flatMap((locale) => (slugs.length ? slugs : ['aucune']).map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -6,6 +6,7 @@
   "hero": {
     "eyebrow": "Admissions",
     "title": "Inscriptions {%year%}",
+    "titlePlain": "Les {inscriptions}",
     "intro": "Les étapes, les dates de concours, les pièces à fournir et le formulaire de préinscription.",
     "primary": "Préinscrire mon enfant",
     "secondary": "Voir les frais"
@@ -77,6 +78,7 @@
     "title": "Dates des {concours}",
     "intro": "Entrée en 6e, en 1re année technique et en Form 1.",
     "datePlaceholder": "[Date à fournir]",
+    "dateSoon": "Date communiquée prochainement",
     "note": "[Lieu, heure et matières des épreuves, à fournir.]"
   },
   "documents": {

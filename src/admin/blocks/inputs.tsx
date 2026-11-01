@@ -75,6 +75,7 @@ export function TextField({
     disabled: base.disabled,
     'aria-invalid': base.error ? true : undefined,
     'aria-describedby': describe(id, base.hint, base.error),
+    lang,
   } as const;
   return (
     <Frame id={id} lang={lang} {...base}>

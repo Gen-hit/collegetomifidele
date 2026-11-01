@@ -13,6 +13,6 @@ export function resultItems(examIds: string[], locale: Locale, dict: Dictionary)
     const stat = statFor(id);
     if (!stat) return [];
     const session = stat.latest ? fill(t.session, { year: stat.latest.year }) : t.sessionPlaceholder;
-    return [{ label: `${stat.exam.label} · ${session}`, value: formatPercent(stat.latest?.rate, locale, t.ratePlaceholder) }];
+    return [{ label: session ? `${stat.exam.label} · ${session}` : stat.exam.label, value: formatPercent(stat.latest?.rate, locale, t.ratePlaceholder) }];
   });
 }

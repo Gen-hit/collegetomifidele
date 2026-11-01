@@ -21,6 +21,44 @@ export type Facility = {
  * Chaque photo s'ouvre dans la visionneuse, qui fait défiler tous les espaces avec leur description.
  */
 export function FacilityRows({ items, photoWord, viewer }: { items: Facility[]; photoWord: string; viewer: LightboxLabels }) {
+  // Tant qu'aucun espace n'est décrit, de grands blocs ne contiendraient qu'un titre : une grille de cartes, plus juste.
+  if (!items.some((item) => item.text || item.features.some(Boolean))) {
+    return (
+      <section className="py-16 sm:py-24">
+        <LightboxGroup labels={viewer} photoWord={photoWord} items={items.map((item) => ({ src: item.photo.src ?? null, title: item.title }))}>
+          <Container>
+            <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {items.map((item, index) => {
+                const look = tones[item.tone];
+                return (
+                  <li key={item.key} id={item.key} className="group flex scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-line bg-white">
+                    <LightboxTrigger index={index} className="overflow-hidden">
+                      <PhotoSlot
+                        label={item.photo.label}
+                        src={item.photo.src}
+                        alt={item.title}
+                        photoWord={photoWord}
+                        ratio="aspect-16/10"
+                        priority={index === 0}
+                        className="rounded-none transition-transform duration-500 group-hover:scale-103"
+                      />
+                    </LightboxTrigger>
+                    <div className="flex items-center gap-3 p-5">
+                      <span aria-hidden="true" className={cn('flex size-11 shrink-0 items-center justify-center rounded-xl', look.tile)}>
+                        <item.Icon className="size-5" strokeWidth={1.75} />
+                      </span>
+                      <h2 className="font-display text-xl leading-7 font-semibold text-navy-700">{item.title}</h2>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </Container>
+        </LightboxGroup>
+      </section>
+    );
+  }
+
   return (
     <section className="py-16 sm:py-24">
       <LightboxGroup labels={viewer} photoWord={photoWord} items={items.map((item) => ({ src: item.photo.src ?? null, title: item.title, description: item.text }))}>
@@ -60,9 +98,9 @@ export function FacilityRows({ items, photoWord, viewer }: { items: Facility[]; 
                   {String(index + 1).padStart(2, '0')}
                 </p>
                 <h2 className="font-display text-[1.7rem] leading-[1.2] font-bold text-balance text-navy-700 sm:text-4xl">{item.title}</h2>
-                <p className="max-w-xl text-pretty">{item.text}</p>
+                {item.text ? <p className="max-w-xl text-pretty">{item.text}</p> : null}
                 <ul className="flex flex-col gap-2.5">
-                  {item.features.map((feature) => (
+                  {item.features.filter(Boolean).map((feature) => (
                     <li key={feature} className="flex items-start gap-3 font-semibold">
                       <span aria-hidden="true" className={cn('mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full', look.tile)}>
                         <Check className="size-3.5" strokeWidth={2.5} />

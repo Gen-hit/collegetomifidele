@@ -13,7 +13,7 @@ type HelpLauncherProps = {
   labels: Dictionary['help'];
   assistantLabels: Omit<Dictionary['assistant'], 'topics'>;
   topics: AssistantTopic[];
-  whatsappHref: string;
+  whatsappHref: string | null;
 };
 
 /**
@@ -64,6 +64,7 @@ export function HelpLauncher({ locale, labels, assistantLabels, topics, whatsapp
                 <span className="text-sm leading-5 text-muted">{labels.assistantDesc}</span>
               </span>
             </button>
+            {whatsappHref ? (
             <a href={whatsappHref} className={actionClass} onClick={() => setMenuOpen(false)}>
               <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-green-700 text-white">
                 <FaWhatsapp aria-hidden="true" className="size-5" />
@@ -73,6 +74,7 @@ export function HelpLauncher({ locale, labels, assistantLabels, topics, whatsapp
                 <span className="text-sm leading-5 text-muted">{labels.whatsappDesc}</span>
               </span>
             </a>
+            ) : null}
           </div>
         ) : null}
 

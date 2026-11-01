@@ -15,6 +15,7 @@ import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { fill, formatNumber, formatPercent } from '@/lib/format';
 import { pageMetadata } from '@/lib/metadata';
+import { showPlaceholders } from '@/lib/placeholders';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -55,6 +56,29 @@ export default async function ResultsPage({ params }: Props) {
         }}
       />
 
+      {year === null && !showPlaceholders ? (
+        // Aucune session saisie : un encart d'attente, avec les examens que le collège présente.
+        <section id={sessionId} className="bg-surface-alt py-16 sm:py-24">
+          <Container className="flex flex-col gap-10">
+            <SectionHeading eyebrow={t.latest.eyebrow} title={t.latest.titleEmpty} accent="green" className="reveal" />
+            <div className="on-dark reveal relative flex flex-col gap-6 overflow-hidden rounded-3xl bg-indigo-900 p-6 text-white sm:p-10">
+              <span aria-hidden="true" className="dot-grid absolute inset-y-0 right-0 w-40 text-sky-400 opacity-20" />
+              <span aria-hidden="true" className="relative flex size-14 shrink-0 items-center justify-center rounded-2xl bg-gold-400 text-ink">
+                <Trophy className="size-7" strokeWidth={1.75} />
+              </span>
+              <p className="relative max-w-2xl font-display text-2xl leading-9 font-semibold text-pretty">{t.latest.soon}</p>
+              <ul className="relative flex flex-wrap gap-2" aria-label={t.latest.examsLabel}>
+                {allExamStats().map(({ exam }) => (
+                  <li key={exam.id} className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[15px] leading-5 font-semibold">
+                    {exam.label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Container>
+        </section>
+      ) : (
+      <>
       <section id={sessionId} className="bg-surface-alt py-16 sm:py-24">
         <Container className="flex flex-col gap-10">
           <SectionHeading
@@ -100,6 +124,9 @@ export default async function ResultsPage({ params }: Props) {
           <ResultsTable locale={locale} labels={t.history} sessions={sessions} />
         </Container>
       </section>
+
+      </>
+      )}
 
       <CtaBand title={t.cta.title} text={t.cta.text} tone="green" flushTop>
         <ButtonLink href={href(locale, '/admissions#preinscription')}>

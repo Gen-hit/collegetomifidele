@@ -9,6 +9,8 @@ import type { Dictionary } from '@/i18n/dictionaries';
  */
 export function Testimonial({ dict }: { dict: Dictionary }) {
   const t = dict.home.testimonial;
+  // Sans témoignage authentique fourni par le collège, le bloc n'apparaît pas.
+  if (!t.quote) return null;
 
   return (
     <section className="bg-surface-alt py-16 sm:py-24">
@@ -18,7 +20,7 @@ export function Testimonial({ dict }: { dict: Dictionary }) {
           <span aria-hidden="true" className="absolute inset-y-6 left-0 w-1.5 rounded-r-full bg-gold-400" />
           <Quote aria-hidden="true" className="size-9 text-gold-400" strokeWidth={1.75} />
           <blockquote className="font-display text-[22px] leading-8 font-semibold text-pretty">{t.quote}</blockquote>
-          <figcaption className="text-sm leading-5 text-muted">{t.author}</figcaption>
+          {t.author ? <figcaption className="text-sm leading-5 text-muted">{t.author}</figcaption> : null}
         </figure>
       </Container>
     </section>

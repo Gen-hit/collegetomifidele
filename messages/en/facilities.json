@@ -106,6 +106,7 @@
   "cta": {
     "title": "Come and {visit} the school",
     "text": "The school office welcomes you during opening hours. You can also browse the photo gallery.",
+    "textShort": "The school office welcomes you during opening hours for a visit of the school.",
     "primary": "Book a visit",
     "secondary": "See the gallery"
   }

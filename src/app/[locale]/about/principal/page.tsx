@@ -8,6 +8,7 @@ import { ButtonLink } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { LinkCards } from '@/components/ui/link-cards';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { hiddenSections, sectionPath } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -37,6 +38,7 @@ export default async function PrincipalPage({ params }: Props) {
   const dict = getDictionary(locale);
   const t = dict.pages.principal;
   const cta = dict.pages.about.cta;
+  const hidden = hiddenSections(dict);
 
   return (
     <>
@@ -57,12 +59,10 @@ export default async function PrincipalPage({ params }: Props) {
         <Container className="flex flex-col gap-10">
           <SectionHeading eyebrow={t.more.eyebrow} title={t.more.title} accent="gold" className="reveal" />
           <LinkCards
-            items={t.more.items.map((item, index) => ({
-              label: item.label,
-              text: item.text,
-              href: href(locale, item.path),
-              ...looks[index % looks.length],
-            }))}
+            items={t.more.items.flatMap((item, index) => {
+              const path = sectionPath(hidden, item.path);
+              return path ? [{ label: item.label, text: item.text, href: href(locale, path), ...looks[index % looks.length] }] : [];
+            })}
           />
         </Container>
       </section>

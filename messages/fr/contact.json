@@ -6,7 +6,8 @@
   "hero": {
     "eyebrow": "Contact",
     "title": "Contactez le {collège}",
-    "intro": "Le secrétariat répond à vos questions par téléphone, par WhatsApp ou sur place."
+    "intro": "Le secrétariat répond à vos questions par téléphone, par WhatsApp ou sur place.",
+    "introForm": "Écrivez au secrétariat avec le formulaire ci-dessous, ou passez au collège : le plan d'accès vous guide."
   },
   "cards": {
     "address": "Adresse",

@@ -59,7 +59,7 @@ export function CycleCards({ id, eyebrow, title, examLabel, items, tone, classLa
                     </li>
                   ))}
                 </ul>
-                <p className="text-[15px] leading-6 text-muted">{cycle.text}</p>
+                {cycle.text ? <p className="text-[15px] leading-6 text-muted">{cycle.text}</p> : null}
                 <p className="mt-auto flex items-start gap-3 rounded-xl bg-surface-alt p-4">
                   <span aria-hidden="true" className={cn('flex size-10 shrink-0 items-center justify-center rounded-[10px]', look.tile)}>
                     <GraduationCap className="size-5" strokeWidth={1.75} />

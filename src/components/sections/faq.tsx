@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { showPlaceholders } from '@/lib/placeholders';
 
 type FaqProps = {
   id?: string;
@@ -15,7 +16,10 @@ type FaqProps = {
  * une réponse encore entre crochets n'y figure pas.
  */
 export function Faq({ id, eyebrow, title, items }: FaqProps) {
-  const answered = items.filter((item) => !item.a.trim().startsWith('['));
+  const answered = items.filter((item) => item.a.trim() && !item.a.trim().startsWith('['));
+  // Sur le site public, seules les questions qui ont leur réponse sont affichées.
+  const shown = showPlaceholders ? items : answered;
+  if (shown.length === 0) return null;
   const structured = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -27,7 +31,7 @@ export function Faq({ id, eyebrow, title, items }: FaqProps) {
       <Container className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
         <SectionHeading eyebrow={eyebrow} title={title} accent="gold" className="reveal lg:sticky lg:top-28 lg:self-start" />
         <div className="flex flex-col gap-3">
-          {items.map((item, index) => (
+          {shown.map((item, index) => (
             <details
               key={item.q}
               open={index === 0}

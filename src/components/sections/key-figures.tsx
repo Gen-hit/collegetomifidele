@@ -1,5 +1,7 @@
-import { CalendarDays, GraduationCap, Languages, Trophy, Users, type LucideIcon } from 'lucide-react';
+import { CalendarDays, GitFork, GraduationCap, Languages, Layers, Trophy, Users, type LucideIcon } from 'lucide-react';
+import { levels } from '@content/levels';
 import { site } from '@content/site';
+import { showPlaceholders } from '@/lib/placeholders';
 import { Container } from '@/components/ui/container';
 import { CountUp } from '@/components/ui/count-up';
 import type { Locale } from '@/i18n/config';
@@ -8,6 +10,11 @@ import { tones, type Tone } from '@/lib/tones';
 import { cn } from '@/lib/utils';
 
 export type FigureKey = keyof Dictionary['home']['stats'];
+
+/** Années d'études de la 6e à la Terminale (premier cycle + second cycle de la section francophone générale). */
+const yearsOfStudy = levels
+  .filter((level) => level.section === 'francophone' && level.stream === 'general')
+  .reduce((sum, level) => sum + level.classes.length, 0);
 
 type Figure = {
   value: number | null;
@@ -26,7 +33,14 @@ const figures: Record<FigureKey, Figure> = {
   teachers: { value: site.stats.teachers, placeholder: '[00]', Icon: GraduationCap, tone: 'gold' },
   success: { value: site.stats.successRate, placeholder: '[00 %]', suffix: ' %', Icon: Trophy, tone: 'green' },
   sections: { value: site.stats.sections, placeholder: '[0]', Icon: Languages, tone: 'gold' },
+  // Deux faits tirés de l'offre du collège (content/levels.ts), toujours connus : ils complètent la rangée
+  // tant que les chiffres officiels manquent.
+  streams: { value: new Set(levels.map((level) => level.stream)).size, placeholder: '[0]', Icon: GitFork, tone: 'green' },
+  years: { value: yearsOfStudy, placeholder: '[0]', Icon: Layers, tone: 'blue' },
 };
+
+/** Ordre de remplacement d'un chiffre absent : d'abord les chiffres officiels, puis ceux de l'offre. */
+const fallbackOrder: FigureKey[] = ['founded', 'students', 'success', 'teachers', 'sections', 'streams', 'years'];
 
 type KeyFiguresProps = {
   locale: Locale;
@@ -37,13 +51,21 @@ type KeyFiguresProps = {
   overlap?: boolean;
 };
 
-/** Chiffres clés du collège. Un chiffre absent reste un emplacement entre crochets. */
+/**
+ * Chiffres clés du collège. Sur le site public, un chiffre absent est remplacé par le suivant de `fallbackOrder`
+ * qui est connu : jamais de chiffre inventé, jamais de case vide.
+ */
 export function KeyFigures({ locale, dict, keys = ['founded', 'students', 'success', 'sections'], overlap = true }: KeyFiguresProps) {
+  const known = (key: FigureKey) => figures[key].value !== null;
+  const chosen = showPlaceholders
+    ? keys
+    : [...keys.filter(known), ...fallbackOrder.filter((key) => known(key) && !keys.includes(key))].slice(0, keys.length);
+  if (chosen.length === 0) return null;
   return (
     <section className={overlap ? 'relative z-10 -mt-16 lg:-mt-20' : 'pb-16 sm:pb-24'}>
       <Container>
-        <ul className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:gap-4">
-          {keys.map((key) => {
+        <ul className={cn('grid gap-3 lg:gap-4', chosen.length === 3 ? 'grid-cols-2 sm:grid-cols-3 [&>li:last-child]:col-span-2 sm:[&>li:last-child]:col-span-1' : chosen.length === 4 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2')}>
+          {chosen.map((key) => {
             const { value, placeholder, suffix, plain, Icon, tone } = figures[key];
             const look = tones[tone];
             return (

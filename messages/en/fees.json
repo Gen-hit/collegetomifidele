@@ -6,7 +6,8 @@
   "hero": {
     "eyebrow": "Admissions",
     "title": "Fees and {payment}",
-    "intro": "School fees by level, the instalment schedule, the fee calculator and the payment methods."
+    "intro": "School fees by level, the instalment schedule, the fee calculator and the payment methods.",
+    "introShort": "Tuition by level, the instalment schedule and how to pay."
   },
   "toc": {
     "label": "On this page",
@@ -50,6 +51,8 @@
     ],
     "before": "by %date%",
     "deadlinePlaceholder": "[deadline]",
+    "pendingTitle": "This year's fees will be published here",
+    "pendingText": "The fee schedule by level, the instalments and their deadlines will appear on this page once approved by the administration. In the meantime, the school office can give you the amounts.",
     "total": "Annual total",
     "special": "Special rate",
     "sections": {

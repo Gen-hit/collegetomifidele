@@ -13,6 +13,7 @@ import { ButtonLink } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { FeatureCards } from '@/components/ui/feature-cards';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { visibleToc } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -58,7 +59,7 @@ export default async function TechniquePage({ params }: Props) {
           ],
         }}
       />
-      <AnchorNav label={t.toc.label} items={t.toc.items} />
+      <AnchorNav label={t.toc.label} items={visibleToc(dict, PATH, t.toc.items)} />
       <IntroSplit
         eyebrow={t.overview.eyebrow}
         title={t.overview.title}

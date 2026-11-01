@@ -37,7 +37,7 @@ export function DiplomaColumns({ id, eyebrow, title, columns, note }: DiplomaCol
                       </span>
                       <span className="flex flex-col">
                         <span className="font-display text-lg leading-6 font-semibold text-navy-700">{item.exam}</span>
-                        <span className="text-[15px] leading-6 text-muted">{item.when}</span>
+                        {item.when ? <span className="text-[15px] leading-6 text-muted">{item.when}</span> : null}
                       </span>
                     </li>
                   ))}

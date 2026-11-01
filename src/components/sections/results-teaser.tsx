@@ -19,7 +19,10 @@ type ResultsTeaserProps = {
 };
 
 /** Aperçu des résultats aux examens, avec un lien vers la page complète. Les taux viennent de content/results.ts. */
-export function ResultsTeaser({ id, eyebrow, title, text, items, link, tone, alt = false }: ResultsTeaserProps) {
+export function ResultsTeaser({ id, eyebrow, title, text, items: all, link, tone, alt = false }: ResultsTeaserProps) {
+  // Pas de taux publié : pas d'aperçu. La page Résultats explique, elle, que les chiffres arrivent.
+  const items = all.filter((item) => item.value);
+  if (items.length === 0) return null;
   // Quatre examens : 2 × 2 sur téléphone. Trois : une colonne, pour ne pas laisser une carte seule sur sa ligne.
   const columns = items.length >= 4 ? 'grid-cols-2 md:grid-cols-4' : 'sm:grid-cols-3';
 

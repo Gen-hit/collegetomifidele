@@ -32,8 +32,11 @@ import frProgrammes from '@messages/fr/programmes.json';
 import frResults from '@messages/fr/results.json';
 import frSections from '@messages/fr/sections.json';
 import frTechnique from '@messages/fr/technique.json';
+import textsData from '@content/data/texts.json';
 import { typo } from '@/lib/format';
+import { showPlaceholders } from '@/lib/placeholders';
 import type { Locale } from './config';
+import { applyOverrides, cleanPlaceholders, overridesFor, type TextOverrides } from './texts';
 
 /**
  * Les textes du site.
@@ -89,8 +92,19 @@ const en: Dictionary = {
   },
 };
 
-// Les textes français reçoivent leurs espaces insécables ici, une fois pour toutes (voir `typo`).
-const dictionaries: Record<Locale, Dictionary> = { fr: typo(fr, 'fr'), en };
+// Les textes saisis dans l'administration (content/data/texts.json) remplacent les emplacements entre crochets,
+// puis les textes français reçoivent leurs espaces insécables, une fois pour toutes (voir `typo`).
+const saved = textsData as TextOverrides;
+// Le site public ne montre jamais de crochets : ce qui reste à fournir est retiré (et la section se replie).
+// NEXT_PUBLIC_SHOW_PLACEHOLDERS=true les fait réapparaître, pour voir la maquette complète avec ses emplacements.
+const finish = <T,>(value: T): T => (showPlaceholders ? value : cleanPlaceholders(value));
+const dictionaries: Record<Locale, Dictionary> = {
+  fr: finish(typo(applyOverrides(fr, overridesFor('fr', saved)), 'fr')),
+  en: finish(applyOverrides(en, overridesFor('en', saved, en))),
+};
+
+/** Les textes d'origine, avant les saisies de l'administration (pour l'écran « Textes du site »). */
+export const sourceTexts = { fr, en };
 
 export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale];

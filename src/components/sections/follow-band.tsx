@@ -1,4 +1,4 @@
-import { SocialLinks } from '@/components/layout/social-links';
+import { SocialLinks, visibleNetworks } from '@/components/layout/social-links';
 import { Container } from '@/components/ui/container';
 import { RichTitle } from '@/components/ui/section-heading';
 import type { Dictionary } from '@/i18n/dictionaries';
@@ -13,6 +13,8 @@ type FollowBandProps = {
 /** « Suivez le collège » : bandeau sombre avec les icônes des réseaux sociaux (liens dans content/site.ts). */
 export function FollowBand({ dict, flushTop = false }: FollowBandProps) {
   const t = dict.follow;
+  // Sans aucune page de réseau social renseignée, rien à suivre : le bandeau se replie.
+  if (visibleNetworks.length === 0) return null;
 
   return (
     <section className={cn('pb-16 sm:pb-24', flushTop ? '' : 'pt-16 sm:pt-24')}>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Dialog } from 'radix-ui';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { FaWhatsapp } from 'react-icons/fa6';
-import type { Locale } from '@/i18n/config';
+import { href, type Locale } from '@/i18n/config';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { cn } from '@/lib/utils';
 import { askAssistant } from './provider';
@@ -14,13 +14,37 @@ type Message = { id: number; from: 'bot' | 'user'; text: string; link?: { href: 
 
 export type AssistantTopic = { id: string; label: string; answer: string; href: string; linkLabel: string };
 
+/** Mots qui rattachent une question libre à un sujet guidé (début de mot, sans accents, français et anglais). */
+const topicWords: Record<string, string[]> = {
+  fees: ['frais', 'scolarit', 'tranche', 'pai', 'pay', 'prix', 'cout', 'montant', 'combien', 'momo', 'mobile money', 'fee', 'tuition', 'cost', 'price', 'how much'],
+  enroll: ['inscri', 'preinscri', 'admission', 'dossier', 'concours', 'piece', 'enrol', 'apply', 'applica', 'register', 'entrance'],
+  programmes: ['classe', 'filiere', 'section', 'programme', 'technique', 'anglophone', 'francophone', 'bac', 'bepc', 'probatoire', 'gce', 'cap', 'specialit', 'course', 'stream', 'subject', 'level'],
+  calendar: ['date', 'calendrier', 'rentree', 'vacance', 'conge', 'examen', 'ferie', 'calendar', 'holiday', 'term', 'exam', 'when'],
+  location: ['ou se trouve', 'ou est', 'adresse', 'situe', 'trouver', 'carte', 'itineraire', 'quartier', 'where', 'address', 'map', 'location', 'direction'],
+};
+
+const plain = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/** Le sujet guidé dont le plus de mots apparaissent dans la question, ou rien. */
+export function matchTopic(question: string, topics: AssistantTopic[]): AssistantTopic | null {
+  const q = ` ${plain(question).replace(/[^a-z0-9 ]+/g, ' ')} `;
+  let best: AssistantTopic | null = null;
+  let score = 0;
+  for (const topic of topics) {
+    const hits = (topicWords[topic.id] ?? []).filter((word) => q.includes(` ${word}`)).length;
+    if (hits > score) [best, score] = [topic, hits];
+  }
+  return best;
+}
+
 type AssistantPanelProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   locale: Locale;
   labels: Omit<Dictionary['assistant'], 'topics'>;
   topics: AssistantTopic[];
-  whatsappHref: string;
+  /** Lien WhatsApp du secrétariat ; `null` tant que le numéro n'est pas renseigné. */
+  whatsappHref: string | null;
 };
 
 /**
@@ -28,6 +52,7 @@ type AssistantPanelProps = {
  * question libre tant que l'assistant n'est pas branché (voir provider.ts).
  */
 export function AssistantPanel({ open, onOpenChange, locale, labels, topics, whatsappHref }: AssistantPanelProps) {
+  const contactHref = href(locale, '/contact');
   const [messages, setMessages] = useState<Message[]>([{ id: 0, from: 'bot', text: labels.welcome }]);
   const [draft, setDraft] = useState('');
   const [pending, setPending] = useState(false);
@@ -56,7 +81,11 @@ export function AssistantPanel({ open, onOpenChange, locale, labels, topics, wha
     setPending(true);
     const answer = await askAssistant(question, locale);
     setPending(false);
-    push({ from: 'bot', text: answer ?? labels.fallback });
+    if (answer) return push({ from: 'bot', text: answer });
+    // Sans assistant en ligne : la question est rapprochée d'un sujet guidé, sinon renvoyée au secrétariat.
+    const topic = matchTopic(question, topics);
+    if (topic) return push({ from: 'bot', text: topic.answer, link: { href: topic.href, label: topic.linkLabel } });
+    push({ from: 'bot', text: labels.fallback, link: { href: contactHref, label: labels.contactLink } });
   };
 
   return (
@@ -127,13 +156,15 @@ export function AssistantPanel({ open, onOpenChange, locale, labels, topics, wha
                   </button>
                 ))}
               </div>
-              <a
-                href={whatsappHref}
-                className="inline-flex min-h-11 items-center gap-2 self-start font-semibold text-green-700 underline underline-offset-4"
-              >
-                <FaWhatsapp aria-hidden="true" className="size-5" />
-                {labels.whatsapp}
-              </a>
+              {whatsappHref ? (
+                <a
+                  href={whatsappHref}
+                  className="inline-flex min-h-11 items-center gap-2 self-start font-semibold text-green-700 underline underline-offset-4"
+                >
+                  <FaWhatsapp aria-hidden="true" className="size-5" />
+                  {labels.whatsapp}
+                </a>
+              ) : null}
             </div>
             <div ref={endRef} />
           </div>

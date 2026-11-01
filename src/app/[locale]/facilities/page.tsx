@@ -22,6 +22,7 @@ import { ButtonLink } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { FeatureCards } from '@/components/ui/feature-cards';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { isShown } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -62,6 +63,9 @@ export default async function FacilitiesPage({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
   const t = dict.pages.facilities;
+  // Un espace sans nom (pas encore décrit par le collège) n'est pas affiché.
+  const spaces = t.items.filter((item) => item.title);
+  const safety = t.safety.items.filter((item) => item.title);
 
   return (
     <>
@@ -75,11 +79,11 @@ export default async function FacilitiesPage({ params }: Props) {
           items: [{ label: dict.nav.facilities.label, path: PATH }],
         }}
       />
-      <AnchorNav label={t.toc.label} items={t.items.map((item) => ({ id: item.key, label: item.short }))} />
+      <AnchorNav label={t.toc.label} items={spaces.map((item) => ({ id: item.key, label: item.short }))} />
       <FacilityRows
         photoWord={dict.common.photo}
         viewer={dict.viewer}
-        items={t.items.map((item) => ({
+        items={spaces.map((item) => ({
           key: item.key,
           title: item.title,
           text: item.text,
@@ -88,20 +92,24 @@ export default async function FacilitiesPage({ params }: Props) {
           ...(looks[item.key] ?? looks.other),
         }))}
       />
-      <section className="bg-surface-alt py-16 sm:py-24">
-        <Container className="flex flex-col gap-10">
-          <SectionHeading eyebrow={t.safety.eyebrow} title={t.safety.title} accent="green" className="reveal" />
-          <FeatureCards columns={3} items={t.safety.items.map((item, index) => ({ ...item, ...safetyLooks[index % safetyLooks.length] }))} />
-        </Container>
-      </section>
-      <CtaBand title={t.cta.title} text={t.cta.text} tone="green">
+      {safety.length ? (
+        <section className="bg-surface-alt py-16 sm:py-24">
+          <Container className="flex flex-col gap-10">
+            <SectionHeading eyebrow={t.safety.eyebrow} title={t.safety.title} accent="green" className="reveal" />
+            <FeatureCards columns={3} items={safety.map((item, index) => ({ ...item, ...safetyLooks[index % safetyLooks.length] }))} />
+          </Container>
+        </section>
+      ) : null}
+      <CtaBand title={t.cta.title} text={isShown(dict, '/gallery') ? t.cta.text : t.cta.textShort} tone="green">
         <ButtonLink href={href(locale, '/contact')}>
           {t.cta.primary}
           <ArrowRight aria-hidden="true" className="size-5" strokeWidth={2} />
         </ButtonLink>
-        <ButtonLink href={href(locale, '/gallery')} variant="secondary">
-          {t.cta.secondary}
-        </ButtonLink>
+        {isShown(dict, '/gallery') ? (
+          <ButtonLink href={href(locale, '/gallery')} variant="secondary">
+            {t.cta.secondary}
+          </ButtonLink>
+        ) : null}
       </CtaBand>
     </>
   );

@@ -3,6 +3,7 @@ import { LightboxGroup, LightboxTrigger, type LightboxLabels } from '@/component
 import { PhotoSlot } from '@/components/ui/photo-slot';
 import { accentOf, SectionHeading } from '@/components/ui/section-heading';
 import type { Tone } from '@/lib/tones';
+import { showPlaceholders } from '@/lib/placeholders';
 import { cn } from '@/lib/utils';
 
 type PhotoStripProps = {
@@ -19,13 +20,16 @@ type PhotoStripProps = {
 };
 
 /** Rangée de trois photos légendées, qui s'ouvrent dans la visionneuse. */
-export function PhotoStrip({ id, eyebrow, title, photos, photoWord, viewer, tone = 'blue', alt = false }: PhotoStripProps) {
+export function PhotoStrip({ id, eyebrow, title, photos: all, photoWord, viewer, tone = 'blue', alt = false }: PhotoStripProps) {
+  // Sur le site public, seules les vraies photos : une rangée d'emplacements vides n'apprend rien au visiteur.
+  const photos = showPlaceholders ? all : all.filter((item) => item.src);
+  if (photos.length === 0) return null;
   return (
     <section id={id} className={cn('py-16 sm:py-24', alt && 'bg-surface-alt')}>
       <Container className="flex flex-col gap-10">
         <SectionHeading eyebrow={eyebrow} title={title} accent={accentOf(tone)} className="reveal" />
         <LightboxGroup labels={viewer} photoWord={photoWord} items={photos.map((item) => ({ src: item.src ?? null, title: item.label }))}>
-          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
+          <ul className={cn('grid grid-cols-2 gap-3 sm:gap-5', photos.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2')}>
             {photos.map((item, index) => (
               <li key={item.label} className={cn('group reveal', index === 0 && 'col-span-2 sm:col-span-1')}>
                 <LightboxTrigger index={index} className="overflow-hidden rounded-2xl">

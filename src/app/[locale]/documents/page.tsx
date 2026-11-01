@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { documents } from '@content/documents';
+import { site } from '@content/site';
 import { CtaBand } from '@/components/sections/cta-band';
 import { DocumentList } from '@/components/sections/document-list';
 import { PageHero } from '@/components/sections/page-hero';
@@ -45,11 +46,13 @@ export default async function DocumentsPage({ params }: Props) {
       />
       <DocumentList locale={locale} documents={documents} labels={t} viewer={dict.viewer} photoWord={dict.common.photo} />
       <CtaBand title={t.help.title} text={t.help.text} tone="blue" flushTop>
-        <ButtonLink href={whatsappLink(locale, t.help.whatsappMessage)} variant="whatsapp">
-          <FaWhatsapp aria-hidden="true" className="size-5" />
-          {t.help.primary}
-        </ButtonLink>
-        <ButtonLink href={href(locale, '/contact')} variant="secondary">
+        {site.contact.whatsapp ? (
+          <ButtonLink href={whatsappLink(locale, t.help.whatsappMessage)} variant="whatsapp">
+            <FaWhatsapp aria-hidden="true" className="size-5" />
+            {t.help.primary}
+          </ButtonLink>
+        ) : null}
+        <ButtonLink href={href(locale, '/contact')} variant={site.contact.whatsapp ? 'secondary' : 'primary'}>
           {t.help.secondary}
         </ButtonLink>
       </CtaBand>

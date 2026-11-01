@@ -17,9 +17,10 @@ type ExamDatesProps = {
 
 /** Concours d'entrée (dates de content/admissions.ts) et pièces du dossier, côte à côte. */
 export function ExamDates({ id, locale, exams, documents }: ExamDatesProps) {
+  const pieces = documents.items.filter(Boolean);
   return (
     <section id={id} className="py-16 sm:py-24">
-      <Container className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+      <Container className={cn('grid gap-14 lg:gap-16', pieces.length ? 'lg:grid-cols-2' : 'max-w-3xl')}>
         <div className="flex flex-col gap-8">
           <SectionHeading eyebrow={exams.eyebrow} title={exams.title} intro={exams.intro} className="reveal" />
           <ul className="flex flex-col gap-3">
@@ -33,34 +34,40 @@ export function ExamDates({ id, locale, exams, documents }: ExamDatesProps) {
                   <p className="flex flex-col">
                     <span className="text-sm leading-5 text-muted">{exam.label[locale]}</span>
                     <span className="font-display text-lg leading-6 font-semibold text-navy-700">
-                      {formatDate(exam.date, locale, exams.datePlaceholder)}
+                      {formatDate(exam.date, locale, exams.datePlaceholder || exams.dateSoon)}
                     </span>
                   </p>
                 </li>
               );
             })}
           </ul>
-          <p className="reveal flex items-start gap-3 text-[15px] leading-6 text-muted">
-            <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
-            {exams.note}
-          </p>
+          {exams.note ? (
+            <p className="reveal flex items-start gap-3 text-[15px] leading-6 text-muted">
+              <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
+              {exams.note}
+            </p>
+          ) : null}
         </div>
 
+        {pieces.length ? (
         <div className="flex flex-col gap-8">
           <SectionHeading eyebrow={documents.eyebrow} title={documents.title} accent="green" className="reveal" />
           <ul className="reveal flex flex-col divide-y divide-line rounded-2xl border border-line bg-white px-5">
-            {documents.items.map((item) => (
+            {pieces.map((item) => (
               <li key={item} className="flex items-start gap-3 py-4 font-semibold">
                 <FileCheck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-green-700" strokeWidth={1.75} />
                 {item}
               </li>
             ))}
           </ul>
-          <p className="reveal flex items-start gap-3 text-[15px] leading-6 text-muted">
-            <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
-            {documents.note}
-          </p>
+          {documents.note ? (
+            <p className="reveal flex items-start gap-3 text-[15px] leading-6 text-muted">
+              <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
+              {documents.note}
+            </p>
+          ) : null}
         </div>
+        ) : null}
       </Container>
     </section>
   );

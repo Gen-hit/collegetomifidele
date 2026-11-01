@@ -17,11 +17,13 @@
     ],
     "quote": "[Key sentence of the message, to be provided: it is highlighted in the middle of the text.]",
     "photoLabel": "Portrait of the Principal · 3:4",
-    "namePlaceholder": "[Principal's name]"
+    "namePlaceholder": "[Principal's name]",
+    "pending": "The Principal's message to parents and students will be published here soon."
   },
   "meet": {
     "title": "Meeting the Principal",
     "text": "[Details to be provided: days and times when the Principal receives parents, how to book an appointment through the school office.]",
+    "fallback": "To meet the Principal, please contact the school office.",
     "cta": "Contact the school office"
   },
   "more": {

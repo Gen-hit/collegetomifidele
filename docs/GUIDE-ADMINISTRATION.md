@@ -19,7 +19,7 @@ Mot de passe oublié : sur l'écran de connexion, **Mot de passe oublié**.
 | Actualités, calendrier, galerie, documents | rédige, propose | valide et publie | tout |
 | Demandes des familles | traite | traite | traite |
 | Mettre le site à jour | — | oui | oui |
-| Réglages (coordonnées, frais, résultats, équipe, photos) | — | oui | oui |
+| Réglages (coordonnées, frais, résultats, équipe, photos, textes) | — | oui | oui |
 | Numéros de paiement Mobile Money | — | consulte | modifie |
 | Comptes, ménage du stockage | — | — | oui |
 
@@ -51,10 +51,27 @@ automatiquement 12 mois après leur envoi, comme annoncé aux familles.
 ## Les réglages du collège (Principal)
 
 *Réglages* regroupe ce qui change rarement : coordonnées et horaires, année scolaire et concours, frais de scolarité,
-résultats aux examens, équipe de direction, photos des pages. Après **Enregistrer**, le changement apparaît sur le site
-à la prochaine **mise à jour du site**.
+résultats aux examens, équipe de direction, photos des pages et **textes du site**. Après **Enregistrer**, le changement
+apparaît sur le site à la prochaine **mise à jour du site**.
 
-Règle du site : jamais de chiffre inventé. Une case laissée vide affiche « à fournir ».
+Règle du site : jamais de chiffre ni de texte inventé. **Ce qui n'est pas encore rempli n'apparaît pas** sur le site
+public : une section sans contenu se replie (et son lien disparaît du menu), une photo manquante est remplacée par une
+illustration aux couleurs du collège, les frais et les résultats affichent « publiés prochainement ». Dès qu'une
+information est saisie puis le site mis à jour, elle apparaît d'elle-même.
+
+## Les textes du site (Principal)
+
+*Réglages > Textes du site* liste tous les textes propres au collège qui manquent encore : mot du Principal, histoire,
+clubs, règlement, horaires des cours, pièces du dossier, réponses aux questions fréquentes, spécialités techniques…
+
+1. Le filtre **À remplir** montre ce qui reste ; la barre indique la progression. La recherche trouve un texte par mot
+   (« club », « règlement »…).
+2. Chaque ligne rappelle la consigne. Écrivez le texte **en français** ; l'**anglais** est facultatif : tant qu'il est
+   vide, le site anglais reprend le français.
+3. **Enregistrer**, puis, une fois plusieurs textes remplis, **Mettre le site à jour** depuis le tableau de bord.
+
+Les montants, numéros de téléphone, dates et noms de l'équipe ne sont pas dans cette liste : ils se remplissent dans les
+autres réglages.
 
 ## En cas de souci
 

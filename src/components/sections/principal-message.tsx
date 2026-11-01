@@ -10,6 +10,9 @@ import type { Dictionary } from '@/i18n/dictionaries';
 /** Mot du Principal : portrait, extrait et lien vers le message complet. Le nom et le portrait viennent de content/team.ts. */
 export function PrincipalMessage({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const t = dict.home.principal;
+  // Le mot du Principal n'apparaît sur l'accueil qu'une fois son texte fourni.
+  if (!t.text) return null;
+  const name = principal.name ?? t.namePlaceholder;
 
   return (
     <section className="py-16 sm:py-24">
@@ -33,7 +36,7 @@ export function PrincipalMessage({ locale, dict }: { locale: Locale; dict: Dicti
             {t.text}
           </blockquote>
           <p className="flex flex-col">
-            <span className="font-semibold">{principal.name ?? t.namePlaceholder}</span>
+            {name ? <span className="font-semibold">{name}</span> : null}
             <span className="text-sm leading-5 text-muted">{principal.role[locale]}</span>
           </p>
           <Link

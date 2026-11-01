@@ -5,23 +5,31 @@ import { cn } from '@/lib/utils';
 export type FeatureCard = { title: string; text: string; Icon: LucideIcon; tone: Tone };
 
 const grids = {
+  1: 'max-w-xl',
+  2: 'sm:grid-cols-2',
   3: 'md:grid-cols-3',
   4: 'sm:grid-cols-2 lg:grid-cols-4',
 } as const;
 
 type FeatureCardsProps = {
   items: FeatureCard[];
-  columns?: keyof typeof grids;
+  columns?: 3 | 4;
   /** Affiche « 01 », « 02 »… en filigrane, pour une suite d'étapes ou de valeurs. */
   numbered?: boolean;
   className?: string;
 };
 
-/** Grille de cartes à pictogramme coloré : atouts, valeurs, étapes, engagements. */
+/**
+ * Grille de cartes à pictogramme coloré : atouts, valeurs, étapes, engagements.
+ * Une carte sans titre (texte que le collège n'a pas encore fourni) n'est pas affichée ; la grille s'adapte au nombre restant.
+ */
 export function FeatureCards({ items, columns = 4, numbered = false, className }: FeatureCardsProps) {
+  const shown = items.filter((item) => item.title.trim());
+  if (shown.length === 0) return null;
+  const grid = grids[Math.min(columns, shown.length) as keyof typeof grids];
   return (
-    <ul className={cn('grid gap-4', grids[columns], className)}>
-      {items.map(({ title, text, Icon, tone }, index) => (
+    <ul className={cn('grid gap-4', grid, className)}>
+      {shown.map(({ title, text, Icon, tone }, index) => (
         <li
           key={title}
           className="group reveal relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-card"
@@ -36,7 +44,7 @@ export function FeatureCards({ items, columns = 4, numbered = false, className }
             <Icon className="size-6" strokeWidth={1.75} />
           </span>
           <h3 className="font-display text-xl leading-7 font-semibold">{title}</h3>
-          <p className="text-[15px] leading-6 text-muted">{text}</p>
+          {text ? <p className="text-[15px] leading-6 text-muted">{text}</p> : null}
         </li>
       ))}
     </ul>

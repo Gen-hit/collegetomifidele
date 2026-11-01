@@ -8,7 +8,7 @@ export type LinkCard = { label: string; text: string; href: string; Icon: Lucide
 /** Rangée de cartes entièrement cliquables : « pour aller plus loin », raccourcis vers d'autres pages. */
 export function LinkCards({ items, className }: { items: LinkCard[]; className?: string }) {
   return (
-    <ul className={cn('grid gap-4 lg:grid-cols-3', className)}>
+    <ul className={cn('grid gap-4', items.length === 2 ? 'md:grid-cols-2' : 'lg:grid-cols-3', className)}>
       {items.map(({ label, text, href, Icon, tone }) => (
         <li key={href} className="reveal">
           <Link

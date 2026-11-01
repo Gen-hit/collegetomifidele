@@ -20,13 +20,18 @@
     "emailPlaceholder": "[School office email]",
     "addressPlaceholder": "[Neighbourhood, street or landmark]",
     "cityPlaceholder": "[City], Cameroon",
+    "cityLine": "%city%, Cameroon",
     "hoursPlaceholder": "[Opening days and hours]",
     "valuePlaceholder": "[to be provided]",
     "breadcrumb": "Breadcrumb",
     "yearPlaceholder": "[school year]",
     "closed": "Closed",
     "hoursLine": "%days%: %hours%",
-    "days": { "weekdays": "Monday to Friday", "saturday": "Saturday", "sunday": "Sunday" },
+    "days": {
+      "weekdays": "Monday to Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
     "share": {
       "title": "Share:",
       "label": "Share",
@@ -39,36 +44,107 @@
   },
   "announcement": {
     "text": "Admissions for %year% are open.",
+    "textPlain": "Admissions are open.",
     "cta": "See admissions",
     "dismiss": "Dismiss announcement"
   },
   "nav": {
-    "about": { "label": "The school" },
-    "aboutOverview": { "label": "About us", "desc": "Who we are and what sets us apart" },
-    "aboutHistory": { "label": "History and values", "desc": "Key milestones, mission and motto" },
-    "principal": { "label": "Principal's message", "desc": "A word from the head of school" },
-    "team": { "label": "Leadership team", "desc": "The staff who guide our students" },
-    "programmes": { "label": "Programmes" },
-    "francophone": { "label": "Section francophone", "desc": "De la 6e à la Terminale" },
-    "anglophone": { "label": "Anglophone section", "desc": "From Form 1 to Upper Sixth" },
-    "technique": { "label": "Technical education", "desc": "Specialities, workshops and certificates" },
-    "results": { "label": "Exam results", "desc": "Pass rates for each session" },
-    "facilities": { "label": "Facilities" },
-    "campus": { "label": "School life" },
-    "clubs": { "label": "Clubs and activities", "desc": "Learning beyond the classroom" },
-    "rules": { "label": "Rules and uniform", "desc": "Discipline, uniform and timetable" },
-    "calendar": { "label": "School calendar", "desc": "Assessments, exams, holidays and events" },
-    "gallery": { "label": "Photo gallery", "desc": "The school in pictures" },
-    "documents": { "label": "Documents", "desc": "Rules, book lists and forms to download" },
-    "news": { "label": "News" },
-    "admissions": { "label": "Admissions" },
-    "procedure": { "label": "How to apply", "desc": "Enrol in four steps" },
-    "fees": { "label": "Fees and payment", "desc": "Instalments, MoMo and Orange Money" },
-    "simulator": { "label": "Fee calculator", "desc": "Work out the total for your child" },
-    "apply": { "label": "Pre-registration", "desc": "A two-minute form" },
-    "faq": { "label": "Frequently asked questions", "desc": "Answers to parents' questions" },
-    "contact": { "label": "Contact" },
-    "privacy": { "label": "Privacy" }
+    "about": {
+      "label": "The school"
+    },
+    "aboutOverview": {
+      "label": "About us",
+      "desc": "Who we are and what sets us apart"
+    },
+    "aboutHistory": {
+      "label": "History and values",
+      "desc": "Key milestones, mission and motto"
+    },
+    "principal": {
+      "label": "Principal's message",
+      "desc": "A word from the head of school"
+    },
+    "team": {
+      "label": "Leadership team",
+      "desc": "The staff who guide our students"
+    },
+    "programmes": {
+      "label": "Programmes"
+    },
+    "francophone": {
+      "label": "Section francophone",
+      "desc": "De la 6e à la Terminale"
+    },
+    "anglophone": {
+      "label": "Anglophone section",
+      "desc": "From Form 1 to Upper Sixth"
+    },
+    "technique": {
+      "label": "Technical education",
+      "desc": "Specialities, workshops and certificates"
+    },
+    "results": {
+      "label": "Exam results",
+      "desc": "Pass rates for each session"
+    },
+    "facilities": {
+      "label": "Facilities"
+    },
+    "campus": {
+      "label": "School life"
+    },
+    "clubs": {
+      "label": "Clubs and activities",
+      "desc": "Learning beyond the classroom"
+    },
+    "rules": {
+      "label": "Rules and uniform",
+      "desc": "Discipline, uniform and timetable"
+    },
+    "calendar": {
+      "label": "School calendar",
+      "desc": "Assessments, exams, holidays and events"
+    },
+    "gallery": {
+      "label": "Photo gallery",
+      "desc": "The school in pictures"
+    },
+    "documents": {
+      "label": "Documents",
+      "desc": "Rules, book lists and forms to download"
+    },
+    "news": {
+      "label": "News"
+    },
+    "admissions": {
+      "label": "Admissions"
+    },
+    "procedure": {
+      "label": "How to apply",
+      "desc": "Enrol in four steps"
+    },
+    "fees": {
+      "label": "Fees and payment",
+      "desc": "Instalments, MoMo and Orange Money"
+    },
+    "simulator": {
+      "label": "Fee calculator",
+      "desc": "Work out the total for your child"
+    },
+    "apply": {
+      "label": "Pre-registration",
+      "desc": "A two-minute form"
+    },
+    "faq": {
+      "label": "Frequently asked questions",
+      "desc": "Answers to parents' questions"
+    },
+    "contact": {
+      "label": "Contact"
+    },
+    "privacy": {
+      "label": "Privacy"
+    }
   },
   "home": {
     "hero": {
@@ -86,7 +162,9 @@
       "students": "Students enrolled",
       "teachers": "Teachers",
       "success": "Exam pass rate",
-      "sections": "Sections: Francophone and Anglophone"
+      "sections": "Sections: Francophone and Anglophone",
+      "streams": "Streams: general and technical",
+      "years": "Years of study, from Form 1 to Upper Sixth"
     },
     "principal": {
       "eyebrow": "The Principal's message",
@@ -100,10 +178,22 @@
       "eyebrow": "Why choose us",
       "title": "What makes the school {strong}",
       "items": [
-        { "title": "Two sections", "text": "The Francophone and Anglophone sections under one roof." },
-        { "title": "General and technical", "text": "Both streams, from the first cycle to the final exam." },
-        { "title": "[Strength 3]", "text": "[To be provided by the school, for example student follow-up.]" },
-        { "title": "[Strength 4]", "text": "[To be provided by the school, for example the learning environment.]" }
+        {
+          "title": "Two sections",
+          "text": "The Francophone and Anglophone sections under one roof."
+        },
+        {
+          "title": "General and technical",
+          "text": "Both streams, from the first cycle to the final exam."
+        },
+        {
+          "title": "[Strength 3]",
+          "text": "[To be provided by the school, for example student follow-up.]"
+        },
+        {
+          "title": "[Strength 4]",
+          "text": "[To be provided by the school, for example the learning environment.]"
+        }
       ]
     },
     "programmes": {
@@ -140,17 +230,35 @@
     "facilities": {
       "eyebrow": "Our facilities",
       "title": "A place designed for {learning}",
-      "items": ["Laboratories", "Computer room", "Technical workshops", "Library"],
+      "items": [
+        "Laboratories",
+        "Computer room",
+        "Technical workshops",
+        "Library"
+      ],
       "cta": "Tour the facilities"
     },
     "admissions": {
       "eyebrow": "Admissions %year%",
+      "eyebrowPlain": "Admissions",
       "title": "Admissions are {open}",
       "text": "Check the fees and entrance exam dates, and pre-register your child in a few minutes.",
       "cards": [
-        { "label": "Registration fee", "value": "[00,000 FCFA]", "note": "[Terms to be specified]" },
-        { "label": "School fees", "value": "[000,000 FCFA]", "note": "Paid in [N] instalments" },
-        { "label": "Next entrance exam", "value": "[Date]", "note": "[Class concerned]" }
+        {
+          "label": "Registration fee",
+          "value": "[00,000 FCFA]",
+          "note": "[Terms to be specified]"
+        },
+        {
+          "label": "School fees",
+          "value": "[000,000 FCFA]",
+          "note": "Paid in [N] instalments"
+        },
+        {
+          "label": "Next entrance exam",
+          "value": "[Date]",
+          "note": "[Class concerned]"
+        }
       ],
       "primary": "Pre-register my child",
       "secondary": "See fees and payment"
@@ -182,6 +290,7 @@
     "cta": {
       "title": "Any questions? The school office is here to {help}",
       "text": "Message us on WhatsApp or call the school during opening hours.",
+      "textForm": "Write to the school office from the website: it will reply by phone or message.",
       "primary": "Contact us",
       "secondary": "Message us on WhatsApp"
     }
@@ -199,7 +308,8 @@
       "youtube": "The school's YouTube channel",
       "tiktok": "The school's TikTok account",
       "whatsappChannel": "The school's WhatsApp channel"
-    }
+    },
+    "write": "Write to the school office"
   },
   "viewer": {
     "title": "Viewer",
@@ -232,18 +342,49 @@
     "subtitle": "Guided answers",
     "close": "Close the assistant",
     "welcome": "Hello! I am the Collège Tomi Fidele assistant. Choose a topic below to find the information you need quickly.",
-    "fallback": "I cannot answer free-form questions yet: the assistant has not been set up. Choose a topic below, or message the school office on WhatsApp.",
+    "fallback": "I don't have a ready answer to that question. Choose a topic below, or ask the school office directly.",
+    "contactLink": "Write to the school office",
     "topicsLabel": "Common topics",
     "inputLabel": "Your question",
     "inputPlaceholder": "Type your question…",
     "send": "Send",
     "whatsapp": "Message the school office",
     "topics": [
-      { "id": "fees", "label": "School fees", "answer": "The registration fee and school fees, instalment by instalment, are detailed on the Fees and payment page.", "path": "/admissions/fees", "linkLabel": "See the fees" },
-      { "id": "enroll", "label": "Enrol my child", "answer": "Enrolment takes four steps. You can start with the online pre-registration, which takes two minutes.", "path": "/admissions", "linkLabel": "See how to apply" },
-      { "id": "programmes", "label": "Classes and streams", "answer": "The school offers general and technical education, in both the Francophone and Anglophone sections.", "path": "/programmes", "linkLabel": "See the programmes" },
-      { "id": "calendar", "label": "Dates and calendar", "answer": "Assessments, exams, holidays and events for the year are all in the school calendar.", "path": "/calendar", "linkLabel": "See the calendar" },
-      { "id": "location", "label": "Where is the school?", "answer": "The exact location of the school, with directions, is on the Contact page.", "path": "/contact", "linkLabel": "See the map" }
+      {
+        "id": "fees",
+        "label": "School fees",
+        "answer": "The registration fee and school fees, instalment by instalment, are detailed on the Fees and payment page.",
+        "path": "/admissions/fees",
+        "linkLabel": "See the fees"
+      },
+      {
+        "id": "enroll",
+        "label": "Enrol my child",
+        "answer": "Enrolment takes four steps. You can start with the online pre-registration, which takes two minutes.",
+        "path": "/admissions",
+        "linkLabel": "See how to apply"
+      },
+      {
+        "id": "programmes",
+        "label": "Classes and streams",
+        "answer": "The school offers general and technical education, in both the Francophone and Anglophone sections.",
+        "path": "/programmes",
+        "linkLabel": "See the programmes"
+      },
+      {
+        "id": "calendar",
+        "label": "Dates and calendar",
+        "answer": "Assessments, exams, holidays and events for the year are all in the school calendar.",
+        "path": "/calendar",
+        "linkLabel": "See the calendar"
+      },
+      {
+        "id": "location",
+        "label": "Where is the school?",
+        "answer": "The exact location of the school, with directions, is on the Contact page.",
+        "path": "/contact",
+        "linkLabel": "See the map"
+      }
     ]
   },
   "notFound": {

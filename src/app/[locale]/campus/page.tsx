@@ -2,7 +2,6 @@ import { ArrowRight, CalendarDays, Clock, Download, FileText, Images, Info } fro
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { documentById, localize } from '@content/documents';
-import { gallery } from '@content/gallery';
 import { photo } from '@content/photos';
 import { CtaBand } from '@/components/sections/cta-band';
 import { IntroSplit } from '@/components/sections/intro-split';
@@ -15,6 +14,7 @@ import { PhotoSlot } from '@/components/ui/photo-slot';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { calendarItems } from '@/features/calendar/events';
 import { UpcomingEvents } from '@/features/calendar/upcoming-events';
+import { hiddenSections, visibleGallery, visibleToc } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -43,6 +43,11 @@ export default async function CampusPage({ params }: Props) {
   const rules = documentById('reglement-interieur')?.file;
   const rulesFile = rules ? localize(rules, locale) : null;
   const buildDate = new Date().toISOString().slice(0, 10);
+  const hidden = hiddenSections(dict);
+  // Les clubs dont le nom est connu, avec leur numéro d'origine (il désigne leur photo dans les réglages).
+  const clubs = t.clubs.items.map((club, index) => ({ ...club, slot: index + 1 })).filter((club) => club.name);
+  const schedule = t.schedule.items.filter((item) => item.value);
+  const preview = visibleGallery.slice(0, 4);
 
   return (
     <>
@@ -56,18 +61,19 @@ export default async function CampusPage({ params }: Props) {
           items: [{ label: dict.nav.campus.label, path: PATH }],
         }}
       />
-      <AnchorNav label={t.toc.label} items={t.toc.items} />
+      <AnchorNav label={t.toc.label} items={visibleToc(dict, PATH, t.toc.items)} />
 
+      {hidden.has(`${PATH}#${clubsId}`) ? null : (
       <section id={clubsId} className="py-16 sm:py-24">
         <Container className="flex flex-col gap-10">
           <SectionHeading eyebrow={t.clubs.eyebrow} title={t.clubs.title} intro={t.clubs.intro} accent="green" className="reveal" />
           <LightboxGroup
             labels={dict.viewer}
             photoWord={dict.common.photo}
-            items={t.clubs.items.map((club, index) => ({ src: photo(`campus.clubs.${index + 1}`) ?? null, title: club.name, description: club.text }))}
+            items={clubs.map((club) => ({ src: photo(`campus.clubs.${club.slot}`) ?? null, title: club.name, description: club.text }))}
           >
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {t.clubs.items.map((club, index) => {
+            {clubs.map((club, index) => {
               const look = tones[toneCycle[index % toneCycle.length]];
               return (
                 <li
@@ -77,12 +83,12 @@ export default async function CampusPage({ params }: Props) {
                   <LightboxTrigger index={index} className="overflow-hidden">
                     <PhotoSlot
                       label={club.photo}
-                      src={photo(`campus.clubs.${index + 1}`)}
+                      src={photo(`campus.clubs.${club.slot}`)}
                       alt={club.name}
                       photoWord={dict.common.photo}
                       ratio="aspect-video"
                       priority={index === 0}
-                      className={cn('rounded-none transition-transform duration-500 group-hover:scale-103', !photo(`campus.clubs.${index + 1}`) && 'border-x-0 border-t-0')}
+                      className={cn('rounded-none transition-transform duration-500 group-hover:scale-103', !photo(`campus.clubs.${club.slot}`) && 'border-x-0 border-t-0')}
                     />
                   </LightboxTrigger>
                   <span
@@ -96,10 +102,12 @@ export default async function CampusPage({ params }: Props) {
                   </span>
                   <div className="flex flex-1 flex-col gap-1.5 p-5">
                     <h3 className="font-display text-xl leading-7 font-semibold text-navy-700">{club.name}</h3>
-                    <p className="flex items-start gap-2 text-[15px] leading-6 text-muted">
-                      <Clock aria-hidden="true" className={cn('mt-0.5 size-4.5 shrink-0', look.text)} strokeWidth={1.75} />
-                      {club.text}
-                    </p>
+                    {club.text ? (
+                      <p className="flex items-start gap-2 text-[15px] leading-6 text-muted">
+                        <Clock aria-hidden="true" className={cn('mt-0.5 size-4.5 shrink-0', look.text)} strokeWidth={1.75} />
+                        {club.text}
+                      </p>
+                    ) : null}
                   </div>
                 </li>
               );
@@ -108,13 +116,15 @@ export default async function CampusPage({ params }: Props) {
           </LightboxGroup>
         </Container>
       </section>
+      )}
 
       <section id={scheduleId} className="bg-surface-alt py-16 sm:py-24">
-        <Container className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+        <Container className={cn('grid gap-14 lg:gap-16', schedule.length ? 'lg:grid-cols-2' : 'max-w-3xl')}>
+          {schedule.length ? (
           <div className="flex flex-col gap-8">
             <SectionHeading eyebrow={t.schedule.eyebrow} title={t.schedule.title} className="reveal" />
             <dl className="reveal divide-y divide-line rounded-2xl border border-line bg-white px-5">
-              {t.schedule.items.map((item) => (
+              {schedule.map((item) => (
                 <div key={item.label} className="flex items-center justify-between gap-4 py-4">
                   <dt className="flex items-center gap-3 font-semibold">
                     <Clock aria-hidden="true" className="size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
@@ -124,11 +134,14 @@ export default async function CampusPage({ params }: Props) {
                 </div>
               ))}
             </dl>
-            <p className="reveal flex items-start gap-3 text-[15px] leading-6 text-muted">
-              <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
-              {t.schedule.note}
-            </p>
+            {t.schedule.note ? (
+              <p className="reveal flex items-start gap-3 text-[15px] leading-6 text-muted">
+                <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-blue-500" strokeWidth={1.75} />
+                {t.schedule.note}
+              </p>
+            ) : null}
           </div>
+          ) : null}
 
           <div className="flex flex-col gap-8">
             <SectionHeading eyebrow={t.dates.eyebrow} title={t.dates.title} accent="gold" className="reveal" />
@@ -150,6 +163,7 @@ export default async function CampusPage({ params }: Props) {
         </Container>
       </section>
 
+      {hidden.has(`${PATH}#${rulesId}`) ? null : (
       <IntroSplit
         id={rulesId}
         eyebrow={t.rules.eyebrow}
@@ -175,7 +189,9 @@ export default async function CampusPage({ params }: Props) {
           </ButtonLink>
         </div>
       </IntroSplit>
+      )}
 
+      {preview.length === 0 ? null : (
       <section id={galleryId} className="bg-surface-alt py-16 sm:py-24">
         <Container className="flex flex-col gap-10">
           <div className="reveal flex flex-wrap items-end justify-between gap-6">
@@ -188,10 +204,10 @@ export default async function CampusPage({ params }: Props) {
           <LightboxGroup
             labels={dict.viewer}
             photoWord={dict.common.photo}
-            items={gallery.slice(0, 4).map((item) => ({ src: item.src, thumb: item.thumb, title: item.caption[locale], description: item.description?.[locale] }))}
+            items={preview.map((item) => ({ src: item.src, thumb: item.thumb, title: item.caption[locale], description: item.description?.[locale] }))}
           >
             <ul className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:gap-4">
-              {gallery.slice(0, 4).map((item, index) => (
+              {preview.map((item, index) => (
                 <li key={index} className="group reveal">
                   <LightboxTrigger index={index} className="overflow-hidden rounded-2xl">
                     <PhotoSlot
@@ -209,6 +225,7 @@ export default async function CampusPage({ params }: Props) {
           </LightboxGroup>
         </Container>
       </section>
+      )}
 
       <CtaBand title={t.cta.title} text={t.cta.text} tone="green">
         <ButtonLink href={href(locale, '/admissions#preinscription')}>

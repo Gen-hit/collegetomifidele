@@ -30,7 +30,9 @@
     "titleEmpty": "Les résultats de la {dernière session}",
     "empty": "Les résultats seront publiés ici dès que le collège les aura communiqués. Les emplacements ci-dessous montrent comment ils seront présentés.",
     "overall": "Taux de réussite global",
-    "overallNote": "Tous examens confondus, %passed% admis sur %registered% inscrits."
+    "overallNote": "Tous examens confondus, %passed% admis sur %registered% inscrits.",
+    "soon": "Les résultats du collège aux examens officiels seront publiés ici, session après session, dès leur communication par la direction.",
+    "examsLabel": "Examens présentés"
   },
   "sections": {
     "francophone": "Section francophone",

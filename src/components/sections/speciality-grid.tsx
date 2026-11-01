@@ -18,7 +18,10 @@ type SpecialityGridProps = {
 };
 
 /** Les spécialités de l'enseignement technique : une carte par spécialité, avec son domaine et son diplôme. */
-export function SpecialityGrid({ id, eyebrow, title, intro, fieldLabel, diplomaLabel, items }: SpecialityGridProps) {
+export function SpecialityGrid({ id, eyebrow, title, intro, fieldLabel, diplomaLabel, items: all }: SpecialityGridProps) {
+  // Une spécialité sans nom n'est pas encore ouverte (ou pas encore décrite) : elle n'est pas affichée.
+  const items = all.filter((item) => item.name);
+  if (items.length === 0) return null;
   return (
     <section id={id} className="bg-surface-alt py-16 sm:py-24">
       <Container className="flex flex-col gap-10">

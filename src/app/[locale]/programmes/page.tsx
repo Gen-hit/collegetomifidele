@@ -12,6 +12,7 @@ import { AnchorNav } from '@/components/ui/anchor-nav';
 import { ButtonLink } from '@/components/ui/button';
 import { resultItems } from '@/features/results/teaser';
 import { Chip } from '@/components/ui/chip';
+import { visibleToc } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -45,7 +46,7 @@ export default async function ProgrammesPage({ params }: Props) {
           items: [{ label: dict.nav.programmes.label, path: PATH }],
         }}
       />
-      <AnchorNav label={t.toc.label} items={t.toc.items} />
+      <AnchorNav label={t.toc.label} items={visibleToc(dict, PATH, t.toc.items)} />
       <SectionCards
         id={sections}
         eyebrow={t.sections.eyebrow}
@@ -73,16 +74,18 @@ export default async function ProgrammesPage({ params }: Props) {
         tone="gold"
         flip
       >
+        {t.technique.specialities.some(Boolean) ? (
         <div className="flex flex-col gap-3">
           <p className="text-[13px] leading-4 font-semibold tracking-[0.08em] text-muted uppercase">{t.technique.specialitiesLabel}</p>
           <ul className="flex flex-wrap gap-2">
-            {t.technique.specialities.map((name) => (
+            {t.technique.specialities.filter(Boolean).map((name) => (
               <li key={name}>
                 <Chip tone="gold">{name}</Chip>
               </li>
             ))}
           </ul>
         </div>
+        ) : null}
         <ButtonLink href={href(locale, '/programmes/technique')} variant="secondary" className="mt-2 self-start">
           {t.technique.link}
           <ArrowRight aria-hidden="true" className="size-5" strokeWidth={2} />

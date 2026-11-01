@@ -20,13 +20,18 @@
     "emailPlaceholder": "[Email du secrétariat]",
     "addressPlaceholder": "[Quartier, rue ou repère]",
     "cityPlaceholder": "[Ville], Cameroun",
+    "cityLine": "%city%, Cameroun",
     "hoursPlaceholder": "[Jours et horaires d'ouverture]",
     "valuePlaceholder": "[à fournir]",
     "breadcrumb": "Fil d'Ariane",
     "yearPlaceholder": "[année scolaire]",
     "closed": "Fermé",
     "hoursLine": "%days% : %hours%",
-    "days": { "weekdays": "Lundi à vendredi", "saturday": "Samedi", "sunday": "Dimanche" },
+    "days": {
+      "weekdays": "Lundi à vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
     "share": {
       "title": "Partager :",
       "label": "Partager",
@@ -39,36 +44,107 @@
   },
   "announcement": {
     "text": "Les inscriptions %year% sont ouvertes.",
+    "textPlain": "Les inscriptions sont ouvertes.",
     "cta": "Voir les admissions",
     "dismiss": "Fermer l'annonce"
   },
   "nav": {
-    "about": { "label": "Le collège" },
-    "aboutOverview": { "label": "Présentation", "desc": "Qui nous sommes et ce qui nous distingue" },
-    "aboutHistory": { "label": "Histoire et valeurs", "desc": "Les grandes étapes, la mission, la devise" },
-    "principal": { "label": "Mot du Principal", "desc": "Le message du chef d'établissement" },
-    "team": { "label": "Équipe de direction", "desc": "Les responsables qui encadrent les élèves" },
-    "programmes": { "label": "Programmes" },
-    "francophone": { "label": "Section francophone", "desc": "De la 6e à la Terminale" },
-    "anglophone": { "label": "Anglophone section", "desc": "From Form 1 to Upper Sixth" },
-    "technique": { "label": "Enseignement technique", "desc": "Spécialités, ateliers et diplômes" },
-    "results": { "label": "Résultats aux examens", "desc": "Les taux de réussite par session" },
-    "facilities": { "label": "Infrastructures" },
-    "campus": { "label": "Vie scolaire" },
-    "clubs": { "label": "Clubs et activités", "desc": "Apprendre aussi en dehors de la classe" },
-    "rules": { "label": "Règlement et tenue", "desc": "Discipline, uniforme, horaires" },
-    "calendar": { "label": "Calendrier scolaire", "desc": "Évaluations, examens, fêtes et événements" },
-    "gallery": { "label": "Galerie photo", "desc": "Le collège en images" },
-    "documents": { "label": "Documents", "desc": "Règlement, fournitures et fiches à télécharger" },
-    "news": { "label": "Actualités" },
-    "admissions": { "label": "Admissions" },
-    "procedure": { "label": "Procédure", "desc": "S'inscrire en quatre étapes" },
-    "fees": { "label": "Frais et paiement", "desc": "Scolarité par tranche, MoMo et Orange Money" },
-    "simulator": { "label": "Simulateur de frais", "desc": "Calculez le total pour votre enfant" },
-    "apply": { "label": "Préinscription", "desc": "Le formulaire en deux minutes" },
-    "faq": { "label": "Questions fréquentes", "desc": "Les réponses aux questions des parents" },
-    "contact": { "label": "Contact" },
-    "privacy": { "label": "Confidentialité" }
+    "about": {
+      "label": "Le collège"
+    },
+    "aboutOverview": {
+      "label": "Présentation",
+      "desc": "Qui nous sommes et ce qui nous distingue"
+    },
+    "aboutHistory": {
+      "label": "Histoire et valeurs",
+      "desc": "Les grandes étapes, la mission, la devise"
+    },
+    "principal": {
+      "label": "Mot du Principal",
+      "desc": "Le message du chef d'établissement"
+    },
+    "team": {
+      "label": "Équipe de direction",
+      "desc": "Les responsables qui encadrent les élèves"
+    },
+    "programmes": {
+      "label": "Programmes"
+    },
+    "francophone": {
+      "label": "Section francophone",
+      "desc": "De la 6e à la Terminale"
+    },
+    "anglophone": {
+      "label": "Anglophone section",
+      "desc": "From Form 1 to Upper Sixth"
+    },
+    "technique": {
+      "label": "Enseignement technique",
+      "desc": "Spécialités, ateliers et diplômes"
+    },
+    "results": {
+      "label": "Résultats aux examens",
+      "desc": "Les taux de réussite par session"
+    },
+    "facilities": {
+      "label": "Infrastructures"
+    },
+    "campus": {
+      "label": "Vie scolaire"
+    },
+    "clubs": {
+      "label": "Clubs et activités",
+      "desc": "Apprendre aussi en dehors de la classe"
+    },
+    "rules": {
+      "label": "Règlement et tenue",
+      "desc": "Discipline, uniforme, horaires"
+    },
+    "calendar": {
+      "label": "Calendrier scolaire",
+      "desc": "Évaluations, examens, fêtes et événements"
+    },
+    "gallery": {
+      "label": "Galerie photo",
+      "desc": "Le collège en images"
+    },
+    "documents": {
+      "label": "Documents",
+      "desc": "Règlement, fournitures et fiches à télécharger"
+    },
+    "news": {
+      "label": "Actualités"
+    },
+    "admissions": {
+      "label": "Admissions"
+    },
+    "procedure": {
+      "label": "Procédure",
+      "desc": "S'inscrire en quatre étapes"
+    },
+    "fees": {
+      "label": "Frais et paiement",
+      "desc": "Scolarité par tranche, MoMo et Orange Money"
+    },
+    "simulator": {
+      "label": "Simulateur de frais",
+      "desc": "Calculez le total pour votre enfant"
+    },
+    "apply": {
+      "label": "Préinscription",
+      "desc": "Le formulaire en deux minutes"
+    },
+    "faq": {
+      "label": "Questions fréquentes",
+      "desc": "Les réponses aux questions des parents"
+    },
+    "contact": {
+      "label": "Contact"
+    },
+    "privacy": {
+      "label": "Confidentialité"
+    }
   },
   "home": {
     "hero": {
@@ -86,7 +162,9 @@
       "students": "Élèves inscrits",
       "teachers": "Enseignants",
       "success": "Réussite aux examens",
-      "sections": "Sections : francophone et anglophone"
+      "sections": "Sections : francophone et anglophone",
+      "streams": "Filières : général et technique",
+      "years": "Années d’études, de la 6e à la Terminale"
     },
     "principal": {
       "eyebrow": "Le mot du Principal",
@@ -100,10 +178,22 @@
       "eyebrow": "Pourquoi nous choisir",
       "title": "Ce qui fait la {force} du collège",
       "items": [
-        { "title": "Deux sections", "text": "La section francophone et la section anglophone dans un même établissement." },
-        { "title": "Général et technique", "text": "Les deux filières, du premier cycle jusqu'à l'examen final." },
-        { "title": "[Atout 3]", "text": "[À fournir par le collège, par exemple le suivi des élèves.]" },
-        { "title": "[Atout 4]", "text": "[À fournir par le collège, par exemple le cadre de travail.]" }
+        {
+          "title": "Deux sections",
+          "text": "La section francophone et la section anglophone dans un même établissement."
+        },
+        {
+          "title": "Général et technique",
+          "text": "Les deux filières, du premier cycle jusqu'à l'examen final."
+        },
+        {
+          "title": "[Atout 3]",
+          "text": "[À fournir par le collège, par exemple le suivi des élèves.]"
+        },
+        {
+          "title": "[Atout 4]",
+          "text": "[À fournir par le collège, par exemple le cadre de travail.]"
+        }
       ]
     },
     "programmes": {
@@ -140,17 +230,35 @@
     "facilities": {
       "eyebrow": "Nos installations",
       "title": "Un cadre pensé pour {apprendre}",
-      "items": ["Laboratoires", "Salle informatique", "Ateliers techniques", "Bibliothèque"],
+      "items": [
+        "Laboratoires",
+        "Salle informatique",
+        "Ateliers techniques",
+        "Bibliothèque"
+      ],
       "cta": "Visiter les infrastructures"
     },
     "admissions": {
       "eyebrow": "Admissions %year%",
+      "eyebrowPlain": "Admissions",
       "title": "Les inscriptions sont {ouvertes}",
       "text": "Consultez les frais, les dates de concours et préinscrivez votre enfant en quelques minutes.",
       "cards": [
-        { "label": "Frais d'inscription", "value": "[00 000 F CFA]", "note": "[Modalité à préciser]" },
-        { "label": "Frais de scolarité", "value": "[000 000 F CFA]", "note": "Paiement échelonné en [N] tranches" },
-        { "label": "Prochain concours", "value": "[Date]", "note": "[Classe concernée]" }
+        {
+          "label": "Frais d'inscription",
+          "value": "[00 000 F CFA]",
+          "note": "[Modalité à préciser]"
+        },
+        {
+          "label": "Frais de scolarité",
+          "value": "[000 000 F CFA]",
+          "note": "Paiement échelonné en [N] tranches"
+        },
+        {
+          "label": "Prochain concours",
+          "value": "[Date]",
+          "note": "[Classe concernée]"
+        }
       ],
       "primary": "Préinscrire mon enfant",
       "secondary": "Voir les frais et le paiement"
@@ -182,6 +290,7 @@
     "cta": {
       "title": "Une question ? Le secrétariat vous {répond}",
       "text": "Écrivez-nous sur WhatsApp ou appelez le collège aux heures d'ouverture.",
+      "textForm": "Écrivez au secrétariat depuis le site : il vous répond par téléphone ou par message.",
       "primary": "Nous contacter",
       "secondary": "Écrire sur WhatsApp"
     }
@@ -199,7 +308,8 @@
       "youtube": "Chaîne YouTube du collège",
       "tiktok": "Compte TikTok du collège",
       "whatsappChannel": "Chaîne WhatsApp du collège"
-    }
+    },
+    "write": "Écrire au secrétariat"
   },
   "viewer": {
     "title": "Visionneuse",
@@ -232,18 +342,49 @@
     "subtitle": "Réponses guidées",
     "close": "Fermer l'assistant",
     "welcome": "Bonjour ! Je suis l'assistant du Collège Tomi Fidele. Choisissez un sujet ci-dessous pour trouver rapidement l'information.",
-    "fallback": "Je ne peux pas encore répondre aux questions libres : l'assistant n'est pas configuré. Choisissez un sujet ci-dessous, ou écrivez au secrétariat sur WhatsApp.",
+    "fallback": "Je n'ai pas de réponse toute prête à cette question. Choisissez un sujet ci-dessous, ou posez-la directement au secrétariat.",
+    "contactLink": "Écrire au secrétariat",
     "topicsLabel": "Sujets fréquents",
     "inputLabel": "Votre question",
     "inputPlaceholder": "Écrivez votre question…",
     "send": "Envoyer",
     "whatsapp": "Écrire au secrétariat",
     "topics": [
-      { "id": "fees", "label": "Frais de scolarité", "answer": "Les frais d'inscription et de scolarité, tranche par tranche, sont détaillés sur la page Frais et paiement.", "path": "/admissions/fees", "linkLabel": "Voir les frais" },
-      { "id": "enroll", "label": "Inscrire mon enfant", "answer": "L'inscription se fait en quatre étapes. Vous pouvez commencer par la préinscription en ligne, qui prend deux minutes.", "path": "/admissions", "linkLabel": "Voir la procédure" },
-      { "id": "programmes", "label": "Classes et filières", "answer": "Le collège propose l'enseignement général et l'enseignement technique, en section francophone et en section anglophone.", "path": "/programmes", "linkLabel": "Voir les programmes" },
-      { "id": "calendar", "label": "Dates et calendrier", "answer": "Les évaluations, examens, fêtes et événements de l'année sont réunis dans le calendrier scolaire.", "path": "/calendar", "linkLabel": "Voir le calendrier" },
-      { "id": "location", "label": "Où se trouve le collège ?", "answer": "L'emplacement exact du collège, avec l'itinéraire, se trouve sur la page Contact.", "path": "/contact", "linkLabel": "Voir la carte" }
+      {
+        "id": "fees",
+        "label": "Frais de scolarité",
+        "answer": "Les frais d'inscription et de scolarité, tranche par tranche, sont détaillés sur la page Frais et paiement.",
+        "path": "/admissions/fees",
+        "linkLabel": "Voir les frais"
+      },
+      {
+        "id": "enroll",
+        "label": "Inscrire mon enfant",
+        "answer": "L'inscription se fait en quatre étapes. Vous pouvez commencer par la préinscription en ligne, qui prend deux minutes.",
+        "path": "/admissions",
+        "linkLabel": "Voir la procédure"
+      },
+      {
+        "id": "programmes",
+        "label": "Classes et filières",
+        "answer": "Le collège propose l'enseignement général et l'enseignement technique, en section francophone et en section anglophone.",
+        "path": "/programmes",
+        "linkLabel": "Voir les programmes"
+      },
+      {
+        "id": "calendar",
+        "label": "Dates et calendrier",
+        "answer": "Les évaluations, examens, fêtes et événements de l'année sont réunis dans le calendrier scolaire.",
+        "path": "/calendar",
+        "linkLabel": "Voir le calendrier"
+      },
+      {
+        "id": "location",
+        "label": "Où se trouve le collège ?",
+        "answer": "L'emplacement exact du collège, avec l'itinéraire, se trouve sur la page Contact.",
+        "path": "/contact",
+        "linkLabel": "Voir la carte"
+      }
     ]
   },
   "notFound": {

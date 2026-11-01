@@ -6,6 +6,7 @@ import { admissionHighlights, schoolYear } from '@/features/fees/highlights';
 import { href, type Locale } from '@/i18n/config';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { fill } from '@/lib/format';
+import { cn } from '@/lib/utils';
 
 const icons: LucideIcon[] = [ClipboardList, Wallet, CalendarDays];
 
@@ -15,6 +16,8 @@ const icons: LucideIcon[] = [ClipboardList, Wallet, CalendarDays];
  */
 export function AdmissionsBand({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const t = dict.home.admissions;
+  // Seules les cartes dont la donnée est connue (montant, date) sont affichées.
+  const cards = admissionHighlights(locale, dict).filter((card) => card.value);
 
   return (
     <section className="on-dark relative overflow-hidden bg-indigo-900 py-16 text-white sm:py-24">
@@ -22,15 +25,16 @@ export function AdmissionsBand({ locale, dict }: { locale: Locale; dict: Diction
       <div aria-hidden="true" className="absolute -bottom-16 -left-16 size-56 rounded-full bg-navy-700" />
       <Container className="relative flex flex-col gap-10">
         <SectionHeading
-          eyebrow={fill(t.eyebrow, { year: schoolYear(dict) })}
+          eyebrow={schoolYear(dict) ? fill(t.eyebrow, { year: schoolYear(dict) }) : t.eyebrowPlain}
           title={t.title}
           intro={t.text}
           accent="gold"
           tone="dark"
           className="reveal"
         />
-        <ul className="grid gap-4 md:grid-cols-3">
-          {admissionHighlights(locale, dict).map((card, index) => {
+        {cards.length ? (
+        <ul className={cn('grid gap-4', cards.length === 3 ? 'md:grid-cols-3' : 'sm:grid-cols-2')}>
+          {cards.map((card, index) => {
             const Icon = icons[index % icons.length];
             return (
               <li
@@ -42,11 +46,12 @@ export function AdmissionsBand({ locale, dict }: { locale: Locale; dict: Diction
                 </span>
                 <p className="mt-1 text-[13px] leading-4 font-semibold tracking-[0.08em] text-sky-400 uppercase">{card.label}</p>
                 <p className="font-display text-[22px] leading-8 font-bold text-gold-400 lg:text-[26px]">{card.value}</p>
-                <p className="text-sm leading-5">{card.note}</p>
+                {card.note ? <p className="text-sm leading-5">{card.note}</p> : null}
               </li>
             );
           })}
         </ul>
+        ) : null}
         <div className="reveal flex flex-wrap gap-3">
           <ButtonLink href={href(locale, '/admissions#preinscription')} variant="gold">
             {t.primary}

@@ -1,4 +1,6 @@
 import { ImageIcon } from 'lucide-react';
+import { PhotoIllustration } from '@/components/ui/photo-illustration';
+import { showPlaceholders } from '@/lib/placeholders';
 import { cn } from '@/lib/utils';
 
 type PhotoSlotProps = {
@@ -41,6 +43,9 @@ export function PhotoSlot({
       />
     );
   }
+
+  // Site public : une illustration aux couleurs du collège. Aperçu : l'emplacement qui dit quelle photo fournir.
+  if (!showPlaceholders) return <PhotoIllustration label={label} ratio={ratio} className={className} />;
 
   // Un <span> et non un <div> : l'emplacement peut ainsi se trouver dans un bouton (photo cliquable).
   return (

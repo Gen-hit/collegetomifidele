@@ -76,7 +76,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         </a>
         {site.announcement.enabled ? (
           <AnnouncementBar
-            text={fill(dict.announcement.text, { year: schoolYear(dict) })}
+            text={schoolYear(dict) ? fill(dict.announcement.text, { year: schoolYear(dict) }) : dict.announcement.textPlain}
             cta={dict.announcement.cta}
             dismissLabel={dict.announcement.dismiss}
             href={href(locale, site.announcement.path)}
@@ -96,7 +96,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             linkLabel: topic.linkLabel,
             href: href(locale, topic.path),
           }))}
-          whatsappHref={whatsappLink(locale, dict.help.whatsappMessage)}
+          whatsappHref={site.contact.whatsapp ? whatsappLink(locale, dict.help.whatsappMessage) : null}
         />
       </body>
     </html>

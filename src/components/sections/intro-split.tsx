@@ -52,7 +52,7 @@ export function IntroSplit({ id, eyebrow, title, paragraphs, points, photo, view
       <Container className="grid items-center gap-12 md:grid-cols-2 md:gap-10 lg:gap-16">
         <div className="reveal flex flex-col gap-5">
           <SectionHeading eyebrow={eyebrow} title={title} accent={accentOf(tone)} />
-          {paragraphs.map((paragraph) => (
+          {paragraphs.filter(Boolean).map((paragraph) => (
             <p key={paragraph} className="max-w-xl text-pretty">
               {paragraph}
             </p>
@@ -73,7 +73,7 @@ export function IntroSplit({ id, eyebrow, title, paragraphs, points, photo, view
           <div aria-hidden="true" className={cn('absolute -top-4 size-24 rounded-2xl', shape.block, flip ? '-left-4' : '-right-4')} />
           <div aria-hidden="true" className={cn('dot-grid absolute -bottom-5 h-24 w-32', shape.dots, flip ? '-right-5' : '-left-5')} />
           {viewer ? (
-            <LightboxGroup labels={viewer} photoWord={photo.word} items={[{ src: photo.src ?? null, title: caption, description: paragraphs[0] }]}>
+            <LightboxGroup labels={viewer} photoWord={photo.word} items={[{ src: photo.src ?? null, title: caption, description: paragraphs.find(Boolean) }]}>
               <LightboxTrigger index={0} className="rounded-2xl">
                 {picture}
               </LightboxTrigger>

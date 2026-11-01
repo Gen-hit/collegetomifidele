@@ -6,7 +6,7 @@
 //     fichiers content/data/*.json du projet, comme avant le back-office.
 //   • Avec ces variables : demande à la base le contenu publié (fonction site_snapshot), réécrit
 //     content/data/news.json, calendar.json, gallery.json et documents.json, ainsi que les réglages du collège
-//     (contact, fees, payment, results, team, admissions, photos .json) quand ils ont été enregistrés dans
+//     (contact, fees, payment, results, team, admissions, photos, texts .json) quand ils ont été enregistrés dans
 //     l'administration, et recopie dans public/media/ les photos et PDF déposés. Le site publié ne dépend donc
 //     jamais de Supabase.
 //   • Si la base ne répond pas, la construction s'arrête : l'hébergeur garde la version en ligne
@@ -78,7 +78,7 @@ async function download(base, key) {
   return true;
 }
 
-const BLOCKS = ['contact', 'fees', 'payment', 'results', 'team', 'admissions', 'photos'];
+const BLOCKS = ['contact', 'fees', 'payment', 'results', 'team', 'admissions', 'photos', 'texts'];
 
 async function readJson(name) {
   try {

@@ -6,7 +6,8 @@
   "hero": {
     "eyebrow": "Admissions",
     "title": "Frais et {paiement}",
-    "intro": "La scolarité par niveau, l'échéancier des tranches, le simulateur et les moyens de paiement."
+    "intro": "La scolarité par niveau, l'échéancier des tranches, le simulateur et les moyens de paiement.",
+    "introShort": "La scolarité par niveau, l'échéancier des tranches et les moyens de paiement."
   },
   "toc": {
     "label": "Sur cette page",
@@ -50,6 +51,8 @@
     ],
     "before": "avant le %date%",
     "deadlinePlaceholder": "[date limite]",
+    "pendingTitle": "Les frais de l'année seront publiés ici",
+    "pendingText": "La grille par niveau, les tranches et leurs dates limites paraîtront sur cette page dès leur validation par la direction. En attendant, le secrétariat vous communique les montants.",
     "total": "Total annuel",
     "special": "Tarif particulier",
     "sections": {

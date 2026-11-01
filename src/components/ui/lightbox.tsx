@@ -6,6 +6,7 @@ import { createContext, useContext, useEffect, useMemo, useRef, useState, type K
 import { buttonClass } from '@/components/ui/button';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { fill } from '@/lib/format';
+import { showPlaceholders } from '@/lib/placeholders';
 import { cn } from '@/lib/utils';
 
 /** Une image de la visionneuse : une photo, ou une page de document. */
@@ -224,6 +225,8 @@ type LightboxTriggerProps = {
 export function LightboxTrigger({ index, children, className, badge = true }: LightboxTriggerProps) {
   const context = useContext(Context);
   if (!context || !context.items[index]) return <>{children}</>;
+  // Sur le site public, une illustration d'attente ne s'agrandit pas : il n'y a pas de photo à montrer.
+  if (!context.items[index].src && !showPlaceholders) return <span className={cn('relative block w-full', className)}>{children}</span>;
 
   return (
     <button

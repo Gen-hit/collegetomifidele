@@ -1,12 +1,12 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Images } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { gallery } from '@content/gallery';
 import { CtaBand } from '@/components/sections/cta-band';
 import { PageHero } from '@/components/sections/page-hero';
 import { ButtonLink } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { GalleryGrid } from '@/features/gallery/gallery-grid';
+import { visibleGallery } from '@/features/visibility';
 import { href, isLocale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
@@ -45,8 +45,9 @@ export default async function GalleryPage({ params }: Props) {
       />
       <section className="py-12 sm:py-16">
         <Container>
+          {visibleGallery.length ? (
           <GalleryGrid
-            photos={gallery.map((photo) => ({
+            photos={visibleGallery.map((photo) => ({
               src: photo.src,
               thumb: photo.thumb,
               category: photo.category,
@@ -57,6 +58,16 @@ export default async function GalleryPage({ params }: Props) {
             viewer={dict.viewer}
             photoWord={dict.common.photo}
           />
+          ) : (
+            // Aucune photo publiée pour l'instant : un encart d'attente plutôt qu'une grille vide.
+            <div className="reveal mx-auto flex max-w-2xl flex-col items-center gap-4 rounded-3xl border border-line bg-surface-alt px-6 py-12 text-center">
+              <span aria-hidden="true" className="flex size-14 items-center justify-center rounded-2xl bg-green-100 text-green-700">
+                <Images className="size-7" strokeWidth={1.75} />
+              </span>
+              <p className="font-display text-2xl leading-8 font-bold text-navy-700">{t.soon.title}</p>
+              <p className="text-pretty text-muted">{t.soon.text}</p>
+            </div>
+          )}
         </Container>
       </section>
       <CtaBand title={t.cta.title} text={t.cta.text} tone="green" flushTop>
