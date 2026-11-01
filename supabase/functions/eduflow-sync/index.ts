@@ -220,6 +220,38 @@ Deno.serve(async (req) => {
         return reply(200, { ok: true, outcome });
       }
 
+      case 'results.propose': {
+        const EXAMS = ['bepc', 'cap', 'probatoire', 'baccalaureat', 'gce-ol', 'gce-al', 'gce-tech'];
+        const input = Array.isArray(body.sessions) ? body.sessions.slice(0, 15) : [];
+        const sessions: { year: number; results: Row }[] = [];
+        for (const session of input as Row[]) {
+          const year = typeof session.year === 'number' && session.year >= 1960 && session.year <= 2200 ? Math.round(session.year) : null;
+          if (!year) continue;
+          const results: Row = {};
+          for (const [exam, value] of Object.entries((session.results ?? {}) as Record<string, Row>)) {
+            if (!EXAMS.includes(exam)) continue;
+            const registered = amount(value.registered);
+            const passed = amount(value.passed);
+            if (registered === null || passed === null || passed > registered) continue;
+            results[exam] = { registered, passed };
+          }
+          if (Object.keys(results).length) sessions.push({ year, results });
+        }
+        if (!sessions.length) return reply(422, { message: 'Aucun résultat exploitable.' });
+        sessions.sort((a, b) => a.year - b.year);
+
+        const { data: current } = await db.from('content_blocks').select('data, pending')
+          .eq('school_id', schoolId).eq('key', 'results').maybeSingle();
+        const base = ((current?.pending as Row | null)?.data ?? current?.data ?? {}) as Row;
+        // Les sessions déjà saisies sur le site sont conservées ; EduFlow remplace celles de ses années.
+        const kept = (Array.isArray(base.sessions) ? base.sessions : []).filter(
+          (s: Row) => !sessions.some((n) => n.year === s.year),
+        );
+        const data = { ...base, sessions: [...kept, ...sessions].sort((a: Row, b: Row) => Number(a.year) - Number(b.year)) };
+        const outcome = await propose(db, 'content_blocks', schoolId, { key: 'results' }, { key: 'results', data });
+        return reply(200, { ok: true, outcome, years: sessions.map((s) => s.year) });
+      }
+
       default:
         return reply(400, { message: 'Action inconnue.' });
     }
