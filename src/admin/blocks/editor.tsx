@@ -12,7 +12,7 @@ import { useStaffNames } from '../content/review';
 import { AdminAlert, PageTitle, Spinner } from '../ui';
 import { blockRules, type BlockData, type BlockKey, type Errors } from './model';
 
-type BlockRow<K extends BlockKey> = { id: string; key: K; data: BlockData[K]; updated_at: string; updated_by: string | null; pending: unknown };
+type BlockRow<K extends BlockKey> = { id: string; key: K; data: BlockData[K]; updated_at: string; updated_by: string | null; pending: unknown; pending_by?: string | null };
 
 export type BlockFormProps<K extends BlockKey> = {
   data: BlockData[K];
@@ -37,6 +37,13 @@ type EditorProps<K extends BlockKey> = {
 
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
+/** Proposition en attente sur un réglage (envoyée par EduFlow) : { key, data }. */
+function proposedData<K extends BlockKey>(pending: unknown): Partial<BlockData[K]> | null {
+  if (!pending || typeof pending !== 'object' || '_archive' in pending) return null;
+  const data = (pending as { data?: unknown }).data;
+  return data && typeof data === 'object' ? (data as Partial<BlockData[K]>) : null;
+}
+
 function Editor<K extends BlockKey>({ blockKey, title, intro, initial, superAdminOnly, form }: EditorProps<K>) {
   const me = useMe();
   const names = useStaffNames();
@@ -49,7 +56,7 @@ function Editor<K extends BlockKey>({ blockKey, title, intro, initial, superAdmi
   const readOnly = (superAdminOnly && me.role !== 'super_admin') || me.role === 'secretariat';
 
   const load = useCallback(async () => {
-    const { data: found, error } = await supabase().from('content_blocks').select('id, key, data, updated_at, updated_by, pending').eq('key', blockKey).maybeSingle();
+    const { data: found, error } = await supabase().from('content_blocks').select('id, key, data, updated_at, updated_by, pending, pending_by').eq('key', blockKey).maybeSingle();
     if (error) {
       setLoadError(frenchError(error));
       return;
@@ -80,6 +87,48 @@ function Editor<K extends BlockKey>({ blockKey, title, intro, initial, superAdmi
     setResult(null);
   }, []);
 
+  const proposal = row ? proposedData<K>(row.pending) : null;
+  const [reviewing, setReviewing] = useState(false);
+
+  /** Charge la proposition dans le formulaire pour la relire avant de la valider. */
+  function review() {
+    if (!proposal) return;
+    setData({ ...initial, ...(row?.data ?? {}), ...proposal } as BlockData[K]);
+    setReviewing(true);
+    setResult({ tone: 'warning', text: 'La proposition est affichée dans le formulaire. Relisez-la, puis validez-la ou refusez-la.' });
+  }
+
+  async function decide(accept: boolean) {
+    if (!row || !proposal) return;
+    const next = { ...initial, ...row.data, ...proposal } as BlockData[K];
+    const rules = blockRules[blockKey];
+    if (accept) {
+      const found = rules.check(next as never);
+      if (Object.keys(found).length > 0) {
+        setData(next);
+        setErrors(found);
+        setReviewing(true);
+        setResult({ tone: 'error', text: 'La proposition contient des champs à corriger (en rouge). Corrigez-les puis enregistrez, ou refusez la proposition.' });
+        return;
+      }
+    }
+    setSaving(true);
+    const changes = accept ? { data: rules.normalize(next as never), pending: null } : { pending: null };
+    const response = await supabase().from('content_blocks').update(changes).eq('id', row.id).select('id, key, data, updated_at, updated_by, pending, pending_by').single();
+    setSaving(false);
+    if (response.error) return setResult({ tone: 'error', text: frenchError(response.error) });
+    const saved = response.data as BlockRow<K>;
+    setRow(saved);
+    setData({ ...initial, ...saved.data } as BlockData[K]);
+    setReviewing(false);
+    setErrors({});
+    setResult(
+      accept
+        ? { tone: 'success', text: 'Proposition validée. Elle apparaîtra sur le site à la prochaine mise à jour.' }
+        : { tone: 'success', text: 'Proposition refusée : le site garde la version actuelle.' },
+    );
+  }
+
   async function save() {
     if (!data) return;
     const rules = blockRules[blockKey];
@@ -96,11 +145,12 @@ function Editor<K extends BlockKey>({ blockKey, title, intro, initial, superAdmi
     try {
       const db = supabase().from('content_blocks');
       const response = row
-        ? await db.update({ data: clean }).eq('id', row.id).select('id, key, data, updated_at, updated_by, pending').single()
-        : await db.insert({ key: blockKey, data: clean, status: 'published' }).select('id, key, data, updated_at, updated_by, pending').single();
+        ? await db.update(reviewing ? { data: clean, pending: null } : { data: clean }).eq('id', row.id).select('id, key, data, updated_at, updated_by, pending, pending_by').single()
+        : await db.insert({ key: blockKey, data: clean, status: 'published' }).select('id, key, data, updated_at, updated_by, pending, pending_by').single();
       if (response.error) throw response.error;
       const next = response.data as BlockRow<K>;
       setRow(next);
+      setReviewing(false);
       setData({ ...initial, ...next.data } as BlockData[K]);
       setResult(
         next.pending
@@ -132,6 +182,24 @@ function Editor<K extends BlockKey>({ blockKey, title, intro, initial, superAdmi
           {superAdminOnly
             ? 'Par sécurité, seul l’administrateur du site peut changer les numéros de paiement : un numéro modifié par erreur ou par malveillance détournerait l’argent des familles.'
             : 'Ces réglages sont modifiés par le Principal.'}
+        </AdminAlert>
+      ) : null}
+      {proposal ? (
+        <AdminAlert tone="warning" title="Proposition en attente">
+          {row?.pending && row.pending_by
+            ? 'Un membre de l’équipe a proposé une nouvelle version de ce réglage.'
+            : 'EduFlow, le logiciel de gestion du collège, propose une nouvelle version de ce réglage.'}{' '}
+          {me.can_publish ? (
+            <span className="mt-3 flex flex-wrap gap-3">
+              {!reviewing ? (
+                <button type="button" onClick={review} className={buttonClass('secondary')}>Afficher la proposition</button>
+              ) : null}
+              <button type="button" disabled={saving} onClick={() => void decide(true)} className={buttonClass('primary', 'disabled:opacity-50')}>Valider</button>
+              <button type="button" disabled={saving} onClick={() => void decide(false)} className={buttonClass('secondary', 'disabled:opacity-50')}>Refuser</button>
+            </span>
+          ) : (
+            'Le Principal décidera de sa mise en ligne.'
+          )}
         </AdminAlert>
       ) : null}
       {loadError ? <AdminAlert tone="error">{loadError}</AdminAlert> : null}

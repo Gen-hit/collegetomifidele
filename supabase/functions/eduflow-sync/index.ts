@@ -50,8 +50,17 @@ const CALENDAR_FIELDS = ['key', 'category', 'start_date', 'end_date', 'title_fr'
 
 type Row = Record<string, unknown>;
 
+/** JSON à clés triées : jsonb ne garde pas l'ordre des clés, une comparaison brute verrait toujours une différence. */
+function canonical(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value as Row).sort().map((k) => `${JSON.stringify(k)}:${canonical((value as Row)[k])}`).join(',')}}`;
+  }
+  return JSON.stringify(value ?? null);
+}
+
 /** Une ligne en ligne reçoit une proposition ; une ligne pas encore en ligne est mise à jour et soumise. */
-async function propose(db: SupabaseClient, table: string, schoolId: string, match: Row, fields: Row): Promise<'created' | 'proposed' | 'unchanged'> {
+async function propose(db: SupabaseClient, table: string, schoolId: string, match: Row, fields: Row): Promise<'created' | 'proposed' | 'unchanged' | 'conflict'> {
   const { data: current, error } = await db.from(table).select('*').eq('school_id', schoolId).match(match).maybeSingle();
   if (error) throw error;
   const now = new Date().toISOString();
@@ -60,10 +69,12 @@ async function propose(db: SupabaseClient, table: string, schoolId: string, matc
     if (insertError) throw insertError;
     return 'created';
   }
-  const same = Object.entries(fields).every(([k, v]) => JSON.stringify(current[k] ?? null) === JSON.stringify(v ?? null));
+  const same = Object.entries(fields).every(([k, v]) => canonical(current[k]) === canonical(v));
   if (current.status === 'published' && !current.deleted_at) {
-    const pendingSame = current.pending && JSON.stringify(current.pending) === JSON.stringify(fields);
+    const pendingSame = current.pending && canonical(current.pending) === canonical(fields);
     if (same || pendingSame) return 'unchanged';
+    // Une proposition de l'équipe (ou une demande d'archivage) attend déjà le Principal : on ne l'écrase pas.
+    if (current.pending && (current.pending_by || (current.pending as Row)._archive)) return 'conflict';
     const { error: updateError } = await db.from(table)
       .update({ pending: fields, pending_by: null, pending_at: now }).eq('id', current.id);
     if (updateError) throw updateError;
@@ -111,8 +122,8 @@ Deno.serve(async (req) => {
       case 'preinscriptions.pull': {
         let query = db.from('preinscriptions')
           .select('reference, student_name, birth_date, target_class, section, stream, previous_school, parent_name, parent_phone, parent_email, message, locale, status, created_at, updated_at')
-          .eq('school_id', schoolId).is('deleted_at', null).order('created_at').limit(200);
-        if (typeof body.since === 'string' && !Number.isNaN(Date.parse(body.since))) query = query.gt('updated_at', new Date(body.since).toISOString());
+          .eq('school_id', schoolId).is('deleted_at', null).order('updated_at').order('id').limit(200);
+        if (typeof body.since === 'string' && !Number.isNaN(Date.parse(body.since))) query = query.gte('updated_at', new Date(body.since).toISOString()); // >= : rien ne se perd à égalité (EduFlow ignore les doublons)
         else query = query.in('status', ['new', 'contacted']);
         const { data, error } = await query;
         if (error) throw error;
@@ -126,19 +137,26 @@ Deno.serve(async (req) => {
           const status = String(item.status ?? '');
           if (!['contacted', 'accepted', 'rejected'].includes(status)) continue;
           const note = text(item.note, 500);
+          const reference = text(item.reference, 40);
+          const { data: found, error: readError } = await db.from('preinscriptions').select('id, internal_note')
+            .eq('school_id', schoolId).eq('reference', reference).is('deleted_at', null).maybeSingle();
+          if (readError) throw readError;
+          if (!found) continue;
           const changes: Row = { status, eduflow_synced_at: new Date().toISOString(), updated_at: new Date().toISOString() };
-          if (note) changes.internal_note = `EduFlow : ${note}`;
-          const { data, error } = await db.from('preinscriptions').update(changes)
-            .eq('school_id', schoolId).eq('reference', text(item.reference, 40)).is('deleted_at', null).select('id');
+          // La note du secrétariat est conservée : celle d'EduFlow s'ajoute à la suite.
+          if (note && !String(found.internal_note ?? '').includes(`EduFlow : ${note}`)) {
+            changes.internal_note = [String(found.internal_note ?? '').trim(), `EduFlow : ${note}`].filter(Boolean).join('\n');
+          }
+          const { error } = await db.from('preinscriptions').update(changes).eq('id', found.id);
           if (error) throw error;
-          updated += data?.length ?? 0;
+          updated++;
         }
         return reply(200, { ok: true, updated });
       }
 
       case 'calendar.propose': {
         const events = Array.isArray(body.events) ? body.events.slice(0, 150) : [];
-        const result = { created: 0, proposed: 0, unchanged: 0, skipped: 0 };
+        const result = { created: 0, proposed: 0, unchanged: 0, skipped: 0, conflict: 0 };
         for (const event of events as Row[]) {
           const k = text(event.key, 60);
           const title = text(event.title_fr, 160);
