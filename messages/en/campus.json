@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "School life",
-    "description": "School life at Collège Tomi Fidele: clubs and activities, weekly timetable, dates of the year, school uniform and school rules."
+    "description": "School life at {{school}}: clubs and activities, weekly timetable, dates of the year, school uniform and school rules."
   },
   "hero": {
     "eyebrow": "School life",

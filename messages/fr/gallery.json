@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Galerie photo",
-    "description": "Le Collège Tomi Fidele en images : campus, salles de classe, ateliers et laboratoires, sport et événements."
+    "description": "Le {{school}} en images : campus, salles de classe, ateliers et laboratoires, sport et événements."
   },
   "hero": {
     "eyebrow": "Galerie photo",

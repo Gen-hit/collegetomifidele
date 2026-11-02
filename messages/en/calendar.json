@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "School calendar",
-    "description": "The Collège Tomi Fidele school year calendar: term dates, assessments, official examinations, breaks, public holidays, international days and school celebrations."
+    "description": "The {{school}} school year calendar: term dates, assessments, official examinations, breaks, public holidays, international days and school celebrations."
   },
   "hero": {
     "eyebrow": "School calendar",

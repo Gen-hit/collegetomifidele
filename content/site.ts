@@ -1,4 +1,5 @@
 import contactData from './data/contact.json';
+import schoolData from './data/school.json';
 
 /**
  * Identité et coordonnées du collège : la seule source de ces informations.
@@ -7,7 +8,7 @@ import contactData from './data/contact.json';
  *
  * D'OÙ VIENNENT LES DONNÉES : coordonnées, horaires, réseaux sociaux et chiffres clés sont dans
  * content/data/contact.json, que l'administration (Réglages > Coordonnées) réécrit à chaque mise à jour du site.
- * Le nom, la devise, le logo et le point de la carte restent ici.
+ * Le nom, la devise, le logo et le point de la carte sont dans content/data/school.json.
  */
 type ContactData = {
   address: string | null;
@@ -23,23 +24,42 @@ const contact = contactData as ContactData;
 
 export type OpeningHours = { days: 'weekdays' | 'saturday' | 'sunday'; open: string | null; close: string | null; closed: boolean };
 
+/**
+ * Identité de l'établissement : content/data/school.json. C'est le SEUL fichier à changer
+ * pour ouvrir le site d'une autre école (voir docs/nouveau-site-ecole.md).
+ */
+type SchoolData = {
+  name: string;
+  shortName: string;
+  slug: string;
+  motto: string;
+  logo: { src: string; width: number; height: number };
+  ogImagePrefix: string;
+  url: string;
+  location: { lat: number; lng: number; mapsUrl: string };
+};
+const school = schoolData as SchoolData;
+
 export const site = {
-  name: 'Collège Tomi Fidele',
-  shortName: 'CTF',
+  name: school.name,
+  shortName: school.shortName,
+  /** Identifiant de l'école dans la base du back-office. */
+  slug: process.env.NEXT_PUBLIC_SCHOOL_SLUG || school.slug,
   /** Devise officielle, telle qu'elle figure sur le logo. */
-  motto: 'Discipline · Travail · Succès',
-  logo: { src: '/brand/ctf-logo.png', width: 178, height: 202 },
+  motto: school.motto,
+  logo: school.logo,
+  /** Préfixe des images de partage (public/og/<préfixe>-fr.jpg). */
+  ogImagePrefix: school.ogImagePrefix,
 
   /** Adresse définitive du site. À changer le jour où le nom de domaine existe. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://college-tomi-fidele.netlify.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? school.url,
   /** Tant que le site est en test, il reste hors de Google. */
   indexable: process.env.NEXT_PUBLIC_SITE_INDEXABLE === 'true',
 
   location: {
-    /** Point fourni par WINX le 7 octobre 2026. */
-    lat: 4.023973,
-    lng: 9.790607,
-    mapsUrl: 'https://maps.app.goo.gl/SJMvix47ieoz1B7c7',
+    lat: school.location.lat,
+    lng: school.location.lng,
+    mapsUrl: school.location.mapsUrl,
     /** Quartier, rue ou repère : à fournir. */
     address: contact.address,
     /** Ville : à confirmer par le collège. */

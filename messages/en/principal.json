@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Principal's message",
-    "description": "A message from the Principal of Collège Tomi Fidele to parents and students: educational vision, discipline, hard work and support towards success."
+    "description": "A message from the Principal of {{school}} to parents and students: educational vision, discipline, hard work and support towards success."
   },
   "hero": {
     "eyebrow": "The school",

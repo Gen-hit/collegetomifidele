@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Programmes",
-    "description": "Les programmes du Collège Tomi Fidele : section francophone, section anglophone, enseignement général et enseignement technique, de la classe d'entrée à l'examen final."
+    "description": "Les programmes du {{school}} : section francophone, section anglophone, enseignement général et enseignement technique, de la classe d'entrée à l'examen final."
   },
   "hero": {
     "eyebrow": "Programmes",

@@ -99,6 +99,20 @@ export function withoutPlaceholders(text: string): string {
 }
 
 /** Applique `withoutPlaceholders` à tous les textes d'un objet (dictionnaire d'une langue). */
+/**
+ * Remplace le jeton `{{school}}` par le nom de l'établissement, partout dans les textes.
+ * Les fichiers messages/ ne contiennent donc jamais le nom d'une école en dur : c'est ce qui
+ * permet d'ouvrir le même site pour un autre établissement (content/data/school.json).
+ */
+export function withSchoolName<T>(value: T, name: string): T {
+  if (typeof value === 'string') return value.replaceAll('{{school}}', name) as T;
+  if (Array.isArray(value)) return value.map((item) => withSchoolName(item, name)) as T;
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, withSchoolName(item, name)])) as T;
+  }
+  return value;
+}
+
 export function cleanPlaceholders<T>(value: T): T {
   if (typeof value === 'string') return withoutPlaceholders(value) as T;
   if (Array.isArray(value)) return value.map((item) => cleanPlaceholders(item)) as T;

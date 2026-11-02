@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Frais et paiement",
-    "description": "Frais d'inscription et de scolarité du Collège Tomi Fidele par niveau, échéancier des tranches, simulateur de frais et paiement par MTN Mobile Money, Orange Money ou au secrétariat."
+    "description": "Frais d'inscription et de scolarité du {{school}} par niveau, échéancier des tranches, simulateur de frais et paiement par MTN Mobile Money, Orange Money ou au secrétariat."
   },
   "hero": {
     "eyebrow": "Admissions",

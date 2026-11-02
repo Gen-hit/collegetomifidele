@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Documents",
-    "description": "Collège Tomi Fidele documents to download: school rules, fee schedule, enrolment form, supply lists and school calendar."
+    "description": "{{school}} documents to download: school rules, fee schedule, enrolment form, supply lists and school calendar."
   },
   "hero": {
     "eyebrow": "Documents",
@@ -32,6 +32,6 @@
     "text": "The school office can hand it to you in person or send it to you on WhatsApp.",
     "primary": "Request a document",
     "secondary": "See contact details",
-    "whatsappMessage": "Hello, I would like to receive a document from Collège Tomi Fidele."
+    "whatsappMessage": "Hello, I would like to receive a document from {{school}}."
   }
 }

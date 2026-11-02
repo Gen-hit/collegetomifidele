@@ -7,7 +7,7 @@ import { href, type Locale } from '@/i18n/config';
  * Les fichiers sont dans public/og/. Un article avec photo de couverture utilise sa propre photo.
  */
 export function shareImage(locale: Locale) {
-  return { url: `/og/college-tomi-fidele-${locale}.jpg`, width: 1200, height: 630, alt: site.name };
+  return { url: `/og/${site.ogImagePrefix}-${locale}.jpg`, width: 1200, height: 630, alt: site.name };
 }
 
 /**

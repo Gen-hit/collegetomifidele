@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Le collège",
-    "description": "Présentation du Collège Tomi Fidele : histoire, mission, valeurs et équipe de direction d'un collège d'enseignement général et technique à sections francophone et anglophone."
+    "description": "Présentation du {{school}} : histoire, mission, valeurs et équipe de direction d'un collège d'enseignement général et technique à sections francophone et anglophone."
   },
   "hero": {
     "eyebrow": "Le collège",
-    "title": "À propos du {Collège Tomi Fidele}",
+    "title": "À propos du {{{school}}}",
     "intro": "Notre histoire, nos valeurs et l'équipe qui accompagne les élèves au quotidien."
   },
   "toc": {
@@ -59,7 +59,7 @@
     "photo": "Portrait · 1:1"
   },
   "cta": {
-    "title": "Rejoignez le {Collège Tomi Fidele}",
+    "title": "Rejoignez le {{{school}}}",
     "text": "Découvrez nos programmes ou préinscrivez votre enfant dès maintenant.",
     "primary": "Préinscrire mon enfant",
     "secondary": "Voir les programmes"

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Contact",
-    "description": "Contacter le Collège Tomi Fidele : adresse, téléphones, WhatsApp, email, heures d'ouverture du secrétariat, plan d'accès et formulaire de contact."
+    "description": "Contacter le {{school}} : adresse, téléphones, WhatsApp, email, heures d'ouverture du secrétariat, plan d'accès et formulaire de contact."
   },
   "hero": {
     "eyebrow": "Contact",

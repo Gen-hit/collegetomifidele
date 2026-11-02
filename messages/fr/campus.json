@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Vie scolaire",
-    "description": "La vie scolaire au Collège Tomi Fidele : clubs et activités, horaires de la semaine, dates de l'année, tenue de classe et règlement intérieur."
+    "description": "La vie scolaire au {{school}} : clubs et activités, horaires de la semaine, dates de l'année, tenue de classe et règlement intérieur."
   },
   "hero": {
     "eyebrow": "Vie scolaire",

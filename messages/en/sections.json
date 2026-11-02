@@ -2,7 +2,7 @@
   "francophone": {
     "meta": {
       "title": "Section francophone",
-      "description": "The Francophone section of Collège Tomi Fidele: from 6e to Terminale, general and technical education, preparing for the BEPC, CAP, Probatoire and Baccalauréat."
+      "description": "The Francophone section of {{school}}: from 6e to Terminale, general and technical education, preparing for the BEPC, CAP, Probatoire and Baccalauréat."
     },
     "hero": {
       "eyebrow": "Programmes",
@@ -105,7 +105,7 @@
   "anglophone": {
     "meta": {
       "title": "Anglophone section",
-      "description": "The Anglophone section of Collège Tomi Fidele: from Form 1 to Upper Sixth, general and technical education, preparing for the GCE Ordinary and Advanced Levels."
+      "description": "The Anglophone section of {{school}}: from Form 1 to Upper Sixth, general and technical education, preparing for the GCE Ordinary and Advanced Levels."
     },
     "hero": {
       "eyebrow": "Programmes",

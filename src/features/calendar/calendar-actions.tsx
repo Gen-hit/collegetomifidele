@@ -12,7 +12,7 @@ type CalendarActionsProps = {
   items: CalendarItem[];
   labels: { downloadAll: string; shareCalendar: string; fileName: string };
   shareLabels: ShareLabels;
-  /** Texte du partage : « Calendrier scolaire 2026-2027 du Collège Tomi Fidele ». */
+  /** Texte du partage : « Calendrier scolaire 2026-2027 » suivi du nom de l'établissement. */
   shareText: string;
   /** Chemin de la page du calendrier : '/fr/calendar/'. */
   path: string;

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Mot du Principal",
-    "description": "Le message du Principal du Collège Tomi Fidele aux parents et aux élèves : projet éducatif, discipline, travail et accompagnement vers la réussite."
+    "description": "Le message du Principal du {{school}} aux parents et aux élèves : projet éducatif, discipline, travail et accompagnement vers la réussite."
   },
   "hero": {
     "eyebrow": "Le collège",

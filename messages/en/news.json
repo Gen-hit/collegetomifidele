@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "News",
-    "description": "News from Collège Tomi Fidele: results, sports and cultural events, notices and school life."
+    "description": "News from {{school}}: results, sports and cultural events, notices and school life."
   },
   "hero": {
     "eyebrow": "News",
