@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Confidentialité",
-    "description": "Ce que le site du Collège Tomi Fidele fait de vos données : aucun compte visiteur, aucun suivi publicitaire, des demandes lues par le seul secrétariat et effacées après 12 mois, une carte chargée à la demande."
+    "description": "Ce que le site du {{school}} fait de vos données : aucun compte visiteur, aucun suivi publicitaire, des demandes lues par le seul secrétariat et effacées après 12 mois, une carte chargée à la demande."
   },
   "hero": {
     "eyebrow": "Confidentialité",
@@ -33,7 +33,7 @@
       "id": "responsable",
       "title": "Qui est responsable de ce site ?",
       "paragraphs": [
-        "Le site est édité par le Collège Tomi Fidele. [Nom et fonction du responsable de la publication, à fournir.]",
+        "Le site est édité par le {{school}}. [Nom et fonction du responsable de la publication, à fournir.]",
         "Pour toute question sur vos données : [email ou téléphone du secrétariat, à fournir]."
       ],
       "points": []

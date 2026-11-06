@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "The school",
-    "description": "About Collège Tomi Fidele: history, mission, values and leadership team of a general and technical secondary school with Francophone and Anglophone sections."
+    "description": "About {{school}}: history, mission, values and leadership team of a general and technical secondary school with Francophone and Anglophone sections."
   },
   "hero": {
     "eyebrow": "The school",
-    "title": "About {Collège Tomi Fidele}",
+    "title": "About {{{school}}}",
     "intro": "Our history, our values and the team that supports students every day."
   },
   "toc": {
@@ -59,7 +59,7 @@
     "photo": "Portrait · 1:1"
   },
   "cta": {
-    "title": "Join {Collège Tomi Fidele}",
+    "title": "Join {{{school}}}",
     "text": "Explore our programmes or pre-register your child today.",
     "primary": "Pre-register my child",
     "secondary": "See the programmes"

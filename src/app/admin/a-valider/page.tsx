@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { frenchError, supabase } from '@/admin/client';
+import { blockPages } from '@/admin/blocks/pages';
 import { contentConfigs } from '@/admin/content/config';
 import { StatusBadges, useStaffNames } from '@/admin/content/review';
 import type { ContentRow } from '@/admin/content/types';
@@ -12,11 +13,14 @@ import { AdminShell } from '@/admin/shell';
 import { AdminAlert, PageTitle, Spinner } from '@/admin/ui';
 
 type Item = { row: ContentRow; table: keyof typeof contentConfigs };
+/** Réglage (frais, résultats…) avec une proposition en attente — en général envoyée par EduFlow. */
+type BlockItem = { key: string; pending_by: string | null; pending_at: string | null };
 
 function ToReview() {
   const me = useMe();
   const names = useStaffNames();
   const [items, setItems] = useState<Item[] | null>(null);
+  const [blocks, setBlocks] = useState<BlockItem[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -34,6 +38,9 @@ function ToReview() {
             list.push({ row, table: tables[i] });
           }
         });
+        const proposals = await supabase().from('content_blocks').select('key, pending, pending_by, pending_at').not('pending', 'is', null);
+        if (proposals.error) throw proposals.error;
+        setBlocks((proposals.data ?? []) as BlockItem[]);
         list.sort((a, b) => String(b.row.pending_at ?? b.row.updated_at).localeCompare(String(a.row.pending_at ?? a.row.updated_at)));
         setItems(list);
       } catch (cause) {
@@ -55,10 +62,25 @@ function ToReview() {
       {error ? <AdminAlert tone="error">{error}</AdminAlert> : null}
       {!items ? (
         <Spinner label="Chargement" />
-      ) : items.length === 0 ? (
+      ) : items.length === 0 && blocks.length === 0 ? (
         <AdminAlert tone="success" title="Rien en attente">Tout ce qui a été envoyé a déjà été traité.</AdminAlert>
       ) : (
         <ul className="flex flex-col gap-3">
+          {blocks.map((block) => {
+            const page = blockPages.find((p) => p.key === block.key);
+            if (!page) return null;
+            return (
+              <li key={`block-${block.key}`}>
+                <Link href={page.path} className="flex flex-col gap-2 rounded-2xl border border-line bg-white p-4 transition-colors hover:border-navy-700 sm:p-5">
+                  <span className="text-[13px] font-semibold tracking-[0.06em] text-blue-600 uppercase">Réglages</span>
+                  <span className="font-semibold text-navy-700">{`${page.title} : nouvelle version proposée`}</span>
+                  <span className="text-sm text-muted">
+                    {`${(block.pending_by && names[block.pending_by]) || 'EduFlow'}, ${relativeTime(String(block.pending_at))}`}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
           {items.map(({ row, table }) => {
             const config = contentConfigs[table];
             const who = (row.pending ? row.pending_by : row.updated_by) as string | null;
@@ -69,7 +91,7 @@ function ToReview() {
                   <span className="font-semibold text-navy-700">{config.titleOf(row) || 'Sans titre'}</span>
                   <span className="flex flex-wrap items-center gap-2 text-sm text-muted">
                     <StatusBadges row={row} />
-                    {`${(who && names[who]) || 'Un membre de l’équipe'}, ${relativeTime(String(row.pending_at ?? row.updated_at))}`}
+                    {`${(who && names[who]) || (who ? 'Un membre de l’équipe' : 'EduFlow')}, ${relativeTime(String(row.pending_at ?? row.updated_at))}`}
                   </span>
                 </Link>
               </li>

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Programmes",
-    "description": "Programmes at Collège Tomi Fidele: Francophone section, Anglophone section, general and technical education, from the entry class to the final examination."
+    "description": "Programmes at {{school}}: Francophone section, Anglophone section, general and technical education, from the entry class to the final examination."
   },
   "hero": {
     "eyebrow": "Programmes",

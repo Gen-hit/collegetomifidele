@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Infrastructures",
-    "description": "Les infrastructures du Collège Tomi Fidele : salles de classe, laboratoires, salles informatiques, ateliers techniques, bibliothèque et aires de sport."
+    "description": "Les infrastructures du {{school}} : salles de classe, laboratoires, salles informatiques, ateliers techniques, bibliothèque et aires de sport."
   },
   "hero": {
     "eyebrow": "Infrastructures",

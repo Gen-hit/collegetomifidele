@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Actualités",
-    "description": "Les actualités du Collège Tomi Fidele : résultats, événements sportifs et culturels, communiqués et vie scolaire."
+    "description": "Les actualités du {{school}} : résultats, événements sportifs et culturels, communiqués et vie scolaire."
   },
   "hero": {
     "eyebrow": "Actualités",

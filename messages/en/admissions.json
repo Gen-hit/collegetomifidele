@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Admissions",
-    "description": "Admissions at Collège Tomi Fidele: four-step procedure, entrance examination dates, documents required, frequently asked questions and pre-registration form."
+    "description": "Admissions at {{school}}: four-step procedure, entrance examination dates, documents required, frequently asked questions and pre-registration form."
   },
   "hero": {
     "eyebrow": "Admissions",

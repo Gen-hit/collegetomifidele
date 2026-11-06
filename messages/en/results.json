@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Exam results",
-    "description": "Pass rates at Collège Tomi Fidele in official examinations: BEPC, CAP, Probatoire, Baccalauréat, GCE Ordinary Level and GCE Advanced Level, session after session."
+    "description": "Pass rates at {{school}} in official examinations: BEPC, CAP, Probatoire, Baccalauréat, GCE Ordinary Level and GCE Advanced Level, session after session."
   },
   "hero": {
     "eyebrow": "Programmes",

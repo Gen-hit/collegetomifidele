@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Résultats aux examens",
-    "description": "Les taux de réussite du Collège Tomi Fidele aux examens officiels : BEPC, CAP, Probatoire, Baccalauréat, GCE Ordinary Level et GCE Advanced Level, session après session."
+    "description": "Les taux de réussite du {{school}} aux examens officiels : BEPC, CAP, Probatoire, Baccalauréat, GCE Ordinary Level et GCE Advanced Level, session après session."
   },
   "hero": {
     "eyebrow": "Programmes",

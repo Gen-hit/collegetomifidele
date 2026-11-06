@@ -2,7 +2,7 @@
   "francophone": {
     "meta": {
       "title": "Section francophone",
-      "description": "La section francophone du Collège Tomi Fidele : de la 6e à la Terminale, enseignement général et technique, préparation au BEPC, au CAP, au Probatoire et au Baccalauréat."
+      "description": "La section francophone du {{school}} : de la 6e à la Terminale, enseignement général et technique, préparation au BEPC, au CAP, au Probatoire et au Baccalauréat."
     },
     "hero": {
       "eyebrow": "Programmes",
@@ -105,7 +105,7 @@
   "anglophone": {
     "meta": {
       "title": "Anglophone section",
-      "description": "La section anglophone du Collège Tomi Fidele : de Form 1 à Upper Sixth, enseignement général et technique, préparation au GCE Ordinary Level et au GCE Advanced Level."
+      "description": "La section anglophone du {{school}} : de Form 1 à Upper Sixth, enseignement général et technique, préparation au GCE Ordinary Level et au GCE Advanced Level."
     },
     "hero": {
       "eyebrow": "Programmes",

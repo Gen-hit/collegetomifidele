@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Photo gallery",
-    "description": "Collège Tomi Fidele in pictures: campus, classrooms, workshops and laboratories, sport and events."
+    "description": "{{school}} in pictures: campus, classrooms, workshops and laboratories, sport and events."
   },
   "hero": {
     "eyebrow": "Photo gallery",

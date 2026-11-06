@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Collège Tomi Fidele · Enseignement général et technique",
+    "title": "{{school}} · Enseignement général et technique",
     "description": "Collège d'enseignement général et technique à sections francophone et anglophone. Programmes, admissions, frais de scolarité, actualités et contacts."
   },
   "common": {
@@ -168,7 +168,7 @@
     },
     "principal": {
       "eyebrow": "Le mot du Principal",
-      "title": "Bienvenue au {Collège Tomi Fidele}",
+      "title": "Bienvenue au {{{school}}}",
       "text": "[Texte du Principal, à fournir : quatre ou cinq phrases sur le projet éducatif du collège, la discipline, le travail et l'accompagnement de chaque élève jusqu'à la réussite.]",
       "namePlaceholder": "[Nom du Principal]",
       "link": "Lire le mot du Principal",
@@ -283,7 +283,7 @@
       "phoneLabel": "Téléphone",
       "load": "Afficher la carte",
       "loadNote": "La carte se charge à la demande pour économiser vos données.",
-      "mapTitle": "Carte de localisation du Collège Tomi Fidele",
+      "mapTitle": "Carte de localisation du {{school}}",
       "directions": "Itinéraire",
       "open": "Ouvrir dans Google Maps"
     },
@@ -335,13 +335,13 @@
     "assistantDesc": "L'assistant du collège",
     "whatsapp": "Écrire sur WhatsApp",
     "whatsappDesc": "Le secrétariat vous répond",
-    "whatsappMessage": "Bonjour, je souhaite avoir des informations sur le Collège Tomi Fidele."
+    "whatsappMessage": "Bonjour, je souhaite avoir des informations sur le {{school}}."
   },
   "assistant": {
     "title": "Assistant du collège",
     "subtitle": "Réponses guidées",
     "close": "Fermer l'assistant",
-    "welcome": "Bonjour ! Je suis l'assistant du Collège Tomi Fidele. Choisissez un sujet ci-dessous pour trouver rapidement l'information.",
+    "welcome": "Bonjour ! Je suis l'assistant du {{school}}. Choisissez un sujet ci-dessous pour trouver rapidement l'information.",
     "fallback": "Je n'ai pas de réponse toute prête à cette question. Choisissez un sujet ci-dessous, ou posez-la directement au secrétariat.",
     "contactLink": "Écrire au secrétariat",
     "topicsLabel": "Sujets fréquents",

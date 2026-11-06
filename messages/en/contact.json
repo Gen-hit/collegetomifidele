@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Contact",
-    "description": "Contact Collège Tomi Fidele: address, phone numbers, WhatsApp, email, school office opening hours, location map and contact form."
+    "description": "Contact {{school}}: address, phone numbers, WhatsApp, email, school office opening hours, location map and contact form."
   },
   "hero": {
     "eyebrow": "Contact",

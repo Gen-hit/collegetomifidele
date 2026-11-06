@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Admissions",
-    "description": "Inscriptions au Collège Tomi Fidele : procédure en quatre étapes, dates des concours, pièces à fournir, questions fréquentes et formulaire de préinscription."
+    "description": "Inscriptions au {{school}} : procédure en quatre étapes, dates des concours, pièces à fournir, questions fréquentes et formulaire de préinscription."
   },
   "hero": {
     "eyebrow": "Admissions",

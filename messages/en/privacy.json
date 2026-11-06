@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Privacy",
-    "description": "What the Collège Tomi Fidele website does with your data: no visitor accounts, no advertising trackers, requests read only by the school office and erased after 12 months, a map loaded on request."
+    "description": "What the {{school}} website does with your data: no visitor accounts, no advertising trackers, requests read only by the school office and erased after 12 months, a map loaded on request."
   },
   "hero": {
     "eyebrow": "Privacy",
@@ -33,7 +33,7 @@
       "id": "responsable",
       "title": "Who is responsible for this site?",
       "paragraphs": [
-        "The site is published by Collège Tomi Fidele. [Name and role of the person responsible for publication, to be provided.]",
+        "The site is published by {{school}}. [Name and role of the person responsible for publication, to be provided.]",
         "For any question about your data: [school office email or phone number, to be provided]."
       ],
       "points": []

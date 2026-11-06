@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Facilities",
-    "description": "Facilities at Collège Tomi Fidele: classrooms, laboratories, computer rooms, technical workshops, library and sports grounds."
+    "description": "Facilities at {{school}}: classrooms, laboratories, computer rooms, technical workshops, library and sports grounds."
   },
   "hero": {
     "eyebrow": "Facilities",

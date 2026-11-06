@@ -36,7 +36,8 @@ import textsData from '@content/data/texts.json';
 import { typo } from '@/lib/format';
 import { showPlaceholders } from '@/lib/placeholders';
 import type { Locale } from './config';
-import { applyOverrides, cleanPlaceholders, overridesFor, type TextOverrides } from './texts';
+import { applyOverrides, cleanPlaceholders, overridesFor, withSchoolName, type TextOverrides } from './texts';
+import schoolData from '@content/data/school.json';
 
 /**
  * Les textes du site.
@@ -95,16 +96,21 @@ const en: Dictionary = {
 // Les textes saisis dans l'administration (content/data/texts.json) remplacent les emplacements entre crochets,
 // puis les textes français reçoivent leurs espaces insécables, une fois pour toutes (voir `typo`).
 const saved = textsData as TextOverrides;
+// Le nom de l'établissement remplace le jeton `{{school}}` avant tout le reste : les textes
+// saisis dans l'administration et les écrans de relecture voient déjà le bon nom.
+const schoolName = (schoolData as { name: string }).name;
 // Le site public ne montre jamais de crochets : ce qui reste à fournir est retiré (et la section se replie).
 // NEXT_PUBLIC_SHOW_PLACEHOLDERS=true les fait réapparaître, pour voir la maquette complète avec ses emplacements.
 const finish = <T,>(value: T): T => (showPlaceholders ? value : cleanPlaceholders(value));
+const frNamed = withSchoolName(fr, schoolName);
+const enNamed = withSchoolName(en, schoolName);
 const dictionaries: Record<Locale, Dictionary> = {
-  fr: finish(typo(applyOverrides(fr, overridesFor('fr', saved)), 'fr')),
-  en: finish(applyOverrides(en, overridesFor('en', saved, en))),
+  fr: finish(typo(applyOverrides(frNamed, overridesFor('fr', saved)), 'fr')),
+  en: finish(applyOverrides(enNamed, overridesFor('en', saved, enNamed))),
 };
 
 /** Les textes d'origine, avant les saisies de l'administration (pour l'écran « Textes du site »). */
-export const sourceTexts = { fr, en };
+export const sourceTexts = { fr: frNamed, en: enNamed };
 
 export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale];

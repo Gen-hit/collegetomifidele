@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fees and payment",
-    "description": "Registration fee and school fees at Collège Tomi Fidele by level, instalment schedule, fee calculator and payment by MTN Mobile Money, Orange Money or at the school office."
+    "description": "Registration fee and school fees at {{school}} by level, instalment schedule, fee calculator and payment by MTN Mobile Money, Orange Money or at the school office."
   },
   "hero": {
     "eyebrow": "Admissions",

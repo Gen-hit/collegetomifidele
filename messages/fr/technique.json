@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Enseignement technique",
-    "description": "L'enseignement technique au Collège Tomi Fidele : spécialités, travaux pratiques en atelier et diplômes préparés, en section francophone et en section anglophone."
+    "description": "L'enseignement technique au {{school}} : spécialités, travaux pratiques en atelier et diplômes préparés, en section francophone et en section anglophone."
   },
   "hero": {
     "eyebrow": "Programmes",

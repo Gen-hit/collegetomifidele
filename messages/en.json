@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Collège Tomi Fidele · General and technical education",
+    "title": "{{school}} · General and technical education",
     "description": "A general and technical secondary school with Francophone and Anglophone sections. Programmes, admissions, school fees, news and contacts."
   },
   "common": {
@@ -168,7 +168,7 @@
     },
     "principal": {
       "eyebrow": "The Principal's message",
-      "title": "Welcome to {Collège Tomi Fidele}",
+      "title": "Welcome to {{{school}}}",
       "text": "[The Principal's message, to be provided: four or five sentences on the school's educational vision, discipline, hard work and the support given to every student on the way to success.]",
       "namePlaceholder": "[Principal's name]",
       "link": "Read the Principal's message",
@@ -283,7 +283,7 @@
       "phoneLabel": "Phone",
       "load": "Show the map",
       "loadNote": "The map loads on request to save your data.",
-      "mapTitle": "Location map of Collège Tomi Fidele",
+      "mapTitle": "Location map of {{school}}",
       "directions": "Directions",
       "open": "Open in Google Maps"
     },
@@ -335,13 +335,13 @@
     "assistantDesc": "The school assistant",
     "whatsapp": "Message us on WhatsApp",
     "whatsappDesc": "The school office will reply",
-    "whatsappMessage": "Hello, I would like some information about Collège Tomi Fidele."
+    "whatsappMessage": "Hello, I would like some information about {{school}}."
   },
   "assistant": {
     "title": "School assistant",
     "subtitle": "Guided answers",
     "close": "Close the assistant",
-    "welcome": "Hello! I am the Collège Tomi Fidele assistant. Choose a topic below to find the information you need quickly.",
+    "welcome": "Hello! I am the {{school}} assistant. Choose a topic below to find the information you need quickly.",
     "fallback": "I don't have a ready answer to that question. Choose a topic below, or ask the school office directly.",
     "contactLink": "Write to the school office",
     "topicsLabel": "Common topics",

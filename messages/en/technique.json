@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Technical education",
-    "description": "Technical education at Collège Tomi Fidele: specialities, workshop practice and the certificates students prepare for, in the Francophone and Anglophone sections."
+    "description": "Technical education at {{school}}: specialities, workshop practice and the certificates students prepare for, in the Francophone and Anglophone sections."
   },
   "hero": {
     "eyebrow": "Programmes",

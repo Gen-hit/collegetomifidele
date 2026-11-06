@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Calendrier scolaire",
-    "description": "Le calendrier de l'année scolaire du Collège Tomi Fidele : rentrées, trimestres, évaluations, examens officiels, congés, jours fériés, journées internationales et fêtes du collège."
+    "description": "Le calendrier de l'année scolaire du {{school}} : rentrées, trimestres, évaluations, examens officiels, congés, jours fériés, journées internationales et fêtes du collège."
   },
   "hero": {
     "eyebrow": "Calendrier scolaire",

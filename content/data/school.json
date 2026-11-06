@@ -1,0 +1,14 @@
+{
+  "name": "Collège Tomi Fidele",
+  "shortName": "CTF",
+  "slug": "tomi-fidele",
+  "motto": "Discipline · Travail · Succès",
+  "logo": { "src": "/brand/ctf-logo.png", "width": 178, "height": 202 },
+  "ogImagePrefix": "college-tomi-fidele",
+  "url": "https://college-tomi-fidele.netlify.app",
+  "location": {
+    "lat": 4.023973,
+    "lng": 9.790607,
+    "mapsUrl": "https://maps.app.goo.gl/SJMvix47ieoz1B7c7"
+  }
+}
